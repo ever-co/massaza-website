@@ -1,0 +1,11 @@
+<svg id="f_logo_RGB-White_1024" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Clip_2" data-name="Clip 2" d="M0,0H40V40H0Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <path id="Clip_2-2" data-name="Clip 2" d="M0,0H40V40H0Z" fill="none"/>
+  <g id="f_logo_RGB-White_1024-2" data-name="f_logo_RGB-White_1024" clip-path="url(#clip-path)">
+    <path id="Fill_1" data-name="Fill 1" d="M40,20.122A20,20,0,1,0,16.875,40V25.939H11.8V20.122h5.078V15.689c0-5.043,2.986-7.829,7.554-7.829a30.575,30.575,0,0,1,4.477.393v4.952H26.384c-2.484,0-3.259,1.551-3.259,3.142v3.775h5.547l-.887,5.817h-4.66V40A20.09,20.09,0,0,0,40,20.122" fill="#fffffe"/>
+  </g>
+</svg>

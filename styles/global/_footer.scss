@@ -1,0 +1,211 @@
+footer {
+  .footer-top {
+    display: flex;
+    flex-flow: column;
+    background: url("../../../assets/images/global/footer-top-background.png");
+    min-height: 25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .footer-top-txt-container {
+     
+      width: 45%;
+      margin: auto;
+      h1 {
+        color: #ffffff;
+ 
+      }
+      .app-store-btns {
+        margin: 2em 0;
+
+        button {
+          width: 11em;
+          h5 {
+            line-height: 5px;
+            margin: 0.5em 0 0 0;
+          }
+        }
+      }
+    }
+  }
+  .footer-media-wrapper {
+    background-color: #60454a;
+    position: relative;
+    .social-media-icons {
+      display: flex;
+      align-items: center;
+      width: 55%;
+      margin: 2em auto;
+      a {
+        margin: 0 1em;
+      }
+      .main-btn {
+        margin: 0 10em;
+      }
+    }
+    #car-svg {
+      transform: translate3d(-15em, -4em, 0);
+    }
+  }
+
+  .footer-bottom {
+    background: #4a3337;
+
+    .footer-bootom-wrapper {
+      justify-content: space-around;
+      color: #f9b19f;
+      display: flex;
+      width: 90%;
+      margin: auto;
+      max-width: 90em;
+      .footer-menus {
+        margin: 2em;
+        h5 {
+          font-size: 1.2rem;
+        }
+        .footer-logo {
+          max-width: 3em;
+        }
+        a {
+          color: #f9b19f;
+        }
+        ul {
+          list-style-type: none;
+        }
+      }
+      .theme-footer-menu {
+        border-left: 1px solid #f9b19f;
+        padding: 1em;
+        .theme {
+          flex-flow: column;
+          svg {
+            background: #3c292c;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    .footer-top {
+      background-position: 80%;
+      .footer-top-txt-container {
+        margin: 3em;
+
+        .app-store-btns {
+          flex-flow: column;
+          button {
+            font-size: 1.2rem;
+            margin: 1em;
+            width: 11em;
+            padding: 0.4rem;
+            h5 {
+              font-size: 0.8rem;
+              line-height: 15px;
+            }
+          }
+        }
+      }
+    }
+    .footer-media-wrapper {
+      .social-media-icons {
+        width: 80%;
+        margin: 2em;
+        .main-btn {
+          margin: auto;
+        }
+      }
+      #car-svg {
+        transform: translate3d(-8em, -4em, 0);
+      }
+    }
+  }
+}
+
+@media screen and(max-width:800px) {
+  footer {
+    .footer-bottom {
+      .footer-bootom-wrapper {
+        flex-flow: wrap;
+        width: 100%;
+        .contact-footer-menu {
+          text-align: center;
+          border-bottom: 1px solid;
+          padding: 0 0 1em;
+          width: 100%;
+        }
+
+        .footer-menus {
+          font-size: 1.5rem;
+          h5 {
+            font-size: 1.8rem;
+          }
+        }
+        .theme-footer-menu {
+          justify-content: space-between;
+          width: 100%;
+          flex-flow: row;
+          border-left: none;
+          border-top: 1px solid;
+          .theme {
+            flex-flow: row;
+            svg {
+              margin: 0 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:600px){
+  footer{
+    .footer-top{
+      background: url('../../../assets/images/global/footer-top-mobile-background.png');
+      background-repeat: no-repeat;
+      background-size: 100% 101%;
+      .footer-top-txt-container{
+        width: 95%;
+        margin: 1em 0;
+        h1{
+          text-align: center;
+        }
+        .app-store-btns{
+          button{
+            width: 9em;
+            margin: 1em auto;
+          }
+        }
+      }
+
+    }
+    .footer-media-wrapper{
+      .social-media-icons{
+        width: 100%;
+        margin: 1em 0;
+        .main-btn{
+          width: 12em;
+        }
+      }
+      #car-svg{
+        display: none;
+      }
+    }
+  
+  .footer-bottom{
+    .footer-bootom-wrapper{
+
+      .footer-menus{
+        display: none;
+      }
+      .contact-footer-menu{
+        display: block;
+        margin: 1em 0 0;
+      }
+    }
+  }
+}
+}

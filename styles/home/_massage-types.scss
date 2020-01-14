@@ -1,0 +1,78 @@
+@import "../global/global";
+
+.types-wrapper {
+background-image: url('../../../assets/images/home/backgrounds/small-backgound.png');
+width: 80%;
+margin: auto;
+background-position: center;
+background-repeat: repeat-y;
+background-size: 100%;
+h2{
+  margin: 0 0 0 2em;
+  font-size: 3rem;
+  color: #DEC98F;
+}
+  .massage-cards-container {
+    flex-flow: wrap;
+    justify-content: center;
+    .massage-card {
+      background: url("../../../assets/images/home/massage-card-background.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 25%;
+      min-height: 28em;
+      margin: 2em;
+      align-items: center;
+      img {
+        width: 11em;
+        margin: 2em auto 2em;
+      }
+      .massage-card-title{
+        margin: 1em;
+        color: #E87B68;
+      }
+      p{
+        width: 60%;
+        text-align: center;
+        max-height: 4em;
+        line-height: 20px;
+      }
+
+    }
+  
+  }
+}
+
+@media screen and(max-width:1024px){
+  .types-wrapper{
+    background: url('../../../assets/images/home/backgrounds/small-background-tablet.png') center center no-repeat;
+    background-repeat: repeat-y;
+    width:95%;
+    .massage-cards-container{
+      .massage-card{
+        width: 40%;
+        min-height: 28em;
+        margin: 1em 1.8em 1em;
+      }
+    }
+  }
+}
+@media screen and(max-width:600px){
+  .types-wrapper{
+    background: none;
+    h2{
+      margin: 0;
+      text-align: center;
+    }
+    .massage-cards-container{
+      .massage-card{
+        width: 80%;
+        display: none;
+        &:first-child{
+          display: flex;
+
+        }
+      }
+    }
+  }
+}

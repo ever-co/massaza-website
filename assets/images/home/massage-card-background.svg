@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="362" height="444" viewBox="0 0 362 444">
+  <defs>
+    <filter id="Combined_Shape" x="0" y="0" width="362" height="444" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feFlood flood-color="#a29d9d" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_17_Copy_6" data-name="Group 17 Copy 6" transform="translate(6 6)">
+    <g transform="matrix(1, 0, 0, 1, -6, -6)" filter="url(#Combined_Shape)">
+      <path id="Combined_Shape-2" data-name="Combined Shape" d="M337,432H13A13,13,0,0,1,0,419V271a20.859,20.859,0,0,0,14.842-6.158A20.857,20.857,0,0,0,21,250,21.024,21.024,0,0,0,0,229V13A13,13,0,0,1,13,0H337a13,13,0,0,1,13,13V229.023c-.325-.015-.661-.024-1-.024a21,21,0,1,0,0,42c.332,0,.668-.008,1-.023V419a13,13,0,0,1-13,13Z" transform="translate(6 6)" fill="#fff"/>
+    </g>
+    <path id="Line" d="M.5.5h45" transform="translate(44.5 250)" fill="none" stroke="#f5e0db" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Line_Copy" data-name="Line Copy" d="M.5.5h45" transform="translate(259.5 250)" fill="none" stroke="#f5e0db" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

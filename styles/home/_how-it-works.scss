@@ -1,0 +1,25 @@
+.how-it-works{
+    width: 85%;
+    max-width: 90em;
+    margin: auto;
+    h3{
+        color: #E87B68;
+    }
+    .down-h{
+        align-self: flex-end;
+        text-transform: uppercase;
+        color: #96525C;
+        margin: 5em 0;
+    }
+    h3,.down-h{
+        font-size: 1em;
+
+    }
+}
+@media screen and(max-width: 600px){
+    .how-it-works{
+        h3{
+            display: none;
+        }
+    }
+}

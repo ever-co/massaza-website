@@ -1,0 +1,33 @@
+.app-store-btns {
+    width: 100%;
+    display: flex;
+    .google-play-btn,
+    .app-store-btn {
+      display: flex;
+      background: #000000;
+      color: #fff;
+    }
+    .google-play-btn,
+    .app-store-btn {
+      padding: 0;
+      font-size: 100%;
+      
+      img {
+        width: 25%;
+        margin: auto;
+      }
+      div {
+        text-align: center;
+        padding: 0.5em;
+       .app-store-down-h {
+          font-size: 1.2rem;
+          line-height: 1;
+        }
+        .app-store-up-h {
+          line-height: 1px;
+          font-size: 1rem;
+          margin: 1em 0 0;
+        }
+      }
+    }
+  }

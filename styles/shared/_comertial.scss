@@ -1,0 +1,163 @@
+@import "./app-store-btns";
+.com1 {
+  background: url("../../../assets/images/comertial/com-background.png");
+  margin: auto;
+  .comertial-label {
+    margin: 0.5em 2em;
+  }
+
+}
+.com2 {
+  background: url("../../../assets/images/comertial/com-extend-background.png");
+  background-position: right;
+  justify-content: flex-end;
+  margin: 5em auto;
+
+  .comertial-description {
+    width: 30%;
+    margin: 1em;
+
+    .comertial-label {
+      margin: 0;
+    }
+    .main-btn {
+      width: 14em;
+      margin: 1em 0 0;
+      font-size: 1rem;
+    }
+  }
+}
+.comertial-wrapper {
+  background-repeat: no-repeat;
+  width: 80%;
+  max-width: 90em;
+  background-size: cover;
+  background-position: top;
+  border-radius: 20px;
+  .comertial-description {
+    justify-content: center;
+    .comertial-label {
+      letter-spacing: 2px;
+      font-size: 2rem;
+      color: #ffffff;
+      line-height: 2rem;
+    }
+    .app-store-btns {
+      margin: 1em 2em;
+      .app-store-btn{
+        min-width: 10em;
+      }
+      button {
+        width: 25%;
+       
+        .app-store-down-h {
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and(max-width:1280px) {
+  .comertial-wrapper {
+    width: 90%;
+  }
+  .com1 {
+    background-position: 70%;
+    background: url('../../../assets/images/comertial/com-1-tablet-background.png') ;
+    background-repeat:no-repeat ;
+    background-size: 100%;
+    .comertial-description {
+      .comertial-label {
+        margin: 0.5em 1em;
+        width: 55%;
+        font-size: 3rem;
+        line-height: 1;
+      }
+      .app-store-btns{
+        margin: 1em 0;
+      font-size: 1.4rem;
+        min-width: none;
+      }
+    }
+
+  }
+  .com2{
+    background: url('../../../assets/images/comertial/com-2-background-tablet.png');
+  }
+}
+
+@media screen and(max-width:1024px){
+  .comertial-wrapper{
+    background-size: cover;
+  }
+  .com1{
+    background-position: 70%;
+    .comertial-description{
+      .comertial-label{
+        font-size: 2.5rem;
+      }
+      
+    }
+  }
+  .com2{
+    background-size: 100% 100%;
+    .comertial-description{
+      .main-btn{
+        width: 11em;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:600px){
+  .comertial-wrapper{
+    flex-flow: column;
+    width: 100%;
+    border-radius: 0;
+    .comertial-description{
+      text-align: center;
+      width: 100%;
+    
+      .comertial-label{
+        width: 100%;
+        margin: 0;
+      }
+      .app-store-btns{
+        .app-store-btn{
+          min-width: 5em;
+        }
+        button{
+          margin: 0 0.2em;
+          width: 10em;
+          h5{
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    
+  }
+  .com1{
+    background: url('../../../assets/images/comertial/com-1-background-mobile.png');
+    background-repeat: no-repeat;
+    background-position:center ;
+    background-size: cover;
+    height: 25em;
+  
+  }
+
+  .com2{
+    background: url('../../../assets/images/comertial/com-2-background-mobile.png');
+    background-size: 100% 100%;
+    height: 25em;
+    .comertial-description{
+      margin: 0;
+        .main-btn{
+          margin: 2em auto;
+        }
+    }
+  }
+}
