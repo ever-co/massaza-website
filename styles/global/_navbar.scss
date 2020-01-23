@@ -37,6 +37,7 @@ nav {
   background: #fff;
   transform: translate(-600px, 0);
   transition: all 1s;
+  z-index: 100;
   ul {
     margin: 2em 0 0;
     .menu-links {

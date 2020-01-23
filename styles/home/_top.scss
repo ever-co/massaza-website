@@ -1,118 +1,98 @@
 @import "../shared/app-store-btns";
 .top-container {
-  min-height: 100vh;
-  background: url('../../../assets/images/home/backgrounds/top-background.png');
+  @media screen and (min-width: 1280px) {
+    min-height: 50em;
+  }
+  background: url("../../../assets/images/home/backgrounds/top-background.png");
   background-size: cover;
-  background-size: 100% ;
+  background-size: 100%;
   background-position: 74%;
   background-repeat: no-repeat;
   margin: 0 auto 4em;
   width: 85%;
   max-width: 95em;
 
-
   .top-header {
     margin: auto 3em;
     width: 45%;
     color: #fff;
-    h1{
+    h1 {
       font-size: 3rem;
-
     }
-    p{
+    p {
       font-size: 1.6rem;
     }
-    .app-store-btns {
-      margin: 4em 0 ;
-      button{
-        min-width: 11em;
-          h5{
-            font-size: 0.8rem;
-          }
-          width: 25%;
-      }
-    }
+
   }
 }
 
-@media screen and(max-width:1280px){
-  .top-container{
+@media screen and(max-width:1280px) {
+  .top-container {
     width: 100%;
     background-size: 150% 100%;
 
     margin: 0 auto 3em;
-    .top-header{
+    .top-header {
       margin: 2em;
       width: 30em;
-   
-      .app-store-btns{
-        margin: 2em;
+
+      .app-store-btns {
+        margin: 0 0 7em;
         flex-flow: column;
-        button{
-          margin: .5em 0;
+        .app-btn {
           width: 40%;
-          font-size: 1.5rem;
-          min-width: 5em;
+          height: 5em;
         }
       }
     }
   }
 }
 
-@media screen and(max-width:1025px){
-  .top-container{
-    background-size:  cover;
-    
+@media screen and(max-width:1025px) {
+  .top-container {
+    background-size: cover;
   }
 }
 
-@media screen and(max-width:850px){
-  .top-container{
+@media screen and(max-width:850px) {
+  .top-container {
     background-size: 100% 100%;
     background-position: top;
-
   }
 }
 
-@media screen and(max-width:600px){
-  .top-container{
-    background: url('../../../assets/images/home/backgrounds/top-background-mobile.png');
+@media screen and(max-width:600px) {
+  .top-container {
+    min-height: 100vh;
+    background: url("../../../assets/images/home/backgrounds/top-background-mobile.png");
     background-repeat: no-repeat;
     background-size: 109% 100%;
     background-position: bottom;
     margin: 0 0 2em;
     flex-flow: column;
-    .top-header{
+    .top-header {
       margin: 2em auto;
       width: 90%;
-      h1{
+      h1 {
         font-size: 2rem;
       }
-      p{
+      p {
         font-size: 1rem;
       }
-      .app-store-btns{
+      .app-store-btns {
         position: absolute;
         width: 90%;
-        z-index: -5;
         margin: 0;
         top: 75%;
-        button{
-          div{
-            padding: 0;
-            margin :0.2em 0;
-          }
-        }
       }
     }
-    
   }
 }
 
-@media screen and(max-width:360px){
-  .top-container{
-    .top-header{
-      h1{
+@media screen and(max-width:360px) {
+  .top-container {
+    .top-header {
+      h1 {
         font-size: 1.5rem;
       }
     }

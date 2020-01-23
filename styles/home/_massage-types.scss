@@ -1,4 +1,4 @@
-@import "../global/global";
+@import '../global/global';
 
 .types-wrapper {
 background-image: url('../../../assets/images/home/backgrounds/small-backgound.png');
@@ -17,7 +17,7 @@ h2{
     flex-flow: wrap;
     justify-content: center;
     .massage-card {
-      background: url("../../../assets/images/home/massage-card-background.svg");
+      background: url('../../../../assets/images/home/massage-card-background.svg');
       background-repeat: no-repeat;
       background-position: center;
       width: 25%;

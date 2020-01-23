@@ -97,6 +97,9 @@
     }
     .offers{
       flex-flow: column;
+      .offer{
+        margin: 1em auto;
+      }
     }
   }
 }

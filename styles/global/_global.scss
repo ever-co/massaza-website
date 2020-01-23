@@ -24,11 +24,10 @@
 $primary-color: #96525c;
 $secondary-color: #e67966;
 $main-background: #fdfaf9;
-$primary-title-color: #DEC98F;  
+$primary-title-color: #dec98f;
 * {
   margin: 0;
   padding: 0;
-  
 }
 body {
   background-color: $main-background;
@@ -47,19 +46,17 @@ a {
 }
 button {
   font-family: "Cairo-SemiBold";
-  box-shadow: 0px 5px 7px -4px rgba(0, 0, 0, 0.57);
   transition: all 0.5s;
   border: none;
   outline: 0;
   &:hover {
-    box-shadow: none;
     cursor: pointer;
   }
   padding: 1em 1.8em;
   margin: auto 1em;
   border-radius: 10px;
   color: #ffffff;
-  a{
+  a {
     color: #ffffff;
   }
 }
@@ -67,10 +64,10 @@ h2 {
   font-family: "Cairo-SemiBold";
 }
 
-.main-btn{
+.main-btn {
   background-color: $secondary-color;
 }
 
-img{
+img {
   width: 100%;
 }

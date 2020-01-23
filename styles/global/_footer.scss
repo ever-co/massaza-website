@@ -7,23 +7,27 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     .footer-top-txt-container {
-     
       width: 45%;
       margin: auto;
       h1 {
         color: #ffffff;
- 
+        margin: 2em 0 0;
+        &::before{
+          content: url('../../../assets/icons/global/footer-leaves.png');
+          width: 1em;
+          margin: -1em;
+          transform: translate(-1em, 1em);
+          display: block;
+        }
       }
       .app-store-btns {
-        margin: 2em 0;
-
-        button {
-          width: 11em;
-          h5 {
-            line-height: 5px;
-            margin: 0.5em 0 0 0;
-          }
+        margin: -2em 0 3em;
+        .app-btn{
+          height: inherit;
+          width: 20%;
+          margin: 0 1em 0 0;
         }
+  
       }
     }
   }
@@ -90,21 +94,19 @@ footer {
 @media screen and (max-width: 1024px) {
   footer {
     .footer-top {
-      background-position: 80%;
+      background-position:65%;
       .footer-top-txt-container {
-        margin: 3em;
+        margin: 3em 5em;
 
         .app-store-btns {
           flex-flow: column;
-          button {
-            font-size: 1.2rem;
-            margin: 1em;
-            width: 11em;
-            padding: 0.4rem;
-            h5 {
-              font-size: 0.8rem;
-              line-height: 15px;
-            }
+            margin: 0 0 7em;
+            .app-btn{
+              width: 40%;
+              height: 5em;
+              &:nth-child(2){
+                width: 43%;
+              }
           }
         }
       }
@@ -174,9 +176,14 @@ footer {
           text-align: center;
         }
         .app-store-btns{
-          button{
-            width: 9em;
-            margin: 1em auto;
+          margin: 0 auto 7em;
+          .app-btn{
+            margin: auto;
+            width: 40%;
+            height: 5em;
+            &:nth-child(2){
+              width: 43%;
+            }
           }
         }
       }

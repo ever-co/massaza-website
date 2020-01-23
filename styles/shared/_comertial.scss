@@ -1,6 +1,6 @@
-@import "./app-store-btns";
+@import './app-store-btns';
 .com1 {
-  background: url("../../../assets/images/comertial/com-background.png");
+  background: url('../../../assets/images/comertial/com-background.png');
   margin: auto;
   .comertial-label {
     margin: 0.5em 2em;
@@ -8,7 +8,7 @@
 
 }
 .com2 {
-  background: url("../../../assets/images/comertial/com-extend-background.png");
+  background: url('../../../assets/images/comertial/com-extend-background.png');
   background-position: right;
   justify-content: flex-end;
   margin: 5em auto;
@@ -21,6 +21,7 @@
       margin: 0;
     }
     .main-btn {
+      align-self: center;
       width: 14em;
       margin: 1em 0 0;
       font-size: 1rem;
@@ -42,17 +43,10 @@
       color: #ffffff;
       line-height: 2rem;
     }
-    .app-store-btns {
-      margin: 1em 2em;
-      .app-store-btn{
-        min-width: 10em;
-      }
-      button {
-        width: 25%;
-       
-        .app-store-down-h {
-          line-height: 1;
-        }
+    .app-store-btns{
+      margin: -1em 3em 0em;
+      .app-btn{
+        height: 10em;
       }
     }
   }
@@ -75,16 +69,14 @@
         font-size: 3rem;
         line-height: 1;
       }
-      .app-store-btns{
-        margin: 1em 0;
-      font-size: 1.4rem;
-        min-width: none;
-      }
+     
     }
 
   }
   .com2{
     background: url('../../../assets/images/comertial/com-2-background-tablet.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -120,23 +112,15 @@
     .comertial-description{
       text-align: center;
       width: 100%;
-    
+      .app-store-btns{
+        justify-content: space-around;
+        margin: 0;
+      }
       .comertial-label{
         width: 100%;
         margin: 0;
       }
-      .app-store-btns{
-        .app-store-btn{
-          min-width: 5em;
-        }
-        button{
-          margin: 0 0.2em;
-          width: 10em;
-          h5{
-            font-size: 0.8rem;
-          }
-        }
-      }
+  
     }
     
   }
