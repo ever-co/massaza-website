@@ -1,0 +1,43 @@
+.g-line,
+.s-line {
+  border-left: 2px solid #f9b19f;
+  position: absolute;
+  left: 7%;
+  h5 {
+    color: #e87b68;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+}
+
+.s-line {
+  height: 90em;
+  z-index: -1;
+  h5 {
+    margin: -1em;
+    background: #fdfaf9;
+  }
+}
+
+.g-line {
+  height: 59em;
+  h5 {
+    color: #f9b19f;
+    background: #97515d;
+    margin: -3em -1em;
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .g-line,
+  .s-line {
+    left: 3%;
+  }
+}
+
+@media screen and(max-width:700px) {
+  .g-line,
+  .s-line {
+    display: none;
+  }
+}

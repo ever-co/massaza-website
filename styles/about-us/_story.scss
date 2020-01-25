@@ -1,0 +1,80 @@
+.story-wrapper{
+    width: 80%;
+    margin: 3em auto 0;
+    justify-content: space-evenly;
+    .story-descr{
+        width: 50%;
+        color: #96525C;
+        margin: 3em 0 0;
+        p{
+            margin: .5em 0;
+        }
+    }
+    .story-pics{
+        width: 40%;
+        background: url('../../../assets/images/about-us/story-pics-background.png');
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: 100% 0;
+        img{
+            margin: 2em 0 0 -3em;
+        }
+      .app-store-btns{
+          justify-content: center;
+      }
+    }
+}
+
+@media screen and(max-width:1024px){
+    .story-wrapper{
+        flex-flow: column;
+        .story-descr{
+            font-size: .8rem;
+            width: 100%;
+        }
+        .story-pics{
+            flex-flow: row-reverse;
+            width: 100%;
+            img{
+                width:70%;
+            }
+            .app-store-btns{
+                flex-flow: column;
+                width: 30%;
+                .app-btn{
+                    width:100%;
+                    margin: -4em 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .story-wrapper{
+        width: 90%;
+        margin: 0 auto;
+        .story-descr{
+            font-size: 1rem;
+        }
+        .story-pics{
+            flex-flow: column;
+            background: none;
+            img{
+                margin: 0;
+                width: 100%;
+            }
+            .app-store-btns{
+                width: 100%;
+                .app-btn{
+                    width: 50%;
+                    margin: -3em auto;
+                    &:nth-child(2){
+                        width: 60%;
+                        margin: -3em auto ;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -115,6 +115,9 @@
       .app-store-btns{
         justify-content: space-around;
         margin: 0;
+        .app-btn{
+          width: 35%;
+        }
       }
       .comertial-label{
         width: 100%;

@@ -1,0 +1,45 @@
+header {
+  background: url("../../../assets/images/about-us/about-us-top-background.png");
+  width: 90%;
+  max-width: 100em;
+  min-height: 25em;
+  margin: 2em auto 5em;
+  .header-container {
+    background: rgba(110, 67, 57, 0.4);
+    width: 100%;
+    justify-content: center;
+    h1 {
+      width: 15em;
+      margin: auto;
+      color: #ffffff;
+      margin: 0 4em;
+      letter-spacing: 2px;
+      font-weight: lighter;
+    }
+  }
+}
+
+
+@media screen and (max-width:1024px){
+    header{
+        width: 100%;
+        margin: 0 0 5em;
+        min-height: 15em;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and(max-width:600px){
+    header{
+        margin: 0;
+        .header-container{
+            h1{
+                width: 80%;
+                margin: auto;
+                font-size:1.5rem;
+                line-height: 2rem;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

@@ -173,16 +173,17 @@ footer {
         width: 95%;
         margin: 1em 0;
         h1{
+          margin: 0;
           text-align: center;
         }
         .app-store-btns{
-          margin: 0 auto 7em;
+          margin: -2em auto 7em;
           .app-btn{
             margin: auto;
-            width: 40%;
+            width: 50%;
             height: 5em;
             &:nth-child(2){
-              width: 43%;
+              width: 55%;
             }
           }
         }

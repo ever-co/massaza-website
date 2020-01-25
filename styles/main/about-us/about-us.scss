@@ -1,0 +1,18 @@
+@import '../../global/global';
+@import '../../global/navbar';
+@import '../../global/footer';
+@import '../../shared/comertial';
+
+@import '../../about-us/about-us-header';
+@import '../../about-us/story';
+@import '../../about-us/guaranties';
+@import '../../about-us/page-line';
+.com1{
+    margin: 3em auto;
+}
+
+@media screen and (max-width:600px){
+    .com1, .com2{
+        margin: 0;
+    }
+}

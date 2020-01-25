@@ -422,7 +422,7 @@ ul {
     width: 90%;
   }
   .top-container .top-header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .top-container .top-header p {
     font-size: 1rem;
@@ -606,6 +606,9 @@ ul {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     margin: 0;
+  }
+  .comertial-wrapper .comertial-description .app-store-btns .app-btn {
+    width: 35%;
   }
   .comertial-wrapper .comertial-description .comertial-label {
     width: 100%;
@@ -1200,18 +1203,19 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
     margin: 1em 0;
   }
   footer .footer-top .footer-top-txt-container h1 {
+    margin: 0;
     text-align: center;
   }
   footer .footer-top .footer-top-txt-container .app-store-btns {
-    margin: 0 auto 7em;
+    margin: -2em auto 7em;
   }
   footer .footer-top .footer-top-txt-container .app-store-btns .app-btn {
     margin: auto;
-    width: 40%;
+    width: 50%;
     height: 5em;
   }
   footer .footer-top .footer-top-txt-container .app-store-btns .app-btn:nth-child(2) {
-    width: 43%;
+    width: 55%;
   }
   footer .footer-media-wrapper .social-media-icons {
     width: 100%;
