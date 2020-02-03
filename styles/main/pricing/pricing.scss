@@ -1,0 +1,20 @@
+@import '../../global/global';
+@import '../../global/navbar';
+@import '../../global/footer';
+@import '../../shared/comertial';
+// app store buttons ??
+@import '../../shared/app-store-btns';
+@import '../../pricing/line-adj';
+@import '../../shared/pricingand-offers';
+
+@import '../../pricing/pricing-offers';
+@import '../../pricing/pricing-header';
+
+.com1{
+    margin: 3em auto;
+}
+@media screen and(max-width:600px){
+    .com1{
+        margin: 3em auto 0;
+    }
+}

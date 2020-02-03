@@ -1,0 +1,42 @@
+@import '../shared/page-line';
+.f-line {
+  height: 100em;
+}
+.c-line{
+    height: 25em;
+}
+.line-title {
+  letter-spacing: 1px;
+  background: #fdfaf9;
+  margin: 0 -1em;
+  text-transform: uppercase;
+  color: #f9b19f;
+  z-index: 5;
+}
+
+@media screen and(max-width:1280px){
+  .f-line-title{
+    margin: 0 -2.5em;
+  }
+  .line-title{
+    font-size: 1.2rem;
+
+  }
+}
+
+@media screen and(max-width:1024px){
+  .f-line{
+    height: 140em;
+  }
+  .f-line-title{
+    margin: 0 -1.8em;
+
+  }
+
+}
+
+@media screen and (max-width:600px){
+  .f-line-title, .line-title{
+    margin: 0;
+  }
+}

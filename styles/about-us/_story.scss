@@ -1,11 +1,11 @@
 .story-wrapper{
     width: 80%;
-    margin: 3em auto 0;
+    margin:0 auto ;
     justify-content: space-evenly;
     .story-descr{
         width: 50%;
         color: #96525C;
-        margin: 3em 0 0;
+        margin: auto;
         p{
             margin: .5em 0;
         }
@@ -31,6 +31,9 @@
         .story-descr{
             font-size: .8rem;
             width: 100%;
+            p{
+                font-size: 1.3rem;
+            }
         }
         .story-pics{
             flex-flow: row-reverse;
@@ -53,9 +56,12 @@
 @media screen and (max-width:600px){
     .story-wrapper{
         width: 90%;
-        margin: 0 auto;
+        margin: 5em auto 0;
         .story-descr{
             font-size: 1rem;
+            p{
+                font-size: 1rem;
+            }
         }
         .story-pics{
             flex-flow: column;

@@ -22,6 +22,14 @@
         }
     }
 }
+.g-line {
+    height: 59em;
+}
+        .g-line-title {
+          color: #f9b19f;
+          background: #97515d;
+          margin: -3em -1em;
+        }
 
 @media screen and(max-width:1024px){
     .guaranties{
@@ -36,6 +44,11 @@
                     max-width: 5em;
                 }
             }
+        }
+    }
+    .g-line{
+        .g-line-title{
+            font-size: 1.2rem;
         }
     }
 }

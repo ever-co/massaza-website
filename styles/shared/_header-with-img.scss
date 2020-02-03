@@ -1,0 +1,35 @@
+.header-with-img{
+    width: 90%;
+    max-width: 100em;
+    min-height: 25em;
+    margin: 2em auto;
+    .header-container {
+    width: 100%;
+    justify-content: center;
+    color: #ffffff;
+  
+    }
+}
+@media screen and (max-width:1024px){
+    .header-with-img{
+        width: 100%;
+        margin: 0 0 5em;
+        min-height: 15em;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+@media screen and(max-width:600px){
+    .header-with-img{
+        margin: 0;
+        .header-container{
+            h1{
+                width: 80%;
+                margin: auto;
+                font-size:1.5rem;
+                line-height: 2rem;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

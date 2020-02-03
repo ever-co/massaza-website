@@ -1,0 +1,64 @@
+.pricing-offers {
+  background: url("../../../assets/images/pricing/pricing-offeers-background.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  .offers {
+    .offer {
+      margin: auto;
+    }
+  }
+}
+.comissions {
+  width: 90%;
+  max-width: 90em;
+  margin: 0 auto;
+  p {
+    color: #96525c;
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .pricing-offers {
+    width: 90%;
+    background-size: 35% 35%;
+    .pricing-descr {
+      margin: 2em;
+      font-size: 1.3rem;
+      width: 60%;
+    }
+    .offers {
+      justify-content: space-between;
+      .offer {
+        width: 30%;
+        margin: 0;
+      }
+    }
+  }
+  .comissions {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and(max-width:600px){
+    .pricing-offers{
+        background: none;
+        .pricing-descr{
+            width: 100%;
+            margin: 0;
+            font-size: 1rem;
+            p{
+                margin: 1em 0;
+            }
+        }
+        .offers{
+            .offer{
+                width: 95%;
+                margin: 1em auto;
+            }
+        }
+    }
+    .comissions {
+       width: 100%;
+       font-size: 1rem;
+      }
+}

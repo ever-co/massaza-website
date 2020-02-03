@@ -1,0 +1,31 @@
+
+@import '../shared/page-line';
+.s-line {
+  height: 90em;
+  z-index: -1;
+  .line-title {
+    margin: -1em;
+    background: #fdfaf9;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .s-line{
+    .line-title{
+      margin: -2em -1em;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and(max-width:1024px){
+  .s-line{
+    .line-title{
+      margin: 1em 0;
+    }
+  }
+}
+
+
+
+

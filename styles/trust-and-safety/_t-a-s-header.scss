@@ -1,0 +1,49 @@
+@import "../shared/header-with-img";
+
+.t-a-s-header {
+  background: url("../../../assets/images/trust-and-safety/t-a-s-top-background.png");
+  .header-container {
+    justify-content: center;
+    height: inherit;
+    .header-txt-container {
+      margin: 5em auto;
+      width: 80%;
+      h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        width: 10em;
+      }
+      p {
+        width: 50em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1024px){
+  .t-a-s-header{
+    margin: 0;
+    .header-container{
+      .header-txt-container{
+        p{
+          width: auto;
+        }
+      }
+    }
+  }
+  
+}
+
+@media screen and(max-width:600px){
+  .t-a-s-header{
+    .header-container{
+      .header-txt-container{
+        width: 95%;
+        h1{
+          width: 100%;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

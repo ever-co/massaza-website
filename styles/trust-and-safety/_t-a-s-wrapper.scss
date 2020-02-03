@@ -1,0 +1,105 @@
+.t-a-s {
+  width: 80%;
+  max-width: 90em;
+  margin: 3em auto;
+  .t-a-s-article-wrapper {
+    width: 45%;
+    article {
+      color: #97515d;
+      margin: 2em auto;
+      .num {
+        border: 2px solid #f7d4cd;
+        border-radius: 50%;
+        height: fit-content;
+        padding: 0 1em;
+        text-align: center;
+        margin: 0 2em;
+        font-weight: bold;
+      }
+      .t-a-s-article-descr{
+        .d-color{
+          color: #E87B68;
+        }
+      }
+    }
+  }
+  .t-a-s-img-wrapper {
+    width: 50%;
+    justify-content: flex-end;
+    img {
+      width: 80%;
+      margin: 5em auto;
+    }
+    .t-a-s-therapist-img {
+      width: 50%;
+    }
+  }
+  .t-a-s-therapist-img-wrapper {
+    background: url("../../../assets/images/trust-and-safety/therapist-safety-background.png");
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .t-a-s {
+    flex-flow: column;
+    margin: 2em auto 0;
+    .t-a-s-article-wrapper {
+      width: 90%;
+      margin: auto;
+    }
+    .t-a-s-img-wrapper {
+      width: 90%;
+      margin: auto;
+      img {
+        margin: 3em auto;
+        width: 60%;
+      }
+      .t-a-s-therapist-img{
+        margin: 0;
+      }
+    }
+    .t-a-s-therapist-img-wrapper {
+      background: url("../../../assets/images/trust-and-safety/therapist-safety-background-tablet.png");
+    }
+    .t-a-s-client-img-wrapper {
+      background: url("../../../assets/images/trust-and-safety/client-safety-background-tablet.png");
+    }
+    .t-a-s-therapist-img-wrapper,
+    .t-a-s-client-img-wrapper {
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+  }
+}
+
+
+@media screen and(max-width:600px){
+  .t-a-s-therapist-wrapper{
+    flex-flow: column-reverse;
+  }
+  .t-a-s{
+    width: 95%;
+    .t-a-s-article-wrapper{
+      article{
+        flex-flow: column;
+        .num{
+          width: 1em;
+          margin: 0 0 1em;
+        }
+      }
+    }
+    .t-a-s-img-wrapper{
+      img{
+        width: 100%;
+      }
+    }
+    .t-a-s-therapist-img-wrapper,
+    .t-a-s-client-img-wrapper{
+      background-size: 100% 50%;
+      background-position: top;
+    }
+  
+  }
+}

@@ -1,0 +1,36 @@
+@import '../shared/header-with-img';
+.pricing-header{
+    background: url('../../../assets/images/pricing/pricing-top-header-background.png');
+    background-size: 100% 100%;
+    .header-container{
+        background: rgba(234, 209, 141, .5);
+        .header-txt-container{
+            margin: 0 4em;
+            h1{
+                font-size: 3rem;
+            }
+            p{
+                font-size: 1.2rem;
+                line-height: 1.8rem;
+            }
+        }
+    }
+}
+
+@media screen and(max-width:600px){
+    .pricing-header{
+        .header-container{
+            .header-txt-container{
+                width: 95%;
+                margin: 3em auto;
+
+                h1{
+                    line-height: 1;
+                   width: 100%;
+                   margin: .4em 0;
+                   font-size: 2rem;
+                }
+            }
+        }
+    }
+}

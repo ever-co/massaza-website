@@ -38,7 +38,7 @@ footer {
       display: flex;
       align-items: center;
       width: 55%;
-      margin: 2em auto;
+      margin: 0 auto;
       a {
         margin: 0 1em;
       }
@@ -102,10 +102,10 @@ footer {
           flex-flow: column;
             margin: 0 0 7em;
             .app-btn{
-              width: 40%;
-              height: 5em;
+              width: 60%;
+              height: 7em;
               &:nth-child(2){
-                width: 43%;
+                width: 65%;
               }
           }
         }
@@ -171,7 +171,7 @@ footer {
       background-size: 100% 101%;
       .footer-top-txt-container{
         width: 95%;
-        margin: 1em 0;
+        margin: 1em auto;
         h1{
           margin: 0;
           text-align: center;
