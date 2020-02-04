@@ -14,9 +14,9 @@ nav {
       margin: 0 auto -0.5em;
       width: 9em;
     }
-    svg{
+    svg {
       width: 1.7em;
-      margin: auto .5em ;
+      margin: auto 0.5em;
     }
   }
   ul {
@@ -25,10 +25,9 @@ nav {
     margin: 0 0 0 2em;
   }
 }
-    #nav-btns{
-      display: inherit;
-    }
-
+#nav-btns {
+  display: inherit;
+}
 
 #hidden-menu {
   text-align: center;
@@ -122,33 +121,31 @@ ul {
     ul {
       display: none;
     }
-    #nav-btns{
+    #nav-btns {
       border: none;
     }
   }
 }
 @media screen and(max-width:600px) {
   nav {
-
     #logo {
       width: 100%;
       flex-flow: row-reverse;
       border: none;
-    justify-content: space-between;
+      justify-content: space-between;
     }
   }
   #nav-btns {
     display: none;
   }
-  #hidden-menu{
+  #hidden-menu {
     width: 100vw;
   }
 }
 
-
 .open {
   * {
-    transition: all .5s ease-in;
+    transition: all 0.5s ease-in;
     transform-origin: center;
   }
   #oval {

@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   margin: 0 auto 4em;
   width: 90%;
-  max-width:100em;
+  max-width: 100em;
 
   .top-header {
     margin: auto 10em;
@@ -22,7 +22,6 @@
     p {
       font-size: 1.6rem;
     }
-
   }
 }
 
@@ -58,7 +57,7 @@
   .top-container {
     background-size: 100% 100%;
     background-position: top;
-    .top-header{
+    .top-header {
       margin: 4em;
     }
   }
@@ -82,12 +81,14 @@
       p {
         font-size: 1rem;
       }
+
       .app-store-btns {
         position: absolute;
         width: 90%;
         margin: 0;
         top: 75%;
       }
+ 
     }
   }
 }

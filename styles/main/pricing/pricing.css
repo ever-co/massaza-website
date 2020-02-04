@@ -105,7 +105,7 @@ nav #logo img {
 
 nav #logo svg {
   width: 1.7em;
-  margin: auto .5em;
+  margin: auto 0.5em;
 }
 
 nav ul {
@@ -262,8 +262,8 @@ ul {
 }
 
 .open * {
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -536,8 +536,20 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
     margin: 1em auto;
   }
   footer .footer-top .footer-top-txt-container h1 {
+    font-size: 1.7rem;
     margin: 0;
     text-align: center;
+  }
+  footer .footer-top .footer-top-txt-container h1::before {
+    content: url("../../../assets/icons/global/footer-leaf-top.svg");
+    display: block;
+    width: 5em;
+    margin: -1em 0em .5em -.6em;
+  }
+  footer .footer-top .footer-top-txt-container h1::after {
+    content: url("../../../assets/icons/global/footer-leaf-bottom.svg");
+    display: block;
+    margin: -1.4em 1em 0 9em;
   }
   footer .footer-top .footer-top-txt-container .app-store-btns {
     margin: -2em auto 7em;
@@ -767,84 +779,6 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   width: 30%;
 }
 
-.page-line {
-  border-left: 2px solid #f9b19f;
-  position: absolute;
-  left: 7%;
-}
-
-.line-title {
-  color: #e87b68;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0 -2em;
-}
-
-@media screen and (min-width: 1750px) {
-  .page-line {
-    left: 10%;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .page-line {
-    left: 5%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .page-line {
-    left: 3%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .page-line {
-    border: none;
-  }
-}
-
-.f-line {
-  height: 100em;
-}
-
-.c-line {
-  height: 25em;
-}
-
-.line-title {
-  letter-spacing: 1px;
-  background: #fdfaf9;
-  margin: 0 -1em;
-  text-transform: uppercase;
-  color: #f9b19f;
-  z-index: 5;
-}
-
-@media screen and (max-width: 1280px) {
-  .f-line-title {
-    margin: 0 -2.5em;
-  }
-  .line-title {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .f-line {
-    height: 140em;
-  }
-  .f-line-title {
-    margin: -2.5em -.5em;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .f-line-title, .line-title {
-    margin: 0;
-  }
-}
-
 .pricing-wrapper {
   width: 85%;
   max-width: 90em;
@@ -947,6 +881,84 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   }
   .pricing-wrapper .offers .offer {
     margin: 1em auto;
+  }
+}
+
+.page-line {
+  border-left: 2px solid #f9b19f;
+  position: absolute;
+  left: 7%;
+}
+
+.line-title {
+  color: #e87b68;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 -2em;
+}
+
+@media screen and (min-width: 1750px) {
+  .page-line {
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .page-line {
+    left: 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .page-line {
+    left: 3%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .page-line {
+    border: none;
+  }
+}
+
+.f-line {
+  height: 100em;
+}
+
+.c-line {
+  height: 25em;
+}
+
+.line-title {
+  letter-spacing: 1px;
+  background: #fdfaf9;
+  margin: 0 -1em;
+  text-transform: uppercase;
+  color: #f9b19f;
+  z-index: 5;
+}
+
+@media screen and (max-width: 1280px) {
+  .f-line-title {
+    margin: 0 -2.5em;
+  }
+  .line-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .f-line {
+    height: 140em;
+  }
+  .f-line-title {
+    margin: -2.5em -.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .f-line-title, .line-title {
+    margin: 0;
   }
 }
 

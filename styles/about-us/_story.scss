@@ -45,6 +45,8 @@
             .app-store-btns{
                 flex-flow: column;
                 width: 30%;
+                width: 40%;
+                margin: 0 -4em;
                 .app-btn{
                     width:100%;
                     margin: -4em 0;
@@ -73,6 +75,7 @@
             }
             .app-store-btns{
                 width: 100%;
+                margin: auto;
                 .app-btn{
                     width: 50%;
                     margin: -3em auto;

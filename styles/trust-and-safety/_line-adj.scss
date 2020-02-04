@@ -15,11 +15,12 @@
     height: 120em;
   }
   .t-s-line {
-    height: 100em;
+    height: 95em;
   }
   .line-title {
-    margin: 0 0 0 -2em;
+    margin: 0 0 0 -1em;
   }
+ 
 }
 @media screen and (max-width: 600px) {
     .line-title{
@@ -27,7 +28,7 @@
     }
   .t-s-line {
     .line-title {
-      margin: 8em 0;
+      margin: 1em 0;
     }
   }
 }

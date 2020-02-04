@@ -169,12 +169,25 @@ footer {
       background: url('../../../assets/images/global/footer-top-mobile-background.png');
       background-repeat: no-repeat;
       background-size: 100% 101%;
+
       .footer-top-txt-container{
         width: 95%;
         margin: 1em auto;
         h1{
+          font-size: 1.7rem;
           margin: 0;
           text-align: center;
+          &::before{
+            content: url('../../../assets/icons/global/footer-leaf-top.svg');
+            display: block;
+            width: 5em;
+             margin: -1em 0em .5em -.6em; ;
+          }
+          &::after{
+            content: url('../../../assets/icons/global/footer-leaf-bottom.svg');
+            display: block;
+            margin: -1.4em 1em 0 9em;
+          }
         }
         .app-store-btns{
           margin: -2em auto 7em;

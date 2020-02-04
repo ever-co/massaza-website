@@ -105,7 +105,7 @@ nav #logo img {
 
 nav #logo svg {
   width: 1.7em;
-  margin: auto .5em;
+  margin: auto 0.5em;
 }
 
 nav ul {
@@ -262,8 +262,8 @@ ul {
 }
 
 .open * {
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
   -webkit-transform-origin: center;
           transform-origin: center;
 }
@@ -796,6 +796,7 @@ ul {
   }
   .home-pricing .offers .offer {
     margin: 0 auto 2em;
+    width: 100%;
   }
   .home-pricing .pricing-descr {
     margin: 0 auto 2em;
@@ -1198,8 +1199,20 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
     margin: 1em auto;
   }
   footer .footer-top .footer-top-txt-container h1 {
+    font-size: 1.7rem;
     margin: 0;
     text-align: center;
+  }
+  footer .footer-top .footer-top-txt-container h1::before {
+    content: url("../../../assets/icons/global/footer-leaf-top.svg");
+    display: block;
+    width: 5em;
+    margin: -1em 0em .5em -.6em;
+  }
+  footer .footer-top .footer-top-txt-container h1::after {
+    content: url("../../../assets/icons/global/footer-leaf-bottom.svg");
+    display: block;
+    margin: -1.4em 1em 0 9em;
   }
   footer .footer-top .footer-top-txt-container .app-store-btns {
     margin: -2em auto 7em;
