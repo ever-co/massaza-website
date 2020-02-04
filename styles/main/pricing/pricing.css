@@ -736,7 +736,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
     margin: 1em auto 0;
   }
   .com1 .comertial-description .app-store-btns {
-    margin: -1 0 0;
+    margin: -1.5em 0 0;
   }
   .com1 .comertial-description .app-store-btns .app-btn {
     width: 40%;
@@ -835,7 +835,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
     height: 140em;
   }
   .f-line-title {
-    margin: 0 -1.8em;
+    margin: -2.5em -.5em;
   }
 }
 
@@ -883,7 +883,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
 }
 
 .pricing-wrapper .offers .offer h2 {
-  margin: auto auto 0;
+  margin: .5em auto 0;
   font-size: 3rem;
   line-height: 38px;
 }
@@ -1000,7 +1000,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   }
   .pricing-offers .pricing-descr {
     width: 100%;
-    margin: 0;
+    margin: 4em 0 0;
     font-size: 1rem;
   }
   .pricing-offers .pricing-descr p {
@@ -1013,6 +1013,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   .comissions {
     width: 100%;
     font-size: 1rem;
+    margin: 3em 0 0;
   }
 }
 

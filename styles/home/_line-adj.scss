@@ -1,0 +1,47 @@
+@import '../shared/page-line';
+
+.t-h-line, .t-p-line,.h-i-w-line, .m-line{
+    height: 65em;
+    .line-title{
+        background: #FDFAF9;
+        font-weight: 100;
+    }
+    .t-h-line-title{
+        color: #ffffff;
+        margin: -2em 0 0;
+        background: none;
+    }
+    .t-p-line-title{
+        margin: -1em -1em ;
+    }
+}
+.t-p-line{
+    margin: -2em 0 0;
+}
+.m-line, .h-i-w-line{
+    margin: -4em 0;
+}
+
+@media screen and (max-width:1024px){
+    .t-h-line, .t-p-line,.h-i-w-line, .m-line{
+        .line-title{
+            margin: 0 -1em;
+        }
+        .t-h-line-title{
+            margin: -2em 0 0;
+
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .t-h-line, .t-p-line,.h-i-w-line, .m-line{
+        .line-title{
+            margin: 0;
+        }
+        .t-h-line-title{
+            margin: -1.5em 1em 0;
+            font-size: .7rem;
+        }
+    }
+}

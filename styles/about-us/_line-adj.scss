@@ -14,17 +14,18 @@
     .line-title{
       margin: -2em -1em;
       font-size: 1.3rem;
+      margin: 2em 0 0;
     }
   }
 }
 
-@media screen and(max-width:1024px){
-  .s-line{
-    .line-title{
-      margin: 1em 0;
-    }
-  }
-}
+// @media screen and(max-width:1024px){
+//   .s-line{
+//     .line-title{
+//       margin: 1em 0;
+//     }
+//   }
+// }
 
 
 

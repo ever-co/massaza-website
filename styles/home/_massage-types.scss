@@ -4,7 +4,7 @@
 background-image: url('../../../assets/images/home/backgrounds/small-backgound.png');
 width: 80%;
 max-width: 80em;
-margin: auto;
+margin: 2em auto 0;
 background-position: center;
 background-repeat: repeat-y;
 background-size: 100%;
@@ -33,7 +33,7 @@ h2{
         color: #E87B68;
       }
       p{
-        width: 60%;
+        width: 75%;
         text-align: center;
         max-height: 4em;
         line-height: 20px;
@@ -60,6 +60,7 @@ h2{
 }
 @media screen and(max-width:600px){
   .types-wrapper{
+    margin: 5em 0 0;
     background: none;
     h2{
       margin: 0;
@@ -71,7 +72,22 @@ h2{
         display: none;
         &:first-child{
           display: flex;
-
+          background-size: contain;
+          min-height: 23em;
+          h3{
+            margin: 2em 0 0; 
+          }
+          img{
+            width: 9em;
+            margin: 2em auto 0;
+          }
+          p{
+            width: 80%;
+            font-size: .8rem;
+          }
+          .more-info{
+            margin: 1em auto 0;
+          }
         }
       }
     }

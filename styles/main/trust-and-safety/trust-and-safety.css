@@ -636,6 +636,9 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   .guaranties .guaranties-wrapper .guarantie {
     width: 100%;
   }
+  .g-line .g-line-title {
+    margin: -15em 0 0;
+  }
 }
 
 .app-store-btns {
@@ -805,7 +808,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
     margin: 1em auto 0;
   }
   .com1 .comertial-description .app-store-btns {
-    margin: -1 0 0;
+    margin: -1.5em 0 0;
   }
   .com1 .comertial-description .app-store-btns .app-btn {
     width: 40%;
@@ -861,12 +864,13 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   }
 }
 
-.c-s-line, .t-s-line {
+.c-s-line,
+.t-s-line {
   height: 65em;
 }
 
 .line-title {
-  background: #FDFAF9;
+  background: #fdfaf9;
   z-index: 5;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -888,6 +892,9 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
 @media screen and (max-width: 600px) {
   .line-title {
     margin: 0;
+  }
+  .t-s-line .line-title {
+    margin: 8em 0;
   }
 }
 

@@ -736,7 +736,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
     margin: 1em auto 0;
   }
   .com1 .comertial-description .app-store-btns {
-    margin: -1 0 0;
+    margin: -1.5em 0 0;
   }
   .com1 .comertial-description .app-store-btns .app-btn {
     width: 40%;
@@ -822,6 +822,9 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   .guaranties .guaranties-wrapper .guarantie {
     width: 100%;
   }
+  .g-line .g-line-title {
+    margin: -15em 0 0;
+  }
 }
 
 .header-with-img {
@@ -896,6 +899,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
 
 .story-wrapper {
   width: 80%;
+  max-width: 90em;
   margin: 0 auto;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -1053,12 +1057,7 @@ footer .footer-bottom .footer-bootom-wrapper .theme-footer-menu .theme svg {
   .s-line .line-title {
     margin: -2em -1em;
     font-size: 1.3rem;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .s-line .line-title {
-    margin: 1em 0;
+    margin: 2em 0 0;
   }
 }
 

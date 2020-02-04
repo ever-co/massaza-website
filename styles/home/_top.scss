@@ -9,11 +9,11 @@
   background-position: 74%;
   background-repeat: no-repeat;
   margin: 0 auto 4em;
-  width: 85%;
-  max-width: 95em;
+  width: 90%;
+  max-width:100em;
 
   .top-header {
-    margin: auto 3em;
+    margin: auto 10em;
     width: 45%;
     color: #fff;
     h1 {
@@ -33,7 +33,7 @@
 
     margin: 0 auto 3em;
     .top-header {
-      margin: 2em;
+      margin: 4em 7em;
       width: 30em;
 
       .app-store-btns {
@@ -58,6 +58,9 @@
   .top-container {
     background-size: 100% 100%;
     background-position: top;
+    .top-header{
+      margin: 4em;
+    }
   }
 }
 
