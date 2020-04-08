@@ -8,6 +8,8 @@ public/
 # Gatsby cache
 .cache/
 
+.vscode/
+
 # Logs
 logs
 *.log
