@@ -1,0 +1,70 @@
+
+.guaranties{
+    background: #97515D;
+    color: #ffffff;
+    padding: 3em 0;
+    .guaranties-wrapper{
+        background: url('../../../../assets/images/about-us/guaranties-background.png');
+        background-repeat: no-repeat;
+        background-position: 100% 25em;
+        flex-flow: wrap;
+        width: 80%;
+        max-width: 80em;
+        margin: auto;
+        justify-content: space-between;
+        .guarantie{
+            width: 40%;
+            margin: 1em 0;
+            img{
+                max-width: 8em;
+                margin: 0 1em;
+            }
+        }
+    }
+}
+.g-line {
+    height: 59em;
+}
+        .g-line-title {
+          color: #f9b19f;
+          background: #97515d;
+          margin: -3em -1em;
+        }
+
+@media screen and(max-width:1024px){
+    .guaranties{
+        .guaranties-wrapper{
+            width: 90%;
+            background-position: 100% 35em;
+            .guarantie{
+                flex-flow: column;
+                width: 45%;
+
+                img{
+                    max-width: 5em;
+                }
+            }
+        }
+    }
+    .g-line{
+        .g-line-title{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width:600px){
+    .guaranties{
+        .guaranties-wrapper{
+            background: none;
+            .guarantie{
+                width: 100%;
+            }
+        }
+    }
+    .g-line{
+        .g-line-title{
+            margin: -15em 0 0;
+        }
+    }
+}

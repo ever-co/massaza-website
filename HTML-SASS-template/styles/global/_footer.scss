@@ -1,0 +1,232 @@
+footer {
+  .footer-top {
+    display: flex;
+    flex-flow: column;
+    background: url("../../../../assets/images/global/footer-top-background.png");
+    min-height: 25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .footer-top-txt-container {
+      width: 45%;
+      margin: auto;
+      h1 {
+        color: #ffffff;
+        margin: 2em 0 0;
+        &::before{
+          content: url('../../../../assets/icons/global/footer-leaves.png');
+          width: 1em;
+          margin: -1em;
+          transform: translate(-1em, 1em);
+          display: block;
+        }
+      }
+      .app-store-btns {
+        margin: -2em 0 3em;
+        .app-btn{
+          height: inherit;
+          width: 20%;
+          margin: 0 1em 0 0;
+        }
+  
+      }
+    }
+  }
+  .footer-media-wrapper {
+    background-color: #60454a;
+    position: relative;
+    .social-media-icons {
+      display: flex;
+      align-items: center;
+      width: 55%;
+      margin: 0 auto;
+      a {
+        margin: 0 1em;
+      }
+      .main-btn {
+        margin: 0 10em;
+      }
+    }
+    #car-svg {
+      transform: translate3d(-15em, -4em, 0);
+    }
+  }
+
+  .footer-bottom {
+    background: #4a3337;
+
+    .footer-bootom-wrapper {
+      justify-content: space-around;
+      color: #f9b19f;
+      display: flex;
+      width: 90%;
+      margin: auto;
+      max-width: 90em;
+      .footer-menus {
+        margin: 2em;
+        h5 {
+          font-size: 1.2rem;
+        }
+        .footer-logo {
+          max-width: 3em;
+        }
+        a {
+          color: #f9b19f;
+        }
+        ul {
+          list-style-type: none;
+        }
+      }
+      .theme-footer-menu {
+        border-left: 1px solid #f9b19f;
+        padding: 1em;
+        .theme {
+          flex-flow: column;
+          svg {
+            background: #3c292c;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    .footer-top {
+      background-position:65%;
+      .footer-top-txt-container {
+        margin: 3em 5em;
+
+        .app-store-btns {
+          flex-flow: column;
+            margin: 0 0 7em;
+            .app-btn{
+              width: 60%;
+              height: 7em;
+              &:nth-child(2){
+                width: 65%;
+              }
+          }
+        }
+      }
+    }
+    .footer-media-wrapper {
+      .social-media-icons {
+        width: 80%;
+        margin: 2em;
+        .main-btn {
+          margin: auto;
+        }
+      }
+      #car-svg {
+        transform: translate3d(-8em, -4em, 0);
+      }
+    }
+  }
+}
+
+@media screen and(max-width:800px) {
+  footer {
+    .footer-bottom {
+      .footer-bootom-wrapper {
+        flex-flow: wrap;
+        width: 100%;
+        .contact-footer-menu {
+          text-align: center;
+          border-bottom: 1px solid;
+          padding: 0 0 1em;
+          width: 100%;
+        }
+
+        .footer-menus {
+          font-size: 1.5rem;
+          h5 {
+            font-size: 1.8rem;
+          }
+        }
+        .theme-footer-menu {
+          justify-content: space-between;
+          width: 100%;
+          flex-flow: row;
+          border-left: none;
+          border-top: 1px solid;
+          .theme {
+            flex-flow: row;
+            svg {
+              margin: 0 1em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width:600px){
+  footer{
+    .footer-top{
+      background: url('../../../../assets/images/global/footer-top-mobile-background.png');
+      background-repeat: no-repeat;
+      background-size: 100% 101%;
+
+      .footer-top-txt-container{
+        width: 95%;
+        margin: 1em auto;
+        h1{
+          font-size: 1.7rem;
+          margin: 0;
+          text-align: center;
+            &::before{
+              content: url('../../../../assets/icons/global/footer-leaf-top.svg');
+              display: block;
+              width: 5em;
+              margin: -1em 0em .5em -.6em; ;
+            }
+            &::after{
+              content: url('../../../../assets/icons/global/footer-leaf-bottom.svg');
+              display: block;
+              margin: -1.4em 1em 0 9em;
+            }
+        }
+        .app-store-btns{
+          margin: -2em auto 7em;
+          .app-btn{
+            margin: auto;
+            width: 50%;
+            height: 5em;
+            &:nth-child(2){
+              width: 55%;
+            }
+          }
+        }
+      }
+
+    }
+    .footer-media-wrapper{
+      .social-media-icons{
+        width: 100%;
+        margin: 1em 0;
+        .main-btn{
+          width: 12em;
+        }
+      }
+      #car-svg{
+        display: none;
+      }
+    }
+  
+  .footer-bottom{
+    .footer-bootom-wrapper{
+
+      .footer-menus{
+        display: none;
+      }
+      .contact-footer-menu{
+        display: block;
+        margin: 1em 0 0;
+      }
+    }
+  }
+}
+}
