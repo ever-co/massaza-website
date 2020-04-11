@@ -1,35 +1,24 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { transparentize } from 'polished'
 import { Link } from 'gatsby'
-import { heights, navBreakpoints, colors } from '../styles/variables'
-import Container from './Container'
-import navLogo from '../../assets/icons/logos/masazza-logo.svg'
+import {  navBreakpoints, colors } from '../styles/variables'
+import {headerStyles} from '../styles/componentStyles/header'
 
+import Container from './Container'
 import { MainStyledButton } from './buttons/MainButtons'
 import MiniMenuBtn from './navbarComponents/MiniMenuButton'
 import NavLinksList from './navbarComponents/NavLinks'
 
+import navLogo from '../../assets/icons/logos/masazza-logo.svg'
+
+
 const StyledHeader = styled.header`
-  height: ${heights.header}px;
-  background-color: ${colors.white};
-  color: ${transparentize(0.5, colors.white)};
-  box-shadow: -2px 7px 7px -4px rgba(0, 0, 0, 0.57);
-  position: fixed;
-  z-index: 5000;
-  width: 100%;
-  top: 0px;
-  transition: all 0.3s ease-out;
+  ${headerStyles.styledHeader}
 `
 
 const HeaderInner = styled(Container)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
+${headerStyles.headerInner}
 `
 const LogoLink = styled(Link)`
   width: 10em;
@@ -37,15 +26,7 @@ const LogoLink = styled(Link)`
 `
 
 const NavButtonsContainer = styled.div`
-  border-left: 1px solid #e8dbdb;
-  display: flex;
-  height: 100%;
-  padding-left: 1rem;
-  justify-content: flex-end;
-  width: fit-content;
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
+  ${headerStyles.navBtnsContainer}
 `
 
 const mq = navBreakpoints.map(bp => `@media screen and (max-width: ${bp}px)`)
@@ -77,15 +58,7 @@ const Header: React.FC<HeaderProps> = ({ navLinks, createAccountBtn, becomeThera
       <HeaderInner>
         <div
           css={css`
-            display: flex;
-            height: 100%;
-            align-items: center;
-            width: 16em;
-            @media (max-width: 600px) {
-              flex-flow: row-reverse;
-              width: 100%;
-              justify-content: space-between;
-            }
+            ${headerStyles.headerContainer}
           `}
         >
           <MiniMenuBtn isOppened={isOppened} navLinks={navLinks} />

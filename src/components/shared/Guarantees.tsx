@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { css } from '@emotion/core'
+import { flex } from '../../styles/variables'
+import { guaranteesStyles,guaranteesPageLine } from '../../styles/componentStyles/shared'
 
 import QualifiedIcon from '../../../assets/icons/about-us/qualified-icon.svg'
 import CheckedIcon from '../../../assets/icons/about-us/background-checked-icon.svg'
@@ -8,7 +10,6 @@ import ScamPreventionIcon from '../../../assets/icons/about-us/scam-prevention-i
 import HealthIcon from '../../../assets/icons/about-us/health-icon.svg'
 import GuaranteesBackground from '../../../assets/images/about-us/guaranties-background.png'
 
-import { flex } from '../../styles/variables'
 import PageLine from './PageLine'
 import Container from '../Container'
 
@@ -49,28 +50,14 @@ const Guarantee = (props: any) => (
     className="guarantie row"
     key={props.key}
     css={css`
-      ${flex.row};
-      width: 40%;
-      margin: 1em 0;
-      @media (max-width: 1024px) {
-        flex-flow: column;
-        width: 45%;
-      }
-      @media (max-width: 600px) {
-        width: 100%;
-      }
+      ${guaranteesStyles.guarantee}
     `}
   >
     <img
       src={props.imgUrl}
       alt=""
       css={css`
-        width: 100%;
-        max-width: 8em;
-        margin: 0 1em;
-        @media (max-width: 1024px) {
-          max-width: 5em;
-        }
+        ${guaranteesStyles.guaranteeImg}
       `}
     />
     <div className="guarantie-descr">
@@ -84,39 +71,20 @@ const Guarantees = () => (
   <div
     className="guaranties"
     css={css`
-      background: #97515d;
-      color: #ffffff;
-      padding: 2em 0 0;
+     ${guaranteesStyles.guarantees}
     `}
   >
     <Container>
       <PageLine
         txtContent="WE GARANTIESE"
-        addLineCss="height:70em"
-        addHCss="background:#97515D; color:#F9B19F; font-weight:500;font-size:.9rem; position:relative; z-index:5; margin:-2em;
-       @media(max-width:1024px){margin:-2em -1em; };
-       @media(max-width:600px){    margin: -2em 0; font-size: 1rem;}"
+        addLineCss={guaranteesPageLine.line}
+        addHCss={guaranteesPageLine.h}
       />
       <div
         className="guaranties-wrapper row"
         css={css`
-          ${flex.row};
           background: url(${GuaranteesBackground});
-          background-repeat: no-repeat;
-          background-position: 100% 25em;
-          flex-flow: wrap;
-          width: 80%;
-          max-width: 80em;
-          margin: auto;
-          justify-content: space-between;
-          @media (max-width: 1024px) {
-            margin: 1em auto;
-            width: 90%;
-            background-position: 100% 35em;
-          }
-          @media (max-width: 600px) {
-            background: none;
-          }
+          ${guaranteesStyles.guaranteesWrapper}
         `}
       >
         {guaranteeData.map((g, key) => (

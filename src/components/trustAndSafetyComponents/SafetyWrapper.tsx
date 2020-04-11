@@ -2,7 +2,7 @@ import * as React from 'react'
 import { css } from '@emotion/core'
 
 import PageLine from '../shared/PageLine'
-import { flex } from '../../styles/variables'
+import {safetyArticleStyles,safetyWrapperStyles, clientSafetyStyles, therapistSafetyStyles,safetyWrapperPageLineStyles } from '../../styles/componentStyles/trustAndSafety'
 
 import ClientSafetyImage from '../../../assets/images/trust-and-safety/client-safety-img.png'
 import ClientSafetyBackgroundTabletImage from '../../../assets/images/trust-and-safety/client-safety-background-tablet.png'
@@ -69,30 +69,13 @@ const SafetyArticle = (props: any) => (
     key={props.key}
     className="row"
     css={css`
-      color: #97515d;
-      margin: 1em auto;
-      ${flex.row};
-      align-items: center;
-      @media (max-width: 600px) {
-        flex-flow: column;
-        align-items: flex-start;
-      }
+     ${safetyArticleStyles.article}
     `}
   >
     <section
       className="num"
       css={css`
-        border: 2px solid #f7d4cd;
-        border-radius: 50%;
-        height: fit-content;
-        padding: 0 1em;
-        text-align: center;
-        margin: 0 2em;
-        font-weight: bold;
-        width: 1em;
-        @media (max-width: 600px) {
-          margin: 0 0 1em;
-        }
+        ${safetyArticleStyles.num}
       `}
     >
       {props.num}
@@ -114,47 +97,22 @@ const SafetyWrapper = (props: any) => (
   <div
     className="t-a-s row"
     css={css`
-      ${flex.row};
-      width: 80%;
-      max-width: 90em;
-      margin: 3em auto;
-      @media (max-width: 1024px) {
-        flex-flow: column;
-        margin: 2em auto 0;
-      }
-      @media (max-width: 600px) {
-        width: 95%;
-      }
+      ${safetyWrapperStyles.wrapper}
       ${props.addTASCss};
     `}
   >
     <PageLine
       txtContent={props.pageLineTxtContent}
-      addLineCss={`height: 65em;
+      addLineCss={`${safetyWrapperPageLineStyles.line}
                   ${props.addLineCss}`}
-      addHCss={` background: #fdfaf9;
-                 z-index: 5;
-                 height: fit-content;
-                 margin: -2em;
-                 font-weight: bold;
-                 font-size: .8rem;
-                 @media (max-width:1024px){
-                   margin: 0 0 0 -1em;
-                  }
-                  @media (max-width:600px){
-                    margin: 0;
-                  }
+      addHCss={` ${safetyWrapperPageLineStyles.h}
                   ${props.addLineHCss};`}
     />
 
     <div
       className="t-a-s-article-wrapper"
       css={css`
-        width: 45%;
-        @media (max-width: 1024px) {
-          width: 90%;
-          margin: auto;
-        }
+       ${safetyWrapperStyles.articleWrapper}
       `}
     >
       {props.data.map((d: any, key: any) => (
@@ -165,19 +123,7 @@ const SafetyWrapper = (props: any) => (
     <div
       className="t-a-s-img-wrapper t-a-s-client-img-wrapper col"
       css={css`
-        ${flex.col};
-        width: 50%;
-        justify-content: flex-end;
-        @media (max-width: 1024px) {
-          width: 90%;
-          margin: auto;
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-        @media (max-width: 600px) {
-          background-size: 100% 50%;
-          background-position: top;
-        }
+       ${safetyWrapperStyles.imgWrapper}
         ${props.addImgWrapperCss};
         background-repeat: no-repeat;
       `}
@@ -198,34 +144,33 @@ const ClientSafety = () => (
     data={ClienSafetyData}
     imgUrl={ClientSafetyImage}
     addImgWrapperCss={`
-                        align-items: flex-end;
-                        @media(max-width:1024px){
-                          align-items: center;
-                          margin: 0 0 2em;
-                          background: url(${ClientSafetyBackgroundTabletImage});
-                        }`}
-    addImgCss="width:80%; @media(max-width:1024px){width:55%}; @media(max-width:600px){width:80%}"
+      ${clientSafetyStyles.imgWrapper}
+      @media(max-width:1024px){
+       background: url(${ClientSafetyBackgroundTabletImage});
+      }`}
+    addImgCss={clientSafetyStyles.img}
     pageLineTxtContent="Client SAFETY"
-    addLineCss="height:75em;  @media (max-width:1024px){height: 120em;}"
-    addLineHCss="@media(max-width:600px){margin: -2em 0;} "
+    addLineCss={clientSafetyStyles.lineCss}
+    addLineHCss={clientSafetyStyles.lineHCss}
   />
 )
 
 const TherapistSafety = () => (
   <SafetyWrapper
     data={TherapistSafetyData}
-    addTASCss="flex-flow: row-reverse; @media(max-width:1024px){flex-flow:column-reverse;}"
+    addTASCss={therapistSafetyStyles.addWrapperCss}
     imgUrl={TherapistSafetyImage}
-    addImgWrapperCss={`background: url(${TherapistSafetyBackground});
-                  background-repeat: no-repeat;
-                  @media(max-width:1024px){
-                    background: url(${TherapistSafetyBackgroundTablet});
-                    background-repeat: no-repeat;
-                  }`}
-    addImgCss="width:55%; margin: 0 auto; @media(max-width:1024px){width:30%; margin:2em;} @media(max-width:600px){width:50%}"
+    addImgWrapperCss={`
+    background: url(${TherapistSafetyBackground});
+    background-repeat: no-repeat;
+    @media(max-width:1024px){
+      background: url(${TherapistSafetyBackgroundTablet});
+      background-repeat: no-repeat;
+    }`}
+    addImgCss={therapistSafetyStyles.addImgCSs}
     pageLineTxtContent="THERAPIST SAFETY "
-    addLineCss="@media(max-width:1024px){height: 95em;} @media(max-width:600px){ bottom: 6%;}"
-    addLineHCss="@media(max-width:600px){top:-6%}"
+    addLineCss={therapistSafetyStyles.addLineCss}
+    addLineHCss={therapistSafetyStyles.addLineHCss}
   />
 )
 

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import {lineAdjStyles, appStoreAddStyles} from '../styles/componentStyles/about-us'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
@@ -18,25 +19,15 @@ const AboutUsPage = () => (
       <Container>
         <PageLine
           txtContent="THE STORY"
-          addLineCss=" height: 90em;
-                       z-index: 1;
-                       @media (max-width:1024px){height: 128em;}"
-          addHCss="margin: -1em;
-                  background: #fdfaf9;
-                  font-weight: bold;
-                  font-size: .8rem;
-                  @media(max-width:1024px){
-                    font-size: 1.1rem;
-                    top:1%;
-                    margin:-3em 0;
-                  }"
+          addLineCss={lineAdjStyles.line}
+          addHCss={lineAdjStyles.h}
         />
         <TheStory />
         <ExtendBuisnessAdd />
       </Container>
       <Guarantees />
       <Container>
-        <AppStoreAdd addWrapperCss="margin-top:3em; @media(max-width:1024px){margin: 2em auto;}" />
+        <AppStoreAdd addWrapperCss={appStoreAddStyles.wrapper} />
       </Container>
     </Page>
   </IndexLayout>

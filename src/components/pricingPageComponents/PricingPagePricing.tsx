@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Pricing from '../shared/Pricing'
 import { css } from '@emotion/core'
+import { pricingPageStyles, pricingPageLineStyles } from '../../styles/componentStyles/pricing'
 
 import PageLine from '../shared/PageLine'
 
@@ -11,30 +12,16 @@ const PricingPagePricing = (props: any) => (
     PageLineHTxt="THE FINAL PRICES"
     addWrapperCss={css`
       background: url(${PricingPagePricingBackgroundImg});
-      background-repeat: no-repeat;
-      background-position: top right;
-      @media (max-width: 600px) {
-        background: none;
-      }
+      ${pricingPageStyles.wrapperCss}
     `}
-    addOfferCss=" margin: auto;"
-    addLineCss="height:95em; @media (max-width:1024px){height:120em}"
-    addPageLHCss="font-weight: bold;
-                  font-size: .8rem;
-                  width: 7em;
-                  @media(max-width:1024px){
-                    margin: 0;
-                    top: -3%;}"
+    addOfferCss={pricingPageStyles.offerCss}
+    addLineCss={pricingPageStyles.lineCss}
+    addPageLHCss={pricingPageStyles.lineHCss}
   >
     <div
       className="pricing-descr"
       css={css`
-        margin: 5em;
-        width: 50%;
-        @media (max-width: 1024px) {
-          margin: 5em auto 0;
-          width: 90%;
-        }
+        ${pricingPageStyles.pricingDescr}
       `}
     >
       <p
@@ -61,27 +48,18 @@ const PricingPagePricing = (props: any) => (
 
       <PageLine
         txtContent="COMISSIONS"
-        addHCss="background: #FDFAF9;
-                font-weight: bold;
-                font-size: .8rem;
-                width: 7em;
-                @media(max-width:1024px){margin:-1em 0}"
+        addHCss={pricingPageLineStyles.h}
       />
     </div>
     <div
       className="comissions"
       css={css`
-        width: 85%;
-        max-width: 90em;
-        margin: 0 auto 3em;
+        ${pricingPageStyles.comissions}
       `}
     >
       <p
         css={css`
-          color: #96525c;
-          @media (max-width: 1024px) {
-            margin: 4em auto 0;
-          }
+          ${pricingPageStyles.paragraph}
         `}
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

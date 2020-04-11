@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { css } from '@emotion/core'
 import { colors, flex } from '../../styles/variables'
+import { pricingStyles } from '../../styles/componentStyles/shared'
 
 import { MainStyledButton } from '../buttons/MainButtons'
 import PageLine from './PageLine'
@@ -12,42 +13,19 @@ const Offer = (props: any) => (
     className="offer"
     css={css`
       background: url(${OfferBackgroundImg});
-      border-radius: 30px;
-      color: #ffffff;
-      width: 18em;
-      text-align: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      z-index: 5;
-      @media (max-width: 1024px) {
-        font-size: 1.1rem;
-        margin: 0 0.5em;
-      }
+      ${pricingStyles.Offer.offerCard}
       ${props.addOfferCss}
-      @media (max-width: 600px) {
-        margin: 1em auto;
-        max-width: 20em;
-        width: 80%;
-      }
     `}
   >
     <div
       className="minutes col"
       css={css`
-        ${flex.col}
-        border: 4px dashed #f9b19f;
-        border-radius: 50%;
-        background: #e87b68;
-        height: 6em;
-        width: 6em;
-        margin: 2em auto 0;
+        ${pricingStyles.Offer.minutes}
       `}
     >
       <h2
         css={css`
-          margin: 0.5em auto 0;
-          font-size: 3rem;
-          line-height: 38px;
+          ${pricingStyles.Offer.offerH}
         `}
       >
         {props.minutes}
@@ -65,37 +43,23 @@ const Offer = (props: any) => (
     </div>
     <p
       css={css`
-        width: 70%;
-        margin: 2em auto;
+        ${pricingStyles.Offer.offerP}
       `}
     >
       {props.description}
     </p>
-    <MainStyledButton
-      background={colors.brandSecondary}
-      btnTxt="More Info"
-      addCss="height:auto; margin-bottom: 1em; @media (max-width:1024px){width: 80%;
-            font-size: 1.1rem;}"
-    />
+    <MainStyledButton background={colors.brandSecondary} btnTxt="More Info" addCss={pricingStyles.Offer.addMainBtn} />
   </article>
 )
+
+
 
 const Pricing = (props: any) => {
   return (
     <div
       className="pricing-wrapper"
       css={css`
-        width: 85%;
-        max-width: 90em;
-        margin: auto;
-        @media (max-width: 1024px) {
-          width: 95%;
-          margin: auto;
-        }
-        @media (max-width: 600px) {
-          width: 95%;
-          margin: 3em auto 0;
-        }
+        ${pricingStyles.Pricing.wrapper}
         ${props.addWrapperCss}
       `}
     >
@@ -110,13 +74,8 @@ const Pricing = (props: any) => {
       <div
         className="pricing-descr"
         css={css`
-          margin: 5em;
-          width: 50%;
+          ${pricingStyles.Pricing.description}
           ${props.addDescrCss}
-          @media(max-width:1024px) {
-            margin: 5em 3em 2em;
-            width: 70%;
-          }
         `}
       >
         <h2
@@ -142,10 +101,7 @@ const Pricing = (props: any) => {
       <div
         className="offers"
         css={css`
-          @media (max-width: 600px) {
-            flex-flow: column;
-          }
-          ${flex.row}
+          ${pricingStyles.Pricing.offers}
         `}
       >
         <Offer

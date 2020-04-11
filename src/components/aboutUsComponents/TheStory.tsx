@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { css } from '@emotion/core'
-import { flex } from '../../styles/variables'
+import { aboutUsStyles } from '../../styles/componentStyles/about-us'
 
 import AppStoreBtns from '../buttons/AppStoreBtns'
 
@@ -17,53 +17,20 @@ const TheStory = () => (
   <div
     className="story-wrapper row"
     css={css`
-      ${flex.row};
-      width: 80%;
-
-      max-width: 90em;
-      margin: 3em auto 0;
-      justify-content: space-evenly;
-      @media (max-width: 1024px) {
-        ${flex.col}
-        margin: 2em auto 0;
-      }
-      @media (max-width: 600px) {
-        width: 90%;
-        margin: 5em auto 0;
-      }
+      ${aboutUsStyles.storyWrapper}
     `}
   >
     <div
       className="story-descr col"
       css={css`
-        width: 50%;
-        color: #96525c;
-        margin: auto;
-        @media (max-width: 1024px) {
-          font-size: 0.8rem;
-          width: 100%;
-          margin: 2em auto 0;
-        }
-        @media (max-width: 600px) {
-          font-size: 1rem;
-        }
+        ${aboutUsStyles.storyDescr}
       `}
     >
       {storyPData.map((story: string, key: number) => (
         <p
           key={key}
           css={css`
-            margin: 0.5em 0;
-            line-height: 30px;
-            @media (max-width: 1024px) {
-              font-size: 1rem;
-              line-height: 25px;
-            }
-            @media (max-width: 600px) {
-              font-size: 1rem;
-              line-height: normal;
-              margin: 1em 0;
-            }
+            ${aboutUsStyles.paragraph}
           `}
         >
           {story}
@@ -73,21 +40,8 @@ const TheStory = () => (
     <div
       className="story-pics col"
       css={css`
-        ${flex.col};
         background: url(${StoryPicsBackground});
-        width: 40%;
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: 100% 0;
-        align-items: flex-end;
-        @media (max-width: 1024px) {
-          flex-flow: row-reverse;
-          width: 100%;
-        }
-        @media (max-width: 600px) {
-          flex-flow: column;
-          background: none;
-        }
+        ${aboutUsStyles.storyPics}
       `}
     >
       <img
@@ -95,34 +49,12 @@ const TheStory = () => (
         alt=""
         className="story-phone"
         css={css`
-          margin: 2em 0 0 -3em;
-          @media (max-width: 1024px) {
-            width: 70%;
-            max-width: 25em;
-          }
-          @media (max-width: 600px) {
-            margin: 0;
-            width: 100%;
-          }
+          ${aboutUsStyles.storyPicsImg}
         `}
       />
       <AppStoreBtns
-        addStoreBtnWrapperCss="justify-content: center;
-         @media (max-width:1024px){
-                 flex-flow: column;
-                 width: 60%;
-                 margin: auto -5em;
-                }
-                @media (max-width:600px){
-                  width: 100%;
-                  margin: auto;
-                }"
-        addCssBtn="@media(max-width:1024px){
-                  width:100%;
-                  margin: -4em 0;
-                  width: 50%;
-                  margin: -3em 3em;
-                }"
+        addStoreBtnWrapperCss={`${aboutUsStyles.appStoreBtnsAdj.btnWrapper}`}
+        addCssBtn={`${aboutUsStyles.appStoreBtnsAdj.btn}`}
       />
     </div>
   </div>

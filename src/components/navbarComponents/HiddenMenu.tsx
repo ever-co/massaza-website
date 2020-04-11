@@ -2,22 +2,11 @@ import * as React from 'react'
 import { css } from '@emotion/core'
 import NavLinksList from './NavLinks'
 import { MainStyledButton } from '../buttons/MainButtons'
-import { colors, flex } from '../../styles/variables'
+import { flex } from '../../styles/variables'
+import {hiddenMenuStyles, hiddenMenuButtonStyles} from '../../styles/componentStyles/header'
 
 const StyledHiddenMenu = css`
-  text-align: center;
-  position: absolute;
-  top: 100%;
-  height: 100vh;
-  background: #fff;
-  transition: all 1s;
-  z-index: 100;
-  width:16em;
-  }
-  @media (max-width:600px){
-    width:150%;
-
-  }
+${hiddenMenuStyles.styledHiddenMenu}
 `
 
 const HiddenMenu = (props: any) => {
@@ -27,18 +16,13 @@ const HiddenMenu = (props: any) => {
     <div
       id="hidden-menu"
       css={css`
-        ${StyledHiddenMenu} ${!oppened
+        ${StyledHiddenMenu} 
+        ${!oppened
           ? css`
-              transform: translate(-600px, 0);
-              @media (max-width: 600px) {
-                transform: translate(25%, 0);
-              }
+             ${hiddenMenuStyles.oppened}
             `
           : css`
-              transform: translate(0, 0);
-              @media (max-width: 600px) {
-                transform: translate(-69%, 0);
-              }
+             ${hiddenMenuStyles.closed}
             `}
       `}
     >
@@ -50,21 +34,11 @@ const HiddenMenu = (props: any) => {
       >
         <MainStyledButton
           btnTxt="Create account"
-          addCss="
-            height: auto;
-            max-width:15em;
-            width: 90%;
-            margin: 0 auto;"
-          background="#96525c"
+          addCss={hiddenMenuButtonStyles.btnF}
         />
         <MainStyledButton
           btnTxt="Become therapist "
-          addCss="
-        height: auto;
-        max-width:15em;
-        width: 90%;
-        margin: 1em auto;"
-          background={colors.brandSecondary}
+          addCss={hiddenMenuButtonStyles.btnS}
         />
       </div>
     </div>

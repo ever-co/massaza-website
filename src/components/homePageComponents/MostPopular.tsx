@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { css } from '@emotion/core'
-import { flex, colors } from '../../styles/variables'
+import {  colors } from '../../styles/variables'
+import { massageCardStyles, mostPopularStyles } from '../../styles/componentStyles/home'
 import { MainStyledButton } from '../buttons/MainButtons'
 import PageLine from '../shared/PageLine'
 
@@ -52,47 +53,29 @@ const MassageCard = (props: any) => {
   return (
     <article
       className="massage-card col"
-      css={css`${flex.col}
-    background: url('${MassageCardBackgroundImage}');
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 25%;
-    min-height: 28em;
-    margin: 2em;
-    align-items: center;
-    @media (max-width:1024px){
-      width: 40%;
-      min-height: 28em;
-      margin: 1em 1.8em 1em;
-    }
-    @media (max-width:600px){
-      width: 80%;
-    }
+      css={css`
+      background: url('${MassageCardBackgroundImage}');
+      ${massageCardStyles.massageCard}
     `}
     >
       <img
         src={props.MassageTypeImg}
         alt="Swedish Massage"
         css={css`
-          width: 11em;
-          margin: 2em auto 2em;
+          ${massageCardStyles.img}
         `}
       />
       <h3
         className="massage-card-title"
         css={css`
-          margin: 1em;
-          color: #e87b68;
+          ${massageCardStyles.h3}
         `}
       >
         {props.MassageCardTitle}
       </h3>
       <p
         css={css`
-          width: 75%;
-          text-align: center;
-          max-height: 4em;
-          line-height: 20px;
+          ${massageCardStyles.paragraph}
         `}
       >
         {props.MassageCardDescr}
@@ -108,20 +91,10 @@ const MostPopular = (props: any) => {
       className="types-wrapper"
       css={css`
         background: url(${MassageTypesWrapperBackground});
-        width: 80%;
-        max-width: 80em;
-        margin: 2em auto 0;
-        background-position: center;
-        background-repeat: repeat-y;
-        background-size: 100%;
+        ${mostPopularStyles.wrapper}
         @media (max-width: 1024px) {
           background: url(${MassageTypesWrapperTabletBackground}) center center no-repeat;
-          background-repeat: repeat-y;
-          width: 95%;
-        }
-        @media (max-width: 600px) {
-          margin: 5em 0 0;
-          background: none;
+          ${mostPopularStyles.wrapperTablet}
         }
       `}
     >
@@ -132,25 +105,13 @@ const MostPopular = (props: any) => {
       />
 
       <h2
-        css={css`
-          margin: 0 0 0 2em;
-          font-size: 3rem;
-          color: ${colors.primaryTitleColor};
-          @media (max-width: 600px) {
-            text-align: center;
-            margin: 0;
-          }
-        `}
+        css={css`${mostPopularStyles.h2}`}
       >
         Most popular
       </h2>
       <div
         className="massage-cards-container row"
-        css={css`
-          ${flex.row};
-          flex-flow: wrap;
-          justify-content: center;
-        `}
+        css={css`${mostPopularStyles.massageCardsContainer}`}
       >
         {MasageTypeData.map((cardData: any, key: number) => {
           return (

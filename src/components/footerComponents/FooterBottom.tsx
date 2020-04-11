@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
+import {footerBottomStyles} from '../../styles/componentStyles/footer'
+
 import MasazzaMiniLogo from '../../../assets/icons/logos/massaza-footer-logo.png'
 
 const FooterMenus = (props: any) => {
@@ -9,31 +11,19 @@ const FooterMenus = (props: any) => {
   return (
     <div
       css={css`
-        margin: 0.5em;
-        @media (max-width: 800px) {
-          font-size: 1rem;
-          margin: 0 auto;
-        }
-        @media (max-width: 600px) {
-          display: none;
-        }
+       ${footerBottomStyles.footerMenusContainer}
       `}
     >
       <h5
         css={css`
-          font-size: 1.2rem;
-          color: #f9b19f;
-          @media (max-width: 800px) {
-            font-size: 1.2rem;
-          }
+          ${footerBottomStyles.footerMenusH}
         `}
       >
         {menuTitle}
       </h5>
       <ul
         css={css`
-          padding: 0;
-          list-style-type: none;
+        ${footerBottomStyles.footerMenusUl}
         `}
       >
         {footerMenuListItems.map((li: String, key: number) => (
@@ -61,17 +51,7 @@ const FooterBottom = () => (
   >
     <div
       css={css`
-        justify-content: space-around;
-        color: #f9b19f;
-        display: flex;
-        width: 90%;
-        margin: auto;
-        max-width: 90em;
-        @media (max-width: 800px) {
-          flex-flow: wrap;
-          width: 100%;
-          justify-content: right;
-        }
+       ${footerBottomStyles.footerBottomContainer}
       `}
     >
       <div>
