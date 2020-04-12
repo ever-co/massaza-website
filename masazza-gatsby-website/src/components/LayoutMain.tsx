@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+import '../../i18n/initI18n';
 
 const StyledLayoutMain = styled.main`
   display: flex;

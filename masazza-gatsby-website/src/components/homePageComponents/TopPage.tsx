@@ -9,7 +9,12 @@ import PageLine from '../shared/PageLine'
 import TopBackgroundImg from '../../../assets/images/home/backgrounds/top-background.png'
 import TopBackgroundMobileImg from '../../../assets/images/home/backgrounds/top-background-mobile.png'
 import Container from '../Container'
+
+import { useTranslation } from 'react-i18next'
+
 const TopContainer = () => {
+  const { t } = useTranslation()
+  console.log()
   return (
     <Container>
       <div
@@ -19,16 +24,13 @@ const TopContainer = () => {
           @media (max-width: 600px) {
             background: url(${TopBackgroundMobileImg});
             ${topPageStyles.topContainerMobile}
-          }`}
+          }
+        `}
       >
-        <PageLine
-          txtContent="Massage. Home or Saloons"
-          addLineCss={pageLine.topLine}
-          addHCss={pageLine.topLineH}
-        />
+        <PageLine txtContent={t('homePage.topPage.pageLine')} addLineCss={pageLine.topLine} addHCss={pageLine.topLineH} />
         <header
           css={css`
-           ${topPageStyles.header}
+            ${topPageStyles.header}
           `}
         >
           <h1
@@ -36,26 +38,21 @@ const TopContainer = () => {
               ${topPageStyles.h1}
             `}
           >
-            Find a Massage Therapist close to you!
+            {t('homePage.topPage.h')}
           </h1>
           <p
             css={css`
-             ${topPageStyles.paragraph}
+              ${topPageStyles.paragraph}
             `}
           >
-            Select between different saloons or therapists and select the right one you need.
+            {t('homePage.topPage.p1')}
+
             <br />
-            It’s easy Just download the App and start searching!
+            {t('homePage.topPage.p2')}
           </p>
-          <AppStoreBtns
-          addCssBtn={topPageAppStoreBtnsStyles.btnS}
-            addStoreBtnWrapperCss={topPageAppStoreBtnsStyles.btnWrapper}
-          />
+          <AppStoreBtns addCssBtn={topPageAppStoreBtnsStyles.btnS} addStoreBtnWrapperCss={topPageAppStoreBtnsStyles.btnWrapper} />
         </header>
-        <AppStoreBtns
-          addCssBtn={topPageAppStoreBtnsStyles.btnF}
-          addStoreBtnWrapperCss={topPageAppStoreBtnsStyles.btnWrapper}
-        />
+        <AppStoreBtns addCssBtn={topPageAppStoreBtnsStyles.btnF} addStoreBtnWrapperCss={topPageAppStoreBtnsStyles.btnWrapper} />
       </div>
     </Container>
   )
