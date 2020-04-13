@@ -5,12 +5,16 @@ import { MainStyledButton } from '../buttons/MainButtons'
 import { flex } from '../../styles/variables'
 import {hiddenMenuStyles, hiddenMenuButtonStyles} from '../../styles/componentStyles/header'
 
+import { useTranslation } from 'react-i18next'
+
+
 const StyledHiddenMenu = css`
 ${hiddenMenuStyles.styledHiddenMenu}
 `
 
 const HiddenMenu = (props: any) => {
   let oppened = props.oppened
+  const { t } = useTranslation()
 
   return (
     <div
@@ -26,18 +30,18 @@ const HiddenMenu = (props: any) => {
             `}
       `}
     >
-      <NavLinksList navLinks={props.navLinks} flexFlow="column" mediaQueryParam="block" />
+      <NavLinksList  flexFlow="column" mediaQueryParam="block" />
       <div
         css={css`
           ${flex.col}
         `}
       >
         <MainStyledButton
-          btnTxt="Create account"
+          btnTxt={t("navbar.createAccount")}
           addCss={hiddenMenuButtonStyles.btnF}
         />
         <MainStyledButton
-          btnTxt="Become therapist "
+          btnTxt={t("navbar.becomeTherapist")}
           addCss={hiddenMenuButtonStyles.btnS}
         />
       </div>

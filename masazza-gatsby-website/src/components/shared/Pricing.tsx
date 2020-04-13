@@ -8,53 +8,56 @@ import PageLine from './PageLine'
 
 import OfferBackgroundImg from '../../../assets/images/shared/prices-card-background.png'
 
-const Offer = (props: any) => (
-  <article
-    className="offer"
-    css={css`
-      background: url(${OfferBackgroundImg});
-      ${pricingStyles.Offer.offerCard}
-      ${props.addOfferCss}
-    `}
-  >
-    <div
-      className="minutes col"
+import { useTranslation } from 'react-i18next'
+const dict = require('../../../i18n/dictionary')
+import {OfferTypes} from '../../data/data'
+
+const Offer = (props: any) => {
+  const { t } = useTranslation()
+
+  return (
+    <article
+      className="offer"
       css={css`
-        ${pricingStyles.Offer.minutes}
+        background: url(${OfferBackgroundImg});
+        ${pricingStyles.Offer.offerCard}
+        ${props.addOfferCss}
       `}
     >
-      <h2
+      <div
+        className="minutes col"
+        css={pricingStyles.Offer.minutes}
+      >
+        <h2
+          css={pricingStyles.Offer.offerH}
+        >
+          {props.minutes}
+        </h2>
+        <h5>{t('homePage.pricing.min')}</h5>
+      </div>
+      <div
+        className="price col"
         css={css`
-          ${pricingStyles.Offer.offerH}
+          ${flex.col}
         `}
       >
-        {props.minutes}
-      </h2>
-      <h5>min</h5>
-    </div>
-    <div
-      className="price col"
-      css={css`
-        ${flex.col}
-      `}
-    >
-      <h5>FROM</h5>
-      <h2>${props.dollars}</h2>
-    </div>
-    <p
-      css={css`
-        ${pricingStyles.Offer.offerP}
-      `}
-    >
-      {props.description}
-    </p>
-    <MainStyledButton background={colors.brandSecondary} btnTxt="More Info" addCss={pricingStyles.Offer.addMainBtn} />
-  </article>
-)
-
-
+        <h5>{t('homePage.pricing.pFrom')}</h5>
+        <h2>${props.dollars}</h2>
+      </div>
+      <p
+        css={pricingStyles.Offer.offerP}
+      >
+        {props.description}
+      </p>
+      <MainStyledButton   addCss={pricingStyles.Offer.addMainBtn} btnTxt={t("pricing.offerBtn")}/>
+    </article>
+  )
+}
 
 const Pricing = (props: any) => {
+  const { t } = useTranslation()
+  let currentLang = useTranslation().i18n.languages[0]
+  const offersData = dict.default[`${currentLang}`].translation.pricing.offers
   return (
     <div
       className="pricing-wrapper"
@@ -84,17 +87,14 @@ const Pricing = (props: any) => {
             color: ${colors.primaryTitleColor};
           `}
         >
-          The pricing
+          {t('homePage.pricing.h2')}
         </h2>
         <p
           css={css`
-            color: #96525c;
+            color: ${colors.brand};
           `}
         >
-          Text about how we create and generate prices. <br />
-          Boxes include dinamice changed prices according day. <br />
-          Prices are subject to change without notice and do not reflect variations in actual amounts to be paid due to region, time of
-          appointment, application of surge pricing, tips, discounts, or other factors. Actual charges may vary.
+          {t('homePage.pricing.description')}
         </p>
       </div>
 
@@ -104,24 +104,9 @@ const Pricing = (props: any) => {
           ${pricingStyles.Pricing.offers}
         `}
       >
-        <Offer
-          minutes={60}
-          dollars={59}
-          description="Enjoy one hour of full-body relaxation, perfect for massage beginners and experts alike."
-          addOfferCss={props.addOfferCss}
-        />
-        <Offer
-          minutes={90}
-          dollars={100}
-          description="Enjoy one hour of full-body relaxation, perfect for massage beginners and experts alike."
-          addOfferCss={props.addOfferCss}
-        />
-        <Offer
-          minutes={120}
-          dollars={140}
-          description="Enjoy one hour of full-body relaxation, perfect for massage beginners and experts alike."
-          addOfferCss={props.addOfferCss}
-        />
+        {offersData.map((offer:OfferTypes, i:number) => (
+          <Offer key={i} minutes={offer.minutes} dollars= {offer.dollars} description={offer.description} addOfferCss={props.addOfferCss}/>
+        ))}
       </div>
       {props.children}
     </div>

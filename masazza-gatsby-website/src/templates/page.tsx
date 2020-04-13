@@ -9,10 +9,6 @@ interface PageTemplateProps {
   data: {
     site: {
       siteMetadata: {
-        navLinks: Array<String>
-        isOppened: boolean
-        createAccountBtn: string
-        becomeTherapistBtn: string
         description: string
         author: {
           name: string
@@ -48,10 +44,6 @@ export const query = graphql`
   query PageTemplateQuery($slug: String!) {
     site {
       siteMetadata {
-        navLinks
-        createAccountBtn
-        becomeTherapistBtn
-        isOppened
         description
         author {
           name

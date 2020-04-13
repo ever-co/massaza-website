@@ -2,6 +2,7 @@
 
 export const colors = {
   brand: '#96525C',
+  brandLight: '#97515d',
   brandSecondary: '#E87B68',
   mainBackground: '#fdfaf9',
   primaryTitleColor: '#dec98f',

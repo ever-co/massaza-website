@@ -13,10 +13,6 @@ import LayoutMain from '../components/LayoutMain'
 interface StaticQueryProps {
   site: {
     siteMetadata: {
-      navLinks: Array<string>
-      createAccountBtn: string
-      becomeTherapistBtn: string
-      isOppened: boolean
       description: string
       keywords: string
     }
@@ -29,10 +25,6 @@ const IndexLayout: React.FC = ({ children }) => (
       query IndexLayoutQuery {
         site {
           siteMetadata {
-            navLinks
-            isOppened
-            createAccountBtn
-            becomeTherapistBtn
             description
           }
         }
@@ -48,10 +40,6 @@ const IndexLayout: React.FC = ({ children }) => (
           ]}
         />
         <Header
-          navLinks={data.site.siteMetadata.navLinks}
-          createAccountBtn={data.site.siteMetadata.createAccountBtn}
-          becomeTherapistBtn={data.site.siteMetadata.becomeTherapistBtn}
-          isOppened={data.site.siteMetadata.isOppened}
         />
         <LayoutMain>{children}</LayoutMain>
         <Footer />

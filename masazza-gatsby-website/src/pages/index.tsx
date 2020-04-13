@@ -8,7 +8,6 @@ import { AppStoreAdd, ExtendBuisnessAdd } from '../components/shared/Advertiseme
 import HomePricing from '../components/homePageComponents/HomePricing'
 import MostPopular from '../components/homePageComponents/MostPopular'
 
-import PricingHomeBackgroundImg from '../../assets/images/home/prices-main-background.png'
 
 const IndexPage = () => (
   <IndexLayout>
@@ -17,7 +16,7 @@ const IndexPage = () => (
       <Container>
         <HowItWorks />
         <AppStoreAdd />
-        <HomePricing imgUrl={PricingHomeBackgroundImg} />
+        <HomePricing />
         <ExtendBuisnessAdd />
         <MostPopular />
       </Container>

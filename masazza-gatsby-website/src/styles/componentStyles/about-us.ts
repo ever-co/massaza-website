@@ -1,7 +1,13 @@
-import { flex } from '../variables'
+import {css} from '@emotion/core'
+import { flex, colors } from '../variables'
+
+
+import StoryPicsBackground from '../../../assets/images/about-us/story-pics-background.png'
+
+
 
 export const aboutUsStyles = {
-  storyWrapper: `
+  storyWrapper: css`
     ${flex.row};
       width: 80%;
 
@@ -16,10 +22,10 @@ export const aboutUsStyles = {
         width: 90%;
         margin: 5em auto 0;
       }`,
-  storyDescr: `
+  storyDescr: css`
     ${flex.col}
     width: 50%;
-    color: #96525c;
+    color: ${colors.brand};
     margin: auto;
     @media (max-width: 1024px) {
       font-size: 0.8rem;
@@ -29,7 +35,7 @@ export const aboutUsStyles = {
     @media (max-width: 600px) {
       font-size: 1rem;
     }`,
-  paragraph: `
+  paragraph: css`
     margin: 0.5em 0;
     line-height: 30px;
     @media (max-width: 1024px) {
@@ -41,7 +47,8 @@ export const aboutUsStyles = {
       line-height: normal;
       margin: 1em 0;
     }`,
-  storyPics: `
+  storyPics: css`
+  background: url(${StoryPicsBackground});
     ${flex.col};
     width: 40%;
     background-repeat: no-repeat;
@@ -56,7 +63,7 @@ export const aboutUsStyles = {
       flex-flow: column;
       background: none;
     }`,
-  storyPicsImg: `
+  storyPicsImg:css`
     margin: 2em 0 0 -3em;
     @media (max-width: 1024px) {
       width: 70%;

@@ -12,13 +12,17 @@ import { ExtendBuisnessAdd, AppStoreAdd } from '../components/shared/Advertiseme
 import Guarantees from '../components/shared/Guarantees'
 import PageLine from '../components/shared/PageLine'
 
-const AboutUsPage = () => (
+import {useTranslation} from 'react-i18next'
+
+const AboutUsPage = () => {
+  const {t} = useTranslation();
+  return(
   <IndexLayout>
     <Page>
       <AboutUsHeader headerBackground={AboutUsHeaderImg} />
       <Container>
         <PageLine
-          txtContent="THE STORY"
+          txtContent={t("aboutUs.theStory.pageLineH")}s
           addLineCss={lineAdjStyles.line}
           addHCss={lineAdjStyles.h}
         />
@@ -31,6 +35,6 @@ const AboutUsPage = () => (
       </Container>
     </Page>
   </IndexLayout>
-)
+)}
 
 export default AboutUsPage

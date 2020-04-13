@@ -1,16 +1,18 @@
-import { flex } from '../variables'
+import { css } from '@emotion/core'
+import { flex,colors } from '../variables'
 
 export const safetyArticleStyles = {
-  article: ` 
-    color: #97515d;
+  article: css`
+    color: ${colors.brandLight};
     margin: 1em auto;
     ${flex.row};
     align-items: center;
     @media (max-width: 600px) {
       flex-flow: column;
       align-items: flex-start;
-    }`,
-  num: `
+    }
+  `,
+  num: css`
     border: 2px solid #f7d4cd;
     border-radius: 50%;
     height: fit-content;
@@ -21,7 +23,11 @@ export const safetyArticleStyles = {
     width: 1em;
     @media (max-width: 600px) {
       margin: 0 0 1em;
-    }`
+    }
+  `,
+  p: css`
+    font-weight: 300;
+  `
 }
 
 export const safetyWrapperStyles = {
@@ -37,11 +43,13 @@ export const safetyWrapperStyles = {
     @media (max-width: 600px) {
       width: 95%;
     }`,
-  articleWrapper: ` width: 45%;
+  articleWrapper: css`
+    width: 45%;
     @media (max-width: 1024px) {
       width: 90%;
       margin: auto;
-    }`,
+    }
+  `,
   imgWrapper: `
     ${flex.col};
     width: 50%;
@@ -106,16 +114,16 @@ export const therapistSafetyStyles = {
     @media(max-width:600px){
          bottom: 6%;
     }`,
-    addLineHCss: `
+  addLineHCss: `
     @media(max-width:600px){
         top:-6%;
     }`
 }
 
 // SafetyWrapper Page line styles
-export const safetyWrapperPageLineStyles={
-  line:`height: 65em`,
-  h:`
+export const safetyWrapperPageLineStyles = {
+  line: `height: 65em;`,
+  h: `
   background: #fdfaf9;
   z-index: 5;
   height: fit-content;

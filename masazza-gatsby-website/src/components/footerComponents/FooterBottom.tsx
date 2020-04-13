@@ -1,31 +1,28 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import {footerBottomStyles} from '../../styles/componentStyles/footer'
+import LanguageSwitch from '../LanguageSwitch'
+import { footerBottomStyles } from '../../styles/componentStyles/footer'
 
 import MasazzaMiniLogo from '../../../assets/icons/logos/massaza-footer-logo.png'
+
+import { useTranslation } from 'react-i18next'
+
+const dict = require('../../../i18n/dictionary')
+
+const StyledUl = styled.ul`
+  list-style-type: none;
+`
+
 
 const FooterMenus = (props: any) => {
   let menuTitle = Object.keys(props.menuObj)[0]
   let footerMenuListItems: any = Object.values(props.menuObj)[0]
   return (
-    <div
-      css={css`
-       ${footerBottomStyles.footerMenusContainer}
-      `}
-    >
-      <h5
-        css={css`
-          ${footerBottomStyles.footerMenusH}
-        `}
-      >
-        {menuTitle}
-      </h5>
-      <ul
-        css={css`
-        ${footerBottomStyles.footerMenusUl}
-        `}
-      >
+    <div css={footerBottomStyles.footerMenusContainer}>
+      <h5 css={footerBottomStyles.footerMenusH}>{menuTitle}</h5>
+      <ul css={footerBottomStyles.footerMenusUl}>
         {footerMenuListItems.map((li: String, key: number) => (
           <li key={key}>
             <Link
@@ -43,58 +40,40 @@ const FooterMenus = (props: any) => {
   )
 }
 
-const FooterBottom = () => (
-  <div
-    css={css`
-      background: #4a3337;
-    `}
-  >
+const FooterBottom = () => {
+  const { t } = useTranslation()
+  let currentLang = useTranslation().i18n.languages[0]
+  const footerMenuData = dict.default[`${currentLang}`].translation.footer.footerMenus
+  return (
     <div
       css={css`
-       ${footerBottomStyles.footerBottomContainer}
+        background: #4a3337;
       `}
     >
-      <div>
-        <img
-          src={MasazzaMiniLogo}
-          alt="massaza"
-          css={css`
-            margin: 1em 2em 0;
-          `}
-        />
-        <ul
-          css={css`
-            list-style-type: none;
-          `}
-        >
-          <li>Call us</li>
-          <li>+359 879 000 000</li>
-        </ul>
-        <ul
-          css={css`
-            list-style-type: none;
-          `}
-        >
-          <li>Contact us</li>
-          <li>Hello@massaza.com</li>
-        </ul>
-      </div>
-
-      <FooterMenus menuObj={{ Lifestyle: ['Pricing', 'Type of massage', 'Partner Saloons', 'Therapists'] }} />
-      <FooterMenus menuObj={{ 'About us': ['Help', 'Trust & Safety', 'Who are we', 'Advertisement'] }} />
-      <FooterMenus menuObj={{ Legals: ['Privacy', 'Terms of use'] }} />
-
-      <div css={css`flex.col`}>
-        <h5
-          css={css`
-            color: #f9b19f;
-          `}
-        >
-          English
-        </h5>
+      <div css={footerBottomStyles.footerBottomContainer}>
+        <div>
+          <img
+            src={MasazzaMiniLogo}
+            alt="massaza"
+            css={css`
+              margin: 1em 2em 0;
+            `}
+          />
+          <StyledUl>
+            <li>{t('footer.callUs')}</li>
+            <li>+359 879 000 000</li>
+          </StyledUl>
+          <StyledUl>
+            <li>{t('footer.contactUs')}</li>
+            <li>Hello@massaza.com</li>
+          </StyledUl>
+        </div>
+        {footerMenuData.map((menu, i) => (
+          <FooterMenus key={menu.title + i.toString()} menuObj={menu} />
+        ))}
+        <LanguageSwitch />
       </div>
     </div>
-  </div>
-)
-
+  )
+}
 export default FooterBottom

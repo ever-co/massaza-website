@@ -1,3 +1,4 @@
+import { css } from '@emotion/core'
 import { heights, colors } from '../variables'
 import { transparentize } from 'polished'
 
@@ -18,6 +19,7 @@ export const headerStyles = {
     flex-direction: row;
     align-items: center;
     height: 100%;
+    max-width:90em;
     display: flex;
     justify-content: space-between;`,
   navBtnsContainer: `
@@ -27,10 +29,11 @@ export const headerStyles = {
     padding-left: 1rem;
     justify-content: flex-end;
     width: fit-content;
+    border: none;
     @media screen and (max-width: 600px) {
       display: none;
     }`,
-  headerContainer: `
+  headerContainer: css`
     display: flex;
     height: 100%;
     align-items: center;
@@ -39,7 +42,18 @@ export const headerStyles = {
       flex-flow: row-reverse;
       width: 100%;
       justify-content: space-between;
-    }`
+    }
+  `,
+  logoLink: css`
+    width: 10em;
+    border-right: 1px solid #e8dbdb;
+    margin-left: 1em;
+    @media(max-width:1110px) {
+      width: 11em;
+      padding: 0;
+    }
+  `,
+  img: css`max-width: 88%;`
 }
 
 // Navlink styles
@@ -49,7 +63,7 @@ export const navLinkStyles = {
     font-weight: 600;
     text-transform: uppercase;
     margin: 0 1rem;
-    color: #96525c;
+    color: ${colors.brand};
     font-weight: 600;
     text-transform: uppercase;
     margin: 0 1rem;
@@ -68,6 +82,9 @@ export const navLinkStyles = {
       margin-left: 5px;
       margin-top: -5px;
       position: relative;
+    }
+    @media(max-width:1350px){
+      font-size: .8rem;
     }`,
   navlinksUl: `
     display: flex;
@@ -166,12 +183,20 @@ export const hiddenMenuButtonStyles = {
   height: auto;
   max-width:15em;
   width: 90%;
-  margin: 0 auto;"
-  background="#96525c"`,
+  margin: 0 auto;
+  background:${colors.brand};
+  display:none;
+  @media (max-width:600px){
+    display:block;
+  }`,
   btnS: `
   height: auto;
   max-width:15em;
   width: 90%;
   margin: 1em auto;
-  background=${colors.brandSecondary};`
+  display:none;
+  background:${colors.brandSecondary};
+  @media (max-width:600px){
+    display:block;
+  }`
 }

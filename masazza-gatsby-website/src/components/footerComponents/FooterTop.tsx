@@ -7,34 +7,19 @@ import TopBackgroundImgMobile from '../../../assets/images/global/footer-top-mob
 
 import AppStoreBtns from '../buttons/AppStoreBtns'
 
-const FooterTop = () => (
-  <div
-    css={css`
-      background: url(${TopBackgroundImg});
-      ${footerTopStyles.footerTopContainer}
-      @media (max-width: 600px) {
-        background: url(${TopBackgroundImgMobile});
-        ${footerTopStyles.footerTopContainerMobileQuery}
-      }
-    `}
-  >
-    <div
-      css={css`
-        ${footerTopStyles.footerTopTxtContainer}
-      `}
-    >
-      <h1
-        css={css`
-          ${footerTopStyles.footerTopH}
-        `}
-      >
-        We’re helping people <br />
-        Find the best Therapist <br />
-        in the city.
-      </h1>
-      <AppStoreBtns addStoreBtnWrapperCss={footerTopAppStoreBtnStyles.wrapper} addCssBtn={footerTopAppStoreBtnStyles.btn} />
+import { useTranslation } from 'react-i18next'
+
+const FooterTop = () => {
+  const { t } = useTranslation()
+
+  return (
+    <div css={footerTopStyles.footerTopContainer}>
+      <div css={footerTopStyles.footerTopTxtContainer}>
+        <h1 css={footerTopStyles.footerTopH}>{t('footer.topTitle')}</h1>
+        <AppStoreBtns addStoreBtnWrapperCss={footerTopAppStoreBtnStyles.wrapper} addCssBtn={footerTopAppStoreBtnStyles.btn} />
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default FooterTop

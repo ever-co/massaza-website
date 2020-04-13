@@ -9,6 +9,9 @@ import {
 
 import Container from '../Container'
 
+import { useTranslation } from 'react-i18next'
+
+
 const TopPictureHeader = (props: any) => {
   return (
     <header
@@ -55,36 +58,46 @@ const TopPictureHeader = (props: any) => {
   )
 }
 
-const AboutUsHeader = (props: any) => (
+const AboutUsHeader = (props: any) => {
+const {t}= useTranslation()
+
+return(
   <TopPictureHeader
-    topPicHeaderTxt=" We’re helping people "
-    bottomPicHeaderTxt="Find the best massage saloon and theapists in the city."
+    topPicHeaderTxt={t("aboutUs.topContainer.topPicHeaderTxt")}
+    bottomPicHeaderTxt={t("aboutUs.topContainer.bottomPicHeaderTxt")}
     addHCss={topPictureHeaderAboutUsStyles.addH}
     addHeaderBackground={props.headerBackground}
   />
-)
+)}
 
-const TrustAndSafetyHeader = (props: any) => (
+const TrustAndSafetyHeader = (props: any) => {
+  const {t} = useTranslation()
+
+  return(
   <TopPictureHeader
-    topPicHeaderTxt=" Your Trust and Safety is out priority"
-    headerParagraph="Every month, therapists on the Soothe network complete thousands of massages across 70+ cities and four countries. We’re proud to be the world’s leading on-demand massage platform that lets you choose the time and place of your massage, and even the preferred gender of your therapist. We take extra steps to ensure that every Soothe massage is a safe and relaxing experience."
+    topPicHeaderTxt= {t("trustAndSafety.topContainer.topPicHeaderTxt")}
+    headerParagraph={t("trustAndSafety.topContainer.headerParagraph")}
     addHTxtContainerCss={topPictureHeaderTrustAndSafety.txtContainer}
     addHCss={topPictureHeaderTrustAndSafety.addH}
     addHeaderParagraphCss={topPictureHeaderTrustAndSafety.addParagraph}
     addHeaderBackground={props.headerBackground}
   />
-)
+)}
 
-const PricingHeader = (props: any) => (
+const PricingHeader = (props: any) => {
+  
+const {t}= useTranslation()
+  
+  return(
   <TopPictureHeader
-    topPicHeaderTxt="Pricing in your location"
-    headerParagraph="There are no hidden costs or additional fees. Choose your preferred treatment type below"
+    topPicHeaderTxt={t("pricing.topContainer.topPicHeaderTxt")}
+    headerParagraph={t("pricing.topContainer.headerParagraph")}
     addHContainerCss={topPictureHeaderPricing.addHContainer}
     addHTxtContainerCss={topPictureHeaderPricing.addTxtContainer}
     addHCss={topPictureHeaderPricing.addH}
     addHeaderParagraphCss={topPictureHeaderPricing.addParagraph}
     addHeaderBackground={props.addHeaderBackground}
   />
-)
+)}
 
 export { AboutUsHeader, TrustAndSafetyHeader, PricingHeader }

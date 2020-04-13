@@ -3,10 +3,10 @@ import { css } from '@emotion/core'
 import {miniMenuStyles} from '../../styles/componentStyles/header'
 import HiddenMenu from './HiddenMenu'
 
-const MiniMenuBtn = (props: any) => {
-  let [oppened, toggleClass] = React.useState(props.isOppened)
-
+const MiniMenuBtn = () => {
+  let [oppened, toggleClass] = React.useState(false)
   return (
+    
     <div>
       <svg
         id="mini-menu"
@@ -36,7 +36,7 @@ const MiniMenuBtn = (props: any) => {
           <rect id="first-line" data-name="Rectangle Copy 7" width="25" height="3" rx="1.5" fill="#f9b19f" />
         </g>
       </svg>
-      <HiddenMenu oppened={oppened} navLinks={props.navLinks} flexFlow="row" />
+      <HiddenMenu oppened={oppened} flexFlow="row" />
     </div>
   )
 }

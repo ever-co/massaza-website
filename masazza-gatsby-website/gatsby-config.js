@@ -2,14 +2,9 @@
 
 module.exports = {
   siteMetadata: {
-    navLinks: ['about us', 'trust and safety', 'pricing', 'partner saloons', 'therapists'],
-    createAccountBtn: 'Create account',
-    becomeTherapistBtn: 'Become Therapist',
-    isOppened: false,
-    // MassageTypeData: './src/content/MassageCardsData.json',
-    // title: 'gatsby-starter-typescript-plus',
+    title: 'masazza-website',
     description: '',
-    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
+    keywords: 'gatsbyjs, gatsby, javascript, massages, therapists',
     siteUrl: 'https://massaza.co',
     author: {
       name: 'Dimana Tsvetkova / ever.co',

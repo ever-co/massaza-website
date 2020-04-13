@@ -1,9 +1,8 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { css } from '@emotion/core'
 import { Link } from 'gatsby'
-import {  navBreakpoints, colors } from '../styles/variables'
-import {headerStyles} from '../styles/componentStyles/header'
+import { navBreakpoints, colors } from '../styles/variables'
+import { headerStyles } from '../styles/componentStyles/header'
 
 import Container from './Container'
 import { MainStyledButton } from './buttons/MainButtons'
@@ -12,17 +11,17 @@ import NavLinksList from './navbarComponents/NavLinks'
 
 import navLogo from '../../assets/icons/logos/masazza-logo.svg'
 
+import { useTranslation } from 'react-i18next'
 
 const StyledHeader = styled.header`
   ${headerStyles.styledHeader}
 `
 
 const HeaderInner = styled(Container)`
-${headerStyles.headerInner}
+  ${headerStyles.headerInner}
 `
 const LogoLink = styled(Link)`
-  width: 10em;
-  border-right: 1px solid #e8dbdb;
+  ${headerStyles.logoLink}
 `
 
 const NavButtonsContainer = styled.div`
@@ -31,14 +30,7 @@ const NavButtonsContainer = styled.div`
 
 const mq = navBreakpoints.map(bp => `@media screen and (max-width: ${bp}px)`)
 
-interface HeaderProps {
-  navLinks: Array<String>
-  createAccountBtn: string
-  becomeTherapistBtn: string
-  isOppened: boolean
-}
-
-const Header: React.FC<HeaderProps> = ({ navLinks, createAccountBtn, becomeTherapistBtn, isOppened }) => {
+const Header: React.FC = () => {
   let currentScrollTop = 0
   let OnScrollEvent = () => {
     let navbar: HTMLElement | null = document.getElementById('nav')
@@ -51,43 +43,24 @@ const Header: React.FC<HeaderProps> = ({ navLinks, createAccountBtn, becomeThera
       currentScrollTop = window.scrollY
     }
   }
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', OnScrollEvent)
+  }
+  const { t } = useTranslation()
 
-  window.addEventListener('scroll', OnScrollEvent)
   return (
     <StyledHeader id="nav">
       <HeaderInner>
-        <div
-          css={css`
-            ${headerStyles.headerContainer}
-          `}
-        >
-          <MiniMenuBtn isOppened={isOppened} navLinks={navLinks} />
-          <LogoLink
-            to="/"
-            css={css`
-              margin-left: 1em;
-              ${mq[0]} {
-                width: 11em;
-                padding: 0;
-              }
-            `}
-          >
-            <img
-              src={navLogo}
-              css={css`
-                max-width: 88%;
-              `}
-            />
+        <div css={headerStyles.headerContainer}>
+          <MiniMenuBtn />
+          <LogoLink to="/" css={headerStyles.logoLink}>
+            <img src={navLogo} css={headerStyles.img} />
           </LogoLink>
         </div>
-        <NavLinksList navLinks={navLinks} mediaQueryParam="none" />
-        <NavButtonsContainer
-          css={css`
-            border: none;
-          `}
-        >
-          <MainStyledButton btnTxt={createAccountBtn} background="#96525c" />
-          <MainStyledButton btnTxt={becomeTherapistBtn} background={colors.brandSecondary} />
+        <NavLinksList mediaQueryParam="none" />
+        <NavButtonsContainer>
+          <MainStyledButton btnTxt={t('navbar.createAccount')} addCss={`background:${colors.brand}`} />
+          <MainStyledButton btnTxt={t('navbar.becomeTherapist')} addCss={`background:${colors.brandSecondary}`} />
         </NavButtonsContainer>
       </HeaderInner>
     </StyledHeader>

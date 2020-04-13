@@ -9,8 +9,12 @@ import { MainStyledButton } from '../buttons/MainButtons'
 import Add1BackgroundWebImg from '../../../assets/images/adds/comBackground.png'
 import Add2BackgroundWebImg from '../../../assets/images/adds/com-extend-background.png'
 
+import { useTranslation } from 'react-i18next'
+
 
 const MainAdd = (props: any) => {
+  const { t } = useTranslation()
+
   return (
     <div
       css={css`
@@ -33,10 +37,10 @@ const MainAdd = (props: any) => {
             ${props.comertialLabelCss}
           `}
         >
-          Available on Android and iOS
+          {t('advertisements.title')}
         </h2>
         {props.isExtend ? (
-          <MainStyledButton background={colors.brandSecondary} addCss={props.addMainBtnCss} btnTxt={props.MainBtnTxt} />
+          <MainStyledButton addCss={`${props.addMainBtnCss};background:${colors.brandSecondary}`} btnTxt={props.MainBtnTxt} />
         ) : (
           <AppStoreBtns addCssBtn={props.addCssBtn} addStoreBtnWrapperCss={props.addStoreBtnWrapperCSs} />
         )}
@@ -60,7 +64,9 @@ const AppStoreAdd = props => (
   />
 )
 
-const ExtendBuisnessAdd = () => (
+const ExtendBuisnessAdd = () => {
+  const { t } = useTranslation()
+return(
   <MainAdd
     backgroundWebUrl={Add2BackgroundWebImg}
     addAddWrapperCss={extendBuisnessAddStyles.addWrapper}
@@ -68,8 +74,9 @@ const ExtendBuisnessAdd = () => (
     comertialLabelCss={extendBuisnessAddStyles.label}
     addMainBtnCss={extendBuisnessAddStyles.mainBtn}
     isExtend={true}
-    MainBtnTxt="Subscribe your salon"
+    MainBtnTxt={t('advertisements.btn')}
   />
 )
+}
 
 export { AppStoreAdd, ExtendBuisnessAdd }

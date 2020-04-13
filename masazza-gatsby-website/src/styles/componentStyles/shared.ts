@@ -1,53 +1,61 @@
+import { css } from '@emotion/core'
 import { flex } from '../variables'
+import { colors } from '../variables'
+// Guarantees background
+import GuaranteesBackground from '../../../assets/images/about-us/guaranties-background.png'
 
 // Guarantees
 export const guaranteesStyles = {
-  guarantees:`
-  background: #97515d;
-  color: #ffffff;
-  padding: 2em 0 0;`,
-  guarantee: `
-      ${flex.row};
-      width: 40%;
-      margin: 1em 0;
-      @media (max-width: 1024px) {
-        flex-flow: column;
-        width: 45%;
-      }
-      @media (max-width: 600px) {
-        width: 100%;
-      }`,
-  guaranteeImg: `
+  guarantees: css`
+    background: ${colors.brandLight};
+    color: #ffffff;
+    padding: 2em 0 0;
+  `,
+  guarantee: css`
+    ${flex.row};
+    width: 40%;
+    margin: 1em 0;
+    @media (max-width: 1024px) {
+      flex-flow: column;
+      width: 45%;
+    }
+    @media (max-width: 600px) {
       width: 100%;
-      max-width: 8em;
-      margin: 0 1em;
-      @media (max-width: 1024px) {
-        max-width: 5em;
-      }`,
-  guaranteesWrapper: `
-      ${flex.row};
-      background-repeat: no-repeat;
-      background-position: 100% 25em;
-      flex-flow: wrap;
-      width: 80%;
-      max-width: 80em;
-      margin: auto;
-      justify-content: space-between;
-      @media (max-width: 1024px) {
-        margin: 1em auto 0;
-        width: 90%;
-        background-position: 100% 35em;
-      }
-      @media (max-width: 600px) {
-        background: none;
-
-      }`
+    }
+  `,
+  guaranteeImg: css`
+    width: 100%;
+    max-width: 8em;
+    margin: 0 1em;
+    @media (max-width: 1024px) {
+      max-width: 5em;
+    }
+  `,
+  guaranteesWrapper: css`
+    background: url(${GuaranteesBackground});
+    ${flex.row};
+    background-repeat: no-repeat;
+    background-position: 100% 25em;
+    flex-flow: wrap;
+    width: 80%;
+    max-width: 80em;
+    margin: auto;
+    justify-content: space-between;
+    @media (max-width: 1024px) {
+      margin: 1em auto 0;
+      width: 90%;
+      background-position: 100% 35em;
+    }
+    @media (max-width: 600px) {
+      background: none;
+    }
+  `
 }
 // Guarantees page line
-export const guaranteesPageLine={
-  line:`height:70em`,
-  h:`
-  background:#97515D; 
+export const guaranteesPageLine = {
+  line: `height:70em;`,
+  h: `
+  background:${colors.brandLight}; 
   color:#F9B19F; 
   font-weight:500;
   font-size:.9rem; 
@@ -62,9 +70,6 @@ export const guaranteesPageLine={
   }
   `
 }
-
-
-
 
 // Advertisements
 
@@ -101,13 +106,13 @@ export const mainAddStyles = {
         border-radius: 0;
         
       }`,
-      description:`
+  description: `
       @media (max-width: 600px) {
         text-align: center;
         width: 100%;
         margin: 0;
       }`,
-      label:`
+  label: `
       @media (max-width: 600px) {
         width: 100%;
         margin: 0;
@@ -115,18 +120,16 @@ export const mainAddStyles = {
       `
 }
 
-
 import Add1BackgroundTabletImg from '../../../assets/images/adds/com-1-tablet-background.png'
 import Add1BackgroundMobileImg from '../../../assets/images/adds/com-1-background-mobile.png'
 
-
 export const appStoreStyles = {
-    addCssBtn: `
+  addCssBtn: `
     width: 25%;
     @media (max-width:600px){
       width: 40%;
     `,
-    label:`
+  label: `
     margin: 1em .8em 0;
     @media (max-width: 1280px) {
       width: 60%;
@@ -141,8 +144,8 @@ export const appStoreStyles = {
       margin: 1em auto 0;
       width: 80%;
     }`,
-    description:`margin: 0 1em;`,
-    addWrapper: `
+  description: `margin: 0 1em;`,
+  addWrapper: `
     @media (max-width: 1280px) {
         background-position: 70%;
         background: url(${Add1BackgroundTabletImg});
@@ -158,7 +161,7 @@ export const appStoreStyles = {
         margin:0;
       }
     `,
-    btnWrapper:`
+  btnWrapper: `
     max-height: 8em;
     @media (max-width:1024px){
       margin: -6em 1em -1em;
@@ -168,14 +171,11 @@ export const appStoreStyles = {
     }"`
 }
 
-
-
 import Add2BackgroundTabletImg from '../../../assets/images/adds/com-2-background-tablet.png'
 import Add2BackgroundMobileImg from '../../../assets/images/adds/com-2-background-mobile.png'
 
-
 export const extendBuisnessAddStyles = {
-    addWrapper : `
+  addWrapper: `
     justify-content: flex-end;
     margin: 5em auto;
     @media (max-width: 1024px){
@@ -189,7 +189,7 @@ export const extendBuisnessAddStyles = {
       height: 25em;
       margin: 2em 0 0;
     }`,
-    addDescr: `
+  addDescr: `
     width: 30%;
     margin: 1em;
     @media (max-width:1024px){
@@ -198,10 +198,10 @@ export const extendBuisnessAddStyles = {
     @media (max-width:600px){
       margin: 1em 0;
     }`,
-    label: `
+  label: `
     margin: 0;
     text-align: center;`,
-    mainBtn: `
+  mainBtn: `
     align-self: center;
     width: 14em;
     margin: 1em 0 0;
@@ -216,13 +216,9 @@ export const extendBuisnessAddStyles = {
     `
 }
 
-
-
-
-
 // Page Line
 export const pageLineStyles = {
-    pageLine:`
+  pageLine: `
     border-left: 2px solid #f9b19f;
     position: absolute;
     left: 10%;
@@ -250,7 +246,7 @@ export const pageLineStyles = {
     @media (max-width: 700px) {
       border: none;
     }`,
-    pageLineH:`
+  pageLineH: `
     color: #e87b68;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -265,11 +261,10 @@ export const pageLineStyles = {
     }`
 }
 
-
 // Pricing and Offers
 export const pricingStyles = {
-    Offer:{
-        offerCard: `
+  Offer: {
+    offerCard: `
         border-radius: 30px;
         color: #ffffff;
         width: 18em;
@@ -286,32 +281,35 @@ export const pricingStyles = {
             max-width: 20em;
             width: 80%;
           }`,
-        minutes: `
-        ${flex.col}
-        border: 4px dashed #f9b19f;
-        border-radius: 50%;
-        background: #e87b68;
-        height: 6em;
-        width: 6em;
-        margin: 2em auto 0;
-        `,
-        offerH:`
-        margin: 0.5em auto 0;
-        font-size: 3rem;
-        line-height: 38px; `,
-        offerP: `
-        width: 70%;
-        margin: 2em auto;`,
-        addMainBtn: `
-        height:auto;
-        margin-bottom: 1em; 
-        @media (max-width:1024px){
-            width: 80%;
-            font-size: 1.1rem;
-        }`
-    },
-    Pricing:{
-        wrapper: `
+    minutes: css`
+      ${flex.col}
+      border: 4px dashed #f9b19f;
+      border-radius: 50%;
+      background: #e87b68;
+      height: 6em;
+      width: 6em;
+      margin: 2em auto 0;
+    `,
+    offerH: css`
+      margin: 0.5em auto 0;
+      font-size: 3rem;
+      line-height: 38px;
+    `,
+    offerP: css`
+      width: 70%;
+      margin: 2em auto;
+    `,
+    addMainBtn: css`
+    background:${colors.brandSecondary}
+    height:auto;
+    margin-bottom: 1em; 
+    @media (max-width:1024px){
+        width: 80%;
+        font-size: 1.1rem;
+    }`
+  },
+  Pricing: {
+    wrapper: `
         width: 85%;
         max-width: 90em;
         margin: auto;
@@ -323,25 +321,24 @@ export const pricingStyles = {
           width: 95%;
           margin: 3em auto 0;
         }`,
-        description:`
+    description: `
         margin: 5em;
         width: 50%;
         @media(max-width:1024px) {
           margin: 5em 3em 2em;
           width: 70%;
         }`,
-        offers: `
+    offers: `
         @media (max-width: 600px) {
             flex-flow: column;
           }
           ${flex.row}`
-    }
+  }
 }
-
 
 //Top Picture
 export const topPictureHeaderStyles = {
-    headerWithImg: `
+  headerWithImg: `
     ${flex.row};
     width: 90%;
     max-width: 100em;
@@ -358,7 +355,7 @@ export const topPictureHeaderStyles = {
     @media (max-width: 600px) {
       margin: 0;
     }`,
-    headerContainer: `
+  headerContainer: `
     width: 100%;
     justify-content: center;
     color: #ffffff;
@@ -366,7 +363,7 @@ export const topPictureHeaderStyles = {
     height: inherit;
     ${flex.col};
     `,
-    h: `
+  h: `
     @media (max-width: 600px) {
         width: 80%;
         margin: auto;
@@ -377,51 +374,51 @@ export const topPictureHeaderStyles = {
     `
 }
 
-export const topPictureHeaderAboutUsStyles ={
-    addH:`
+export const topPictureHeaderAboutUsStyles = {
+  addH: `
     width: 15em;
     margin: 0 4em 0; 
-    letter-spacing: 2px;`,
+    letter-spacing: 2px;`
 }
 
 export const topPictureHeaderTrustAndSafety = {
-    txtContainer: `
+  txtContainer: `
     margin: 5em auto; 
     width: 80%;  
     @media(max-width:600px){
         width:95%; 
         margin:2em auto 1em;
     }`,
-    addH:`
+  addH: `
     font-size: 2.5rem; 
     line-height: 3rem; 
     width: 10em; 
     @media(max-width:600px){
         margin: 0 0 .5em;
     }`,
-    addParagraph:`
+  addParagraph: `
     width: 50em; 
     max-width:100%;
     `
 }
 
 export const topPictureHeaderPricing = {
-    addHContainer: `background: rgba(234, 209, 141, .5);`,
-    addTxtContainer: `
+  addHContainer: `background: rgba(234, 209, 141, .5);`,
+  addTxtContainer: `
     margin: 0 4em;
     width:50%; 
     @media(max-width:600px){
         width: 95%; margin: 
         3em auto;
     }`,
-    addH: `
+  addH: `
     font-size: 3rem; 
     @media (max-width:600px){ 
         line-height: 1; width: 
         100%; margin: .4em 0;
          font-size: 2rem;
     }`,
-    addParagraph: `
+  addParagraph: `
     font-size: 1.2rem; 
     line-height: 1.8rem;
     `
