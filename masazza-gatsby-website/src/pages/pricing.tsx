@@ -9,7 +9,7 @@ import { AppStoreAdd } from '../components/shared/Advertisements'
 
 import PricingHeaderImg from '../../assets/images/pricing/pricing-top-header-background.png'
 
-const PricingPage = () => (
+const PricingPage:React.SFC = () => (
   <IndexLayout>
     <Page>
       <Container>

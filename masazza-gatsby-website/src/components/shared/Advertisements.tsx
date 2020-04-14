@@ -1,55 +1,76 @@
 import * as React from 'react'
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors } from '../../styles/variables'
-import {mainAddStyles, appStoreStyles,extendBuisnessAddStyles} from '../../styles/componentStyles/shared'
+import { mainAddStyles, appStoreStyles, extendBuisnessAddStyles } from '../../styles/componentStyles/shared'
 
 import AppStoreBtns from '../buttons/AppStoreBtns'
 import { MainStyledButton } from '../buttons/MainButtons'
 
 import Add1BackgroundWebImg from '../../../assets/images/adds/comBackground.png'
 import Add2BackgroundWebImg from '../../../assets/images/adds/com-extend-background.png'
+import { DataTypes } from '../../data/data'
 
 import { useTranslation } from 'react-i18next'
 
+interface MainAdd  {
+  isExtend: boolean
+  addMainBtnCss?: string
+  addStoreBtnWrapperCSs?: string
+  addCssBtn?: string
+  backgroundWebUrl: any
+  addAddWrapperCss: any
+  comertialDescrCss: string
+  comertialLabelCss:string,
+  MainBtnTxt?: string
+}
 
-const MainAdd = (props: any) => {
+const MainAdd: React.SFC<MainAdd> = ({
+  isExtend,
+  addMainBtnCss,
+  addStoreBtnWrapperCSs ,
+  addCssBtn,
+  backgroundWebUrl,
+  addAddWrapperCss,
+  comertialDescrCss,
+  comertialLabelCss,
+  MainBtnTxt
+}) => {
   const { t } = useTranslation()
-
   return (
     <div
       css={css`
-      background: url(${props.backgroundWebUrl});
+        background: url(${backgroundWebUrl});
         ${mainAddStyles.addContainer}
-        ${props.addAddWrapperCss}
+        ${addAddWrapperCss}
       `}
     >
       <div
         className="comertial-description"
         css={css`
-         ${mainAddStyles.description}
-          ${props.comertialDescrCss}
+          ${mainAddStyles.description}
+          ${comertialDescrCss}
         `}
       >
         <h2
           className="comertial-label"
           css={css`
             ${mainAddStyles.label}
-            ${props.comertialLabelCss}
+            ${comertialLabelCss}
           `}
         >
           {t('advertisements.title')}
         </h2>
-        {props.isExtend ? (
-          <MainStyledButton addCss={`${props.addMainBtnCss};background:${colors.brandSecondary}`} btnTxt={props.MainBtnTxt} />
+        {isExtend ? (
+          <MainStyledButton addCss={`${addMainBtnCss};background:${colors.brandSecondary}`} btnTxt={t(`${MainBtnTxt}`) } />
         ) : (
-          <AppStoreBtns addCssBtn={props.addCssBtn} addStoreBtnWrapperCss={props.addStoreBtnWrapperCSs} />
+          <AppStoreBtns addCssBtn={addCssBtn} addStoreBtnWrapperCss={addStoreBtnWrapperCSs} />
         )}
       </div>
     </div>
   )
 }
 
-const AppStoreAdd = props => (
+const AppStoreAdd: React.SFC<DataTypes> = ({ addWrapperCss }) => (
   <MainAdd
     backgroundWebUrl={Add1BackgroundWebImg}
     addCssBtn={appStoreStyles.addCssBtn}
@@ -57,26 +78,25 @@ const AppStoreAdd = props => (
     comertialDescrCss={appStoreStyles.description}
     comertialLabelCss={appStoreStyles.label}
     addAddWrapperCss={css`
-      ${props.addWrapperCss};
+      ${addWrapperCss};
       ${appStoreStyles.addWrapper}
     `}
     addStoreBtnWrapperCSs={appStoreStyles.btnWrapper}
   />
 )
 
-const ExtendBuisnessAdd = () => {
-  const { t } = useTranslation()
-return(
-  <MainAdd
-    backgroundWebUrl={Add2BackgroundWebImg}
-    addAddWrapperCss={extendBuisnessAddStyles.addWrapper}
-    comertialDescrCss={extendBuisnessAddStyles.addDescr}
-    comertialLabelCss={extendBuisnessAddStyles.label}
-    addMainBtnCss={extendBuisnessAddStyles.mainBtn}
-    isExtend={true}
-    MainBtnTxt={t('advertisements.btn')}
-  />
-)
+const ExtendBuisnessAdd: React.SFC = () => {
+  return (
+    <MainAdd
+      backgroundWebUrl={Add2BackgroundWebImg}
+      addAddWrapperCss={extendBuisnessAddStyles.addWrapper}
+      comertialDescrCss={extendBuisnessAddStyles.addDescr}
+      comertialLabelCss={extendBuisnessAddStyles.label}
+      addMainBtnCss={extendBuisnessAddStyles.mainBtn}
+      isExtend={true}
+      MainBtnTxt='advertisements.btn'
+    />
+  )
 }
 
 export { AppStoreAdd, ExtendBuisnessAdd }

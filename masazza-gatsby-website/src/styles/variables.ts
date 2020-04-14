@@ -5,21 +5,8 @@ export const colors = {
   brandLight: '#97515d',
   brandSecondary: '#E87B68',
   mainBackground: '#fdfaf9',
+  secondaryLinks: '#f9b19f',
   primaryTitleColor: '#dec98f',
-  accent: '#ffb238',
-  success: '#37b635',
-  warning: '#ec1818',
-  ui: {
-    bright: '#e0d6eb',
-    light: '#f5f3f7',
-    whisper: '#fbfafc'
-  },
-  code: '#fcf6f0',
-  gray: {
-    dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
-    copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
-    calm: 'rgba(0, 0, 0, 0.54)'
-  },
   white: '#fff',
   black: '#000'
 }
@@ -31,14 +18,6 @@ export const fonts = {
   monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
 }
 
-export const breakpoints = [0, 576, 768, 992, 1200, 1300]
-////////////////////////////xs  s    m     l    xl   xxl
-export const navBreakpoints = [1110, 1100, 1200, 1300]
-export const widths = {
-  md: 720,
-  lg: 960,
-  xl: 1140
-}
 
 export const dimensions = {
   fontSize: {
@@ -55,7 +34,6 @@ export const dimensions = {
     regular: 1.45,
     heading: 1.2
   },
-  containerPadding: 1.5
 }
 
 export const heights = {

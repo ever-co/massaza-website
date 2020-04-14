@@ -4,21 +4,26 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import LanguageSwitch from '../LanguageSwitch'
 import { footerBottomStyles } from '../../styles/componentStyles/footer'
-
 import MasazzaMiniLogo from '../../../assets/icons/logos/massaza-footer-logo.png'
-
 import { useTranslation } from 'react-i18next'
+import { colors } from '../../styles/variables'
 
 const dict = require('../../../i18n/dictionary')
+
+interface IMenuData {
+  key: string
+  value: Array<string>
+}
+interface IFooterMenuProps {
+  menuObj: IMenuData
+}
 
 const StyledUl = styled.ul`
   list-style-type: none;
 `
-
-
-const FooterMenus = (props: any) => {
-  let menuTitle = Object.keys(props.menuObj)[0]
-  let footerMenuListItems: any = Object.values(props.menuObj)[0]
+const FooterMenus: React.FC<IFooterMenuProps> = ({ menuObj }) => {
+  let menuTitle = Object.keys(menuObj)[0]
+  let footerMenuListItems: any = Object.values(menuObj)[0]
   return (
     <div css={footerBottomStyles.footerMenusContainer}>
       <h5 css={footerBottomStyles.footerMenusH}>{menuTitle}</h5>
@@ -28,7 +33,7 @@ const FooterMenus = (props: any) => {
             <Link
               to="/"
               css={css`
-                color: #f9b19f;
+                color: ${colors.secondaryLinks};
               `}
             >
               {li}
@@ -40,7 +45,7 @@ const FooterMenus = (props: any) => {
   )
 }
 
-const FooterBottom = () => {
+const FooterBottom: React.SFC = () => {
   const { t } = useTranslation()
   let currentLang = useTranslation().i18n.languages[0]
   const footerMenuData = dict.default[`${currentLang}`].translation.footer.footerMenus
@@ -68,8 +73,8 @@ const FooterBottom = () => {
             <li>Hello@massaza.com</li>
           </StyledUl>
         </div>
-        {footerMenuData.map((menu, i) => (
-          <FooterMenus key={menu.title + i.toString()} menuObj={menu} />
+        {footerMenuData.map((menu: IMenuData, i: number) => (
+          <FooterMenus key={menu + i.toString()} menuObj={menu} />
         ))}
         <LanguageSwitch />
       </div>

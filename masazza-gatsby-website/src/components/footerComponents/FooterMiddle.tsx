@@ -10,7 +10,7 @@ import CarIcon from '../../../assets/icons/global/car.svg'
 
 import { useTranslation } from 'react-i18next'
 
-const FooterMiddle = () => {
+const FooterMiddle: React.SFC = () => {
   const { t } = useTranslation()
 
   return (

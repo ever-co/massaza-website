@@ -52,7 +52,7 @@ export const topPageStyles = {
   header: css`
     margin: auto 10em;
     width: 45%;
-    color: #fff;
+    color: ${colors.white};
     @media (max-width: 1280px) {
       margin: 4em 7em;
       width: 30em;
@@ -70,7 +70,7 @@ export const topPageStyles = {
   `,
   h1: css`
     font-size: 2rem;
-    color: #fff;
+    color:${colors.white};
     @media (max-width: 600px) {
       font-size: 1.8rem;
     }
@@ -150,7 +150,7 @@ margin: 0 1em 2em;
 export const howItWorksPageLineStyles = {
   line: `height:65em;`,
   h: `
-  color: #E87B68; 
+  color: ${colors.brandSecondary}; 
   font-size: 1em; background:${colors.mainBackground}; 
   margin: -3em -2em; 
   @media (max-width:600px){
@@ -183,7 +183,7 @@ export const massageCardStyles = {
   `,
   h3: css`
     margin: 1em;
-    color: #e87b68;
+    color: ${colors.brandSecondary};
   `,
   paragraph: css`
     width: 75%;
@@ -191,7 +191,7 @@ export const massageCardStyles = {
     max-height: 4em;
     line-height: 20px;
   `,
-  btn:`background:${colors.brandSecondary};height: auto;`
+  btn:`background:${colors.brandSecondary}; height: auto;`
 }
 
 export const mostPopularStyles = {
@@ -244,7 +244,7 @@ export const pageLine = {
     top: 10%;
   };`,
   topLineH: `
-  color:#fff;
+  color:${colors.white};
    margin: -1.1em -.2em;
    @media(max-width:1024px){
      margin:-1em 0

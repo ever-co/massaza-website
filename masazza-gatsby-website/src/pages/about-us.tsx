@@ -14,7 +14,7 @@ import PageLine from '../components/shared/PageLine'
 
 import {useTranslation} from 'react-i18next'
 
-const AboutUsPage = () => {
+const AboutUsPage:React.SFC = () => {
   const {t} = useTranslation();
   return(
   <IndexLayout>

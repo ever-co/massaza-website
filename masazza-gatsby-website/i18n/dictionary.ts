@@ -3,6 +3,7 @@ import { dataEN } from '../src/data/en/en'
 import { dataHEB } from '../src/data/heb/heb'
 import { dataRU } from '../src/data/ru/ru'
 
+
 const dict = {
   bg: {
     translation: dataBG

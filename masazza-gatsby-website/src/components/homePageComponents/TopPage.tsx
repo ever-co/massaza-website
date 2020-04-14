@@ -1,14 +1,11 @@
 import * as React from 'react'
 import { topPageStyles, pageLine, topPageAppStoreBtnsStyles } from '../../styles/componentStyles/home'
-
 import AppStoreBtns from '../buttons/AppStoreBtns'
 import PageLine from '../shared/PageLine'
-
 import Container from '../Container'
-
 import { useTranslation } from 'react-i18next'
 
-const TopContainer = () => {
+const TopContainer:React.SFC = () => {
   const { t } = useTranslation()
   return (
     <Container>

@@ -1,6 +1,6 @@
-import { OfferTypes, DataTypes } from '../data'
+import { OfferTypes, DataTypes, ArrayData } from '../data'
 
-export const footerMenusDataHEB = [
+export const footerMenusDataHEB: Array<ArrayData> = [
   {'Lifestyle': ['Pricing', 'Type of massage', 'Partner Saloons', 'Therapists'] },
   {'About us': ['Help', 'Trust & Safety', 'Who are we', 'Advertisement'] },
   { 'Legals': ['Privacy', 'Terms of use']  }

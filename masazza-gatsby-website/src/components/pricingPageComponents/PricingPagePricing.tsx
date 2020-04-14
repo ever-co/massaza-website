@@ -13,7 +13,7 @@ const StyledParagraph = styled.p`
   color: ${colors.brand};
 `
 
-const PricingPagePricing = () => {
+const PricingPagePricing:React.FC = () => {
   const { t } = useTranslation()
   return (
     <Pricing

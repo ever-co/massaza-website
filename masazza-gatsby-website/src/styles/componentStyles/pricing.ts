@@ -46,7 +46,7 @@ export const pricingPageStyles = {
 
 export const pricingPageLineStyles ={
   h:`
-  background: #FDFAF9;
+  background: ${colors.mainBackground};
   font-weight: bold;
   font-size: .8rem;
   width: 7em;

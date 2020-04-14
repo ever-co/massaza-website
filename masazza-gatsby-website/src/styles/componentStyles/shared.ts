@@ -56,7 +56,7 @@ export const guaranteesPageLine = {
   line: `height:70em;`,
   h: `
   background:${colors.brandLight}; 
-  color:#F9B19F; 
+  color:${colors.secondaryLinks}; 
   font-weight:500;
   font-size:.9rem; 
   position:relative; 
@@ -219,7 +219,7 @@ export const extendBuisnessAddStyles = {
 // Page Line
 export const pageLineStyles = {
   pageLine: `
-    border-left: 2px solid #f9b19f;
+    border-left: 2px solid ${colors.secondaryLinks};
     position: absolute;
     left: 10%;
     @media (min-width: 2300px) {
@@ -247,7 +247,7 @@ export const pageLineStyles = {
       border: none;
     }`,
   pageLineH: `
-    color: #e87b68;
+    color: ${colors.brandSecondary};
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0 -2em;
@@ -283,9 +283,9 @@ export const pricingStyles = {
           }`,
     minutes: css`
       ${flex.col}
-      border: 4px dashed #f9b19f;
+      border: 4px dashed ${colors.secondaryLinks};
       border-radius: 50%;
-      background: #e87b68;
+      background: ${colors.brandSecondary};
       height: 6em;
       width: 6em;
       margin: 2em auto 0;
@@ -300,7 +300,7 @@ export const pricingStyles = {
       margin: 2em auto;
     `,
     addMainBtn: css`
-    background:${colors.brandSecondary}
+    background:${colors.brandSecondary};
     height:auto;
     margin-bottom: 1em; 
     @media (max-width:1024px){

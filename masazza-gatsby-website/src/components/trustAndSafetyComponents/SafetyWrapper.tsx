@@ -15,42 +15,59 @@ import ClientSafetyBackgroundTabletImage from '../../../assets/images/trust-and-
 import TherapistSafetyImage from '../../../assets/images/trust-and-safety/therapist-safety-img.png'
 import TherapistSafetyBackground from '../../../assets/images/trust-and-safety/therapist-safety-background.png'
 import TherapistSafetyBackgroundTablet from '../../../assets/images/trust-and-safety/therapist-safety-background-tablet.png'
-
+import {DataTypes} from '../../data/data'
 import { useTranslation } from 'react-i18next'
 
 const dict = require('../../../i18n/dictionary')
 
-const SafetyArticle = (props: any) => (
+interface ISafetyArticleProps{
+  num:number
+  title: string
+  paragraph: string
+
+}
+
+const SafetyArticle: React.SFC<ISafetyArticleProps> = ({num, title, paragraph}) => (
   <article className="row" css={safetyArticleStyles.article}>
     <section className="num" css={safetyArticleStyles.num}>
-      {props.num}
+      {num}
     </section>
     <section className="t-a-s-article-descr">
-      <h3>{props.title} </h3>
-      <p css={safetyArticleStyles.p}>{props.paragraph}</p>
+      <h3>{title} </h3>
+      <p css={safetyArticleStyles.p}>{paragraph}</p>
     </section>
   </article>
 )
 
-const SafetyWrapper = (props: any) => {
-  return (
+interface ISafetyWrapperProps{
+  addTASCss?: string
+  pageLineTxtContent: string
+  addLineHCss: string
+  addLineCss: string
+  imgUrl: string
+  addImgCss: string
+  addImgWrapperCss: string
+  data:Array<DataTypes>
+}
+
+const SafetyWrapper:React.SFC<ISafetyWrapperProps> = ({data,addLineCss,addImgWrapperCss,addImgCss,imgUrl,addLineHCss,pageLineTxtContent,addTASCss}) => (
     <div
       className="t-a-s row"
       css={css`
         ${safetyWrapperStyles.wrapper}
-        ${props.addTASCss};
+        ${addTASCss};
       `}
     >
       <PageLine
-        txtContent={props.pageLineTxtContent}
+        txtContent={pageLineTxtContent}
         addLineCss={`${safetyWrapperPageLineStyles.line}
-                  ${props.addLineCss}`}
+                  ${addLineCss}`}
         addHCss={` ${safetyWrapperPageLineStyles.h}
-                  ${props.addLineHCss};`}
+                  ${addLineHCss};`}
       />
 
       <div className="t-a-s-article-wrapper" css={safetyWrapperStyles.articleWrapper}>
-        {props.data.map((d: any, key: any) => (
+        {data.map((d: any, key: any) => (
           <SafetyArticle num={key + 1} title={d.title} paragraph={d.paragraph} key={key} />
         ))}
       </div>
@@ -59,21 +76,20 @@ const SafetyWrapper = (props: any) => {
         className="t-a-s-img-wrapper t-a-s-client-img-wrapper col"
         css={css`
           ${safetyWrapperStyles.imgWrapper}
-          ${props.addImgWrapperCss};
+          ${addImgWrapperCss};
           background-repeat: no-repeat;
         `}
       >
         <img
-          src={props.imgUrl}
+          src={imgUrl}
           alt=""
           css={css`
-            ${props.addImgCss}
+            ${addImgCss}
           `}
         ></img>
       </div>
     </div>
   )
-}
 
 const ClientSafety = () => {
   const { t } = useTranslation()

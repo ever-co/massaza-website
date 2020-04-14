@@ -1,21 +1,27 @@
 import * as React from 'react'
-import { css } from '@emotion/core'
-import {pageLineStyles} from '../../styles/componentStyles/shared'
+import { css, SerializedStyles } from '@emotion/core'
+import { pageLineStyles } from '../../styles/componentStyles/shared'
 
-const PageLine = (props: any) => (
+interface IPageLineProps{
+  addLineCss: string | SerializedStyles,
+  addHCss:  string | SerializedStyles,
+  txtContent: string
+}
+
+const PageLine: React.SFC<IPageLineProps> = ({ addLineCss, addHCss, txtContent }) => (
   <div
     css={css`
-     ${pageLineStyles.pageLine}
-      ${props.addLineCss}
+      ${pageLineStyles.pageLine}
+      ${addLineCss}
     `}
   >
     <h5
       css={css`
-      ${pageLineStyles.pageLineH}
-        ${props.addHCss};
+        ${pageLineStyles.pageLineH}
+        ${addHCss};
       `}
     >
-      {props.txtContent}
+      {txtContent}
     </h5>
   </div>
 )

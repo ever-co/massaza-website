@@ -129,7 +129,7 @@ export const footerBottomStyles = {
     }`,
   footerMenusH: css`
     font-size: 1.2rem;
-    color: #f9b19f;
+    color: ${colors.secondaryLinks};
      @media (max-width: 800px) {
         font-size: 1.2rem;
      }`,
@@ -138,7 +138,7 @@ export const footerBottomStyles = {
      list-style-type: none;`,
   footerBottomContainer: css`
    justify-content: space-around;
-   color: #f9b19f;
+   color: ${colors.secondaryLinks};
    display: flex;
    width: 90%;
    margin: auto;
@@ -203,7 +203,7 @@ export const languageSwitchStyles ={
   }
   label {
     margin: 0.3em 0;
-    color: #f9b19f;
+    color: ${colors.secondaryLinks};
     cursor: pointer;
     display: flex;
     transition: all 0.5s ease-out;

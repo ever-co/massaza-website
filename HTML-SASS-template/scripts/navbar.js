@@ -8,7 +8,6 @@ let isOpen = false;
 miniMenu.addEventListener("click", function(e){
     e.preventDefault();
     e.stopPropagation();
-    console.log(logoContainer.offsetWidth);
     if(!isOpen){
         navbar.classList.remove("close");
         navbar.classList.add("open");
@@ -19,7 +18,6 @@ miniMenu.addEventListener("click", function(e){
         navbar.classList.remove("open");
         navbar.classList.add("close");
         hiddenMenu.style.transform  = "translate(-600px, 0)";
-        console.log(hiddenMenu.style.width)
         isOpen = false;
     }
 })

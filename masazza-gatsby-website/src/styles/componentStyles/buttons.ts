@@ -1,3 +1,4 @@
+import {colors} from '../variables'
 
 
 export const mainBtnStyles= `
@@ -10,7 +11,7 @@ min-width: max-content;
 outline: none;
 font-size: 1rem;
 font-weight: 600;
-color: #fff;
+color: ${colors.white};
 min-height: 3em;
 &:hover {
   cursor: pointer;

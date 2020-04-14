@@ -1,25 +1,30 @@
 import * as React from 'react'
 import { guaranteesStyles, guaranteesPageLine } from '../../styles/componentStyles/shared'
-
-
 import PageLine from './PageLine'
 import Container from '../Container'
-
 import { useTranslation } from 'react-i18next'
 import { guaranteesImages } from '../../data/data'
-const dict = require('../../../i18n/dictionary')
+import { DataTypes } from '../../data/data'
 
-const Guarantee = (props: any) => (
+const dict = require('../../../i18n/dictionary')
+interface IGuaranteeProps {
+  imgUrl: string
+  title: string
+  description: string
+  key:number
+}
+
+const Guarantee: React.SFC<IGuaranteeProps> = ({ imgUrl, title, description }) => (
   <article className="guarantie row" css={guaranteesStyles.guarantee}>
-    <img src={props.imgUrl} alt="" css={guaranteesStyles.guaranteeImg} />
+    <img src={imgUrl} alt="" css={guaranteesStyles.guaranteeImg} />
     <div className="guarantie-descr">
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
+      <h2>{title}</h2>
+      <p>{description}</p>
     </div>
   </article>
 )
 
-const Guarantees = () => {
+const Guarantees: React.SFC = () => {
   const { t } = useTranslation()
   let currentLang = useTranslation().i18n.languages[0]
   const guaranteesData = dict.default[`${currentLang}`].translation.guaranteesData
@@ -28,7 +33,7 @@ const Guarantees = () => {
       <Container>
         <PageLine txtContent={t('guaranteesLineH')} addLineCss={guaranteesPageLine.line} addHCss={guaranteesPageLine.h} />
         <div className="guaranties-wrapper row" css={guaranteesStyles.guaranteesWrapper}>
-          {guaranteesData.map((g, key) => (
+          {guaranteesData.map((g: DataTypes, key: number) => (
             <Guarantee title={g.title} key={key} description={g.description} imgUrl={guaranteesImages[key]} />
           ))}
         </div>

@@ -9,7 +9,7 @@ import StepsMobile from '../../../assets/images/home/steps-section-mobile.png'
 
 import { useTranslation } from 'react-i18next'
 
-const HowItWorks = () => {
+const HowItWorks:React.SFC = () => {
   const { t } = useTranslation()
   return (
     <div className="how-it-works col" css={howItWorksStyles.howItWorks}>

@@ -1,8 +1,7 @@
 import {footerMenusDataBG, guaranteesDataBG, massageTypesBG, storyParagraphDataBG, clientSafetyDataBG, therapistSafetyDataBG, offersDataBG} from './data'
 
 
-
-export const dataBG = { a: 'lalala',
+export const dataBG = { 
 navbar: {
   aboutUs: 'За нас',
   trustAndSafety: 'Доверие и безопасност',

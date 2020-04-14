@@ -78,7 +78,7 @@ export const navLinkStyles = {
     &::after {
       content: '•';
       font-size: 2rem;
-      color: #f9b19f;
+      color: ${colors.secondaryLinks};
       margin-left: 5px;
       margin-top: -5px;
       position: relative;
@@ -156,7 +156,7 @@ export const hiddenMenuStyles = {
     position: absolute;
     top: 100%;
     height: 100vh;
-    background: #fff;
+    background: ${colors.white};
     transition: all 1s;
     z-index: 100;
     width:16em;

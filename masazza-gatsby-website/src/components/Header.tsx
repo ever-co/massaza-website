@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-import { navBreakpoints, colors } from '../styles/variables'
+import { colors } from '../styles/variables'
 import { headerStyles } from '../styles/componentStyles/header'
 
 import Container from './Container'
@@ -28,9 +28,8 @@ const NavButtonsContainer = styled.div`
   ${headerStyles.navBtnsContainer}
 `
 
-const mq = navBreakpoints.map(bp => `@media screen and (max-width: ${bp}px)`)
 
-const Header: React.FC = () => {
+const Header: React.SFC = () => {
   let currentScrollTop = 0
   let OnScrollEvent = () => {
     let navbar: HTMLElement | null = document.getElementById('nav')

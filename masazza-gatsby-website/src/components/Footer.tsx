@@ -3,7 +3,7 @@ import FooterTop from './footerComponents/FooterTop'
 import FooterMiddle from './footerComponents/FooterMiddle'
 import FooterBottom from './footerComponents/FooterBottom'
 
-const Footer = () => {
+const Footer:React.SFC = () => {
   return (
     <footer>
       <FooterTop />

@@ -1,6 +1,7 @@
-import {DataTypes, OfferTypes} from '../data'
+import {DataTypes, OfferTypes, ArrayData} from '../data'
 
-export const footerMenusDataBG = [
+
+export const footerMenusDataBG:Array<ArrayData> = [
   { 'Начин на живот': ['Цени', 'Видове масажи', 'Партньорски салони', 'Масажисти'] },
   { 'За нас': ['Помощ', 'Доверие и безопасност', 'Кои сме', 'Рекламация'] },
   { 'Права': ['Поверителност', 'Условия на ползване'] }

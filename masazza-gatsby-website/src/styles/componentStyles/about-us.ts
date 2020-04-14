@@ -105,7 +105,7 @@ export const lineAdjStyles ={
   }`,
   h:`
   margin: -1em;
-  background: #fdfaf9;
+  background: ${colors.mainBackground};
   font-weight: bold;
   font-size: .8rem;
   @media(max-width:1024px){

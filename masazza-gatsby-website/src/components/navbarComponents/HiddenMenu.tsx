@@ -7,18 +7,20 @@ import {hiddenMenuStyles, hiddenMenuButtonStyles} from '../../styles/componentSt
 
 import { useTranslation } from 'react-i18next'
 
+interface IHiddenMenuProps{
+  oppened:boolean
+}
 
 const StyledHiddenMenu = css`
 ${hiddenMenuStyles.styledHiddenMenu}
 `
 
-const HiddenMenu = (props: any) => {
-  let oppened = props.oppened
+const HiddenMenu:React.SFC<IHiddenMenuProps> = ({oppened}) => {
   const { t } = useTranslation()
-
   return (
     <div
       id="hidden-menu"
+      
       css={css`
         ${StyledHiddenMenu} 
         ${!oppened

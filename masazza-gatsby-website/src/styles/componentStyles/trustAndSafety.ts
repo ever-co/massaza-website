@@ -124,7 +124,7 @@ export const therapistSafetyStyles = {
 export const safetyWrapperPageLineStyles = {
   line: `height: 65em;`,
   h: `
-  background: #fdfaf9;
+  background: ${colors.mainBackground};
   z-index: 5;
   height: fit-content;
   margin: -2em;

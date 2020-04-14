@@ -6,18 +6,26 @@ import {
   topPictureHeaderTrustAndSafety,
   topPictureHeaderPricing
 } from '../../styles/componentStyles/shared'
-
 import Container from '../Container'
 
 import { useTranslation } from 'react-i18next'
+import { DataTypes } from '../../data/data'
 
-
-const TopPictureHeader = (props: any) => {
+const TopPictureHeader: React.SFC<DataTypes> = ({
+  headerParagraph,
+  addHeaderParagraphCss,
+  bottomPicHeaderTxt,
+  topPicHeaderTxt,
+  addHeaderBackground,
+  addHContainerCss,
+  addHTxtContainerCss,
+  addHCss
+}) => {
   return (
     <header
       className="header-with-img about-us-header row"
       css={css`
-        background: url(${props.addHeaderBackground});
+        background: url(${addHeaderBackground});
         ${topPictureHeaderStyles.headerWithImg}
       `}
     >
@@ -26,30 +34,30 @@ const TopPictureHeader = (props: any) => {
           className="header-container col"
           css={css`
             ${topPictureHeaderStyles.headerContainer}
-            ${props.addHContainerCss}
+            ${addHContainerCss}
           `}
         >
           <div
             className="header-txt-container"
             css={css`
-              ${props.addHTxtContainerCss}
+              ${addHTxtContainerCss}
             `}
           >
             <h1
               css={css`
                 ${topPictureHeaderStyles.h}
-                ${props.addHCss}
+                ${addHCss}
               `}
             >
-              {props.topPicHeaderTxt} <br />
-              {props.bottomPicHeaderTxt}
+              {topPicHeaderTxt} <br />
+              {bottomPicHeaderTxt}
             </h1>
             <p
               css={css`
-                ${props.addHeaderParagraphCss}
+                ${addHeaderParagraphCss}
               `}
             >
-              {props.headerParagraph}
+              {headerParagraph}
             </p>
           </div>
         </div>
@@ -59,45 +67,47 @@ const TopPictureHeader = (props: any) => {
 }
 
 const AboutUsHeader = (props: any) => {
-const {t}= useTranslation()
+  const { t } = useTranslation()
 
-return(
-  <TopPictureHeader
-    topPicHeaderTxt={t("aboutUs.topContainer.topPicHeaderTxt")}
-    bottomPicHeaderTxt={t("aboutUs.topContainer.bottomPicHeaderTxt")}
-    addHCss={topPictureHeaderAboutUsStyles.addH}
-    addHeaderBackground={props.headerBackground}
-  />
-)}
+  return (
+    <TopPictureHeader
+      topPicHeaderTxt={t('aboutUs.topContainer.topPicHeaderTxt')}
+      bottomPicHeaderTxt={t('aboutUs.topContainer.bottomPicHeaderTxt')}
+      addHCss={topPictureHeaderAboutUsStyles.addH}
+      addHeaderBackground={props.headerBackground}
+    />
+  )
+}
 
-const TrustAndSafetyHeader = (props: any) => {
-  const {t} = useTranslation()
+const TrustAndSafetyHeader:React.SFC<DataTypes>= ({headerBackground}) => {
+  const { t } = useTranslation()
 
-  return(
-  <TopPictureHeader
-    topPicHeaderTxt= {t("trustAndSafety.topContainer.topPicHeaderTxt")}
-    headerParagraph={t("trustAndSafety.topContainer.headerParagraph")}
-    addHTxtContainerCss={topPictureHeaderTrustAndSafety.txtContainer}
-    addHCss={topPictureHeaderTrustAndSafety.addH}
-    addHeaderParagraphCss={topPictureHeaderTrustAndSafety.addParagraph}
-    addHeaderBackground={props.headerBackground}
-  />
-)}
+  return (
+    <TopPictureHeader
+      topPicHeaderTxt={t('trustAndSafety.topContainer.topPicHeaderTxt')}
+      headerParagraph={t('trustAndSafety.topContainer.headerParagraph')}
+      addHTxtContainerCss={topPictureHeaderTrustAndSafety.txtContainer}
+      addHCss={topPictureHeaderTrustAndSafety.addH}
+      addHeaderParagraphCss={topPictureHeaderTrustAndSafety.addParagraph}
+      addHeaderBackground={headerBackground}
+    />
+  )
+}
 
-const PricingHeader = (props: any) => {
-  
-const {t}= useTranslation()
-  
-  return(
-  <TopPictureHeader
-    topPicHeaderTxt={t("pricing.topContainer.topPicHeaderTxt")}
-    headerParagraph={t("pricing.topContainer.headerParagraph")}
-    addHContainerCss={topPictureHeaderPricing.addHContainer}
-    addHTxtContainerCss={topPictureHeaderPricing.addTxtContainer}
-    addHCss={topPictureHeaderPricing.addH}
-    addHeaderParagraphCss={topPictureHeaderPricing.addParagraph}
-    addHeaderBackground={props.addHeaderBackground}
-  />
-)}
+const PricingHeader:React.SFC<DataTypes>= ({addHeaderBackground}) => {
+  const { t } = useTranslation()
+
+  return (
+    <TopPictureHeader
+      topPicHeaderTxt={t('pricing.topContainer.topPicHeaderTxt')}
+      headerParagraph={t('pricing.topContainer.headerParagraph')}
+      addHContainerCss={topPictureHeaderPricing.addHContainer}
+      addHTxtContainerCss={topPictureHeaderPricing.addTxtContainer}
+      addHCss={topPictureHeaderPricing.addH}
+      addHeaderParagraphCss={topPictureHeaderPricing.addParagraph}
+      addHeaderBackground={addHeaderBackground}
+    />
+  )
+}
 
 export { AboutUsHeader, TrustAndSafetyHeader, PricingHeader }

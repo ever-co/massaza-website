@@ -6,8 +6,8 @@ import AppStoreSvg from '../../../assets/icons/app-store.svg'
 import GooglePlaySvg from '../../../assets/icons/google-play.svg'
 
 interface IProps {
-  addStoreBtnWrapperCss: string
-  addCssBtn: string
+  addStoreBtnWrapperCss?: string
+  addCssBtn?: string
 }
 
 const AppStoreButtons = ({ addStoreBtnWrapperCss, addCssBtn }: IProps) => (

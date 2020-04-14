@@ -1,7 +1,7 @@
-import { OfferTypes, DataTypes } from '../data'
+import { OfferTypes, DataTypes, ArrayData } from '../data'
 
 
-export const footerMenusDataEN = [
+export const footerMenusDataEN: Array<ArrayData> = [
   {'Lifestyle': ['Pricing', 'Type of massage', 'Partner Saloons', 'Therapists'] },
   {'About us': ['Help', 'Trust & Safety', 'Who are we', 'Advertisement'] },
   { 'Legals': ['Privacy', 'Terms of use']  }

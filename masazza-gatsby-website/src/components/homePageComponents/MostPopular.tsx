@@ -8,23 +8,33 @@ import { massageTypesImages } from '../../data/data'
 
 const dict = require('../../../i18n/dictionary')
 
-const MassageCard = (props: any) => {
+interface ICardData{
+  description: string
+  title: string
+}
+
+interface IMassageCardProps{
+  MassageTypeImg: string
+  MassageCardTitle: string,
+  MassageCardDescr: string
+}
+
+const MassageCard: React.SFC<IMassageCardProps> = ({MassageTypeImg, MassageCardTitle, MassageCardDescr}) => {
   const { t } = useTranslation()
   return (
     <article className="massage-card col" css={massageCardStyles.massageCard}>
-      <img src={props.MassageTypeImg} alt="Swedish Massage" css={massageCardStyles.img} />
+      <img src={MassageTypeImg} alt="Swedish Massage" css={massageCardStyles.img} />
       <h3 className="massage-card-title" css={massageCardStyles.h3}>
-        {props.MassageCardTitle}
+        {MassageCardTitle}
       </h3>
-      <p css={massageCardStyles.paragraph}>{props.MassageCardDescr}</p>
+      <p css={massageCardStyles.paragraph}>{MassageCardDescr}</p>
       <MainStyledButton btnTxt={t('homePage.mostPopular.btn')} addCss={massageCardStyles.btn} />
     </article>
   )
 }
 
-const MostPopular = () => {
+const MostPopular:React.SFC = () => {
   const { t } = useTranslation()
-
   let currentLang = useTranslation().i18n.languages[0]
   const masageTypeData = dict.default[`${currentLang}`].translation.homePage.massageTypes
   return (
@@ -37,7 +47,7 @@ const MostPopular = () => {
 
       <h2 css={mostPopularStyles.h2}>{t('homePage.mostPopular.h2')}</h2>
       <div className="massage-cards-container row" css={mostPopularStyles.massageCardsContainer}>
-        {masageTypeData.map((cardData: any, key: number) => {
+        {masageTypeData.map((cardData: ICardData, key: number) => {
           return (
             <MassageCard
               MassageTypeImg={`${massageTypesImages[key]}`}

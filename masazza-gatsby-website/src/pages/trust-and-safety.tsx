@@ -10,7 +10,7 @@ import { AppStoreAdd, ExtendBuisnessAdd } from '../components/shared/Advertiseme
 
 import TrustAndSafetyHeaderImg from '../../assets/images/trust-and-safety/t-a-s-top-background.png'
 
-const AboutUsPage = () => (
+const AboutUsPage:React.SFC = () => (
   <IndexLayout>
     <Page>
       <TrustAndSafetyHeader headerBackground={TrustAndSafetyHeaderImg} />

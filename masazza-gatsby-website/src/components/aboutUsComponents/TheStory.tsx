@@ -1,16 +1,14 @@
 import * as React from 'react'
 import { aboutUsStyles } from '../../styles/componentStyles/about-us'
-
 import AppStoreBtns from '../buttons/AppStoreBtns'
+import i18n from '../../../i18n/initI18n'
 
 import TheStoryPhone from '../../../assets/images/about-us/the-story-phone.png'
 
-import { useTranslation } from 'react-i18next'
-
 const dict = require('../../../i18n/dictionary')
 
-const TheStory = () => {
-  let currentLang = useTranslation().i18n.languages[0]
+const TheStory: React.SFC = () => {
+  let currentLang = i18n.languages[0]
   let storyParagraphData = dict.default[`${currentLang}`].translation.aboutUs.theStory.storyParagraphData
 
   return (

@@ -3,7 +3,7 @@ import {pricingHomeStyles} from '../../styles/componentStyles/home'
 import Pricing from '../shared/Pricing'
 import {useTranslation} from 'react-i18next'
 
-const HomePricing = () => {
+const HomePricing:React.SFC = () => {
   const {t} = useTranslation()
   return(
   <Pricing

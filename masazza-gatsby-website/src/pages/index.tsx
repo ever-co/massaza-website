@@ -9,7 +9,7 @@ import HomePricing from '../components/homePageComponents/HomePricing'
 import MostPopular from '../components/homePageComponents/MostPopular'
 
 
-const IndexPage = () => (
+const IndexPage:React.SFC = () => (
   <IndexLayout>
     <Page>
       <TopContainer />

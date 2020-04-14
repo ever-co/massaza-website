@@ -2,17 +2,24 @@ import * as React from 'react'
 import { css } from '@emotion/core'
 import { colors, flex } from '../../styles/variables'
 import { pricingStyles } from '../../styles/componentStyles/shared'
-
 import { MainStyledButton } from '../buttons/MainButtons'
 import PageLine from './PageLine'
+import { useTranslation } from 'react-i18next'
+import { OfferTypes, DataTypes } from '../../data/data'
 
 import OfferBackgroundImg from '../../../assets/images/shared/prices-card-background.png'
 
-import { useTranslation } from 'react-i18next'
 const dict = require('../../../i18n/dictionary')
-import {OfferTypes} from '../../data/data'
 
-const Offer = (props: any) => {
+interface IOfferProps {
+  addOfferCss?: string
+  minutes: number
+  dollars: number
+  description: string
+  key: number
+}
+
+const Offer: React.SFC<IOfferProps> = ({ addOfferCss, minutes, dollars, description }) => {
   const { t } = useTranslation()
 
   return (
@@ -21,18 +28,11 @@ const Offer = (props: any) => {
       css={css`
         background: url(${OfferBackgroundImg});
         ${pricingStyles.Offer.offerCard}
-        ${props.addOfferCss}
+        ${addOfferCss}
       `}
     >
-      <div
-        className="minutes col"
-        css={pricingStyles.Offer.minutes}
-      >
-        <h2
-          css={pricingStyles.Offer.offerH}
-        >
-          {props.minutes}
-        </h2>
+      <div className="minutes col" css={pricingStyles.Offer.minutes}>
+        <h2 css={pricingStyles.Offer.offerH}>{minutes}</h2>
         <h5>{t('homePage.pricing.min')}</h5>
       </div>
       <div
@@ -42,19 +42,15 @@ const Offer = (props: any) => {
         `}
       >
         <h5>{t('homePage.pricing.pFrom')}</h5>
-        <h2>${props.dollars}</h2>
+        <h2>${dollars}</h2>
       </div>
-      <p
-        css={pricingStyles.Offer.offerP}
-      >
-        {props.description}
-      </p>
-      <MainStyledButton   addCss={pricingStyles.Offer.addMainBtn} btnTxt={t("pricing.offerBtn")}/>
+      <p css={pricingStyles.Offer.offerP}>{description}</p>
+      <MainStyledButton addCss={pricingStyles.Offer.addMainBtn} btnTxt={t('pricing.offerBtn')} />
     </article>
   )
 }
 
-const Pricing = (props: any) => {
+const Pricing: React.SFC<DataTypes> = ({ children, addWrapperCss, PageLineHTxt, addDescrCss, addOfferCss, addLineCss, addPageLHCss }) => {
   const { t } = useTranslation()
   let currentLang = useTranslation().i18n.languages[0]
   const offersData = dict.default[`${currentLang}`].translation.pricing.offers
@@ -63,22 +59,22 @@ const Pricing = (props: any) => {
       className="pricing-wrapper"
       css={css`
         ${pricingStyles.Pricing.wrapper}
-        ${props.addWrapperCss}
+        ${addWrapperCss}
       `}
     >
       <PageLine
-        txtContent={props.PageLineHTxt}
-        addHCss={`margin-top:-3em; background:${colors.mainBackground};  @media(max-width:600px){ margin: -2em 0em} ${props.addPageLHCss}`}
+        txtContent={PageLineHTxt}
+        addHCss={`margin-top:-3em; background:${colors.mainBackground};  @media(max-width:600px){ margin: -2em 0em} ${addPageLHCss}`}
         addLineCss={css`
           height: 65em;
-          ${props.addLineCss}
+          ${addLineCss}
         `}
       />
       <div
         className="pricing-descr"
         css={css`
           ${pricingStyles.Pricing.description}
-          ${props.addDescrCss}
+          ${addDescrCss}
         `}
       >
         <h2
@@ -104,11 +100,11 @@ const Pricing = (props: any) => {
           ${pricingStyles.Pricing.offers}
         `}
       >
-        {offersData.map((offer:OfferTypes, i:number) => (
-          <Offer key={i} minutes={offer.minutes} dollars= {offer.dollars} description={offer.description} addOfferCss={props.addOfferCss}/>
+        {offersData.map((offer: OfferTypes, i: number) => (
+          <Offer key={i} minutes={offer.minutes} dollars={offer.dollars} description={offer.description} addOfferCss={addOfferCss} />
         ))}
       </div>
-      {props.children}
+      {children}
     </div>
   )
 }
