@@ -28,16 +28,15 @@ const NavButtonsContainer = styled.div`
   ${headerStyles.navBtnsContainer}
 `
 
-
 const Header: React.SFC = () => {
   let currentScrollTop = 0
+  const navbar = React.useRef(null)
   let OnScrollEvent = () => {
-    let navbar: HTMLElement | null = document.getElementById('nav')
-    if (navbar) {
+    if (navbar.current !== null) {
       if (currentScrollTop > window.scrollY) {
-        navbar.style.top = '0'
+        navbar.current.style.top = '0'
       } else if (currentScrollTop < window.scrollY) {
-        navbar.style.top = '-80px'
+        navbar.current.style.top = '-80px'
       }
       currentScrollTop = window.scrollY
     }
@@ -48,18 +47,18 @@ const Header: React.SFC = () => {
   const { t } = useTranslation()
 
   return (
-    <StyledHeader id="nav">
+    <StyledHeader id="nav" ref={navbar}>
       <HeaderInner>
         <div css={headerStyles.headerContainer}>
           <MiniMenuBtn />
           <LogoLink to="/" css={headerStyles.logoLink}>
-            <img src={navLogo} css={headerStyles.img} />
+            <img alt="masazza logo" src={navLogo} css={headerStyles.img} />
           </LogoLink>
         </div>
         <NavLinksList mediaQueryParam="none" />
         <NavButtonsContainer>
-          <MainStyledButton btnTxt={t('navbar.createAccount')} addCss={`background:${colors.brand}`} />
-          <MainStyledButton btnTxt={t('navbar.becomeTherapist')} addCss={`background:${colors.brandSecondary}`} />
+          <MainStyledButton addCss={`background:${colors.brand}`}>{t('navbar.createAccount')}</MainStyledButton>
+          <MainStyledButton addCss={`background:${colors.brandSecondary}`}>{t('navbar.becomeTherapist')}</MainStyledButton>
         </NavButtonsContainer>
       </HeaderInner>
     </StyledHeader>

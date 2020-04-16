@@ -53,6 +53,11 @@ export const dataRU = {
           step:"STEP"
         }
       },
+      howItWorksSvg: {
+        firstStep: 'Download App and Select your location',
+        secondStep: 'Find availabe therapsit  or saloon and make an order',
+        thirdStep: 'Prepaire your self and enjoy your massage'
+      },
       pricing: {
         lineH: 'THE PRICING',
         min: 'min',

@@ -1,15 +1,20 @@
 import * as React from 'react'
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { mainBtnStyles } from '../../styles/componentStyles/buttons'
 
-const MainStyledButton = (props: any) => (
+type TMainStyledBtnProps={
+  addCss?: string | SerializedStyles
+}
+
+
+const MainStyledButton:React.SFC<TMainStyledBtnProps> = ({children,addCss}) => (
   <button
     css={css`
       ${mainBtnStyles}
-      ${props.addCss}
+      ${addCss}
     `}
   >
-    {props.btnTxt}
+    {children}
   </button>
 )
 

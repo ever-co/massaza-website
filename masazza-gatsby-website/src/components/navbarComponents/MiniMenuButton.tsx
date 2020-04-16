@@ -11,7 +11,7 @@ const MiniMenuBtn:React.FC = () => {
     <div>
       <svg
         id="mini-menu"
-        onClick={() => toggleClass(()=>(oppened = !oppened))}
+        onClick={() => toggleClass(oppened = !oppened)}
         data-name="Group 18"
         xmlns="http://www.w3.org/2000/svg"
         width="30"
@@ -37,7 +37,7 @@ const MiniMenuBtn:React.FC = () => {
           <rect id="first-line" data-name="Rectangle Copy 7" width="25" height="3" rx="1.5" fill="#f9b19f" />
         </g>
       </svg>
-      <HiddenMenu oppened={oppened} />
+      <HiddenMenu toggleClass={toggleClass} oppened={oppened} />
     </div>
   )
 }

@@ -17,14 +17,14 @@ const FooterMiddle: React.SFC = () => {
     <div css={footerMiddleStyles.footerMiddleContainer}>
       <div css={footerMiddleStyles.footerMiddleContnentContainer}>
         <Link to="/">
-          <img src={FacebookLogoIcon} alt="" css={footerMiddleStyles.link} />
+          <img src={FacebookLogoIcon} alt="facebook" css={footerMiddleStyles.link} />
         </Link>
         <Link to="/">
-          <img src={TwitterLogoIcon} alt="" css={footerMiddleStyles.link} />
+          <img src={TwitterLogoIcon} alt="twitter" css={footerMiddleStyles.link} />
         </Link>
-        <MainStyledButton btnTxt={t('footer.btn')} addCss={footerMiddleStyles.mainBtn} />
+        <MainStyledButton addCss={footerMiddleStyles.mainBtn}>{t('footer.btn')}</MainStyledButton>
       </div>
-      <img src={CarIcon} css={footerMiddleStyles.car} />
+      <img alt="car" src={CarIcon} css={footerMiddleStyles.car} />
     </div>
   )
 }

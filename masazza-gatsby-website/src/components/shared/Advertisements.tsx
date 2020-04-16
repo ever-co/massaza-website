@@ -6,8 +6,8 @@ import { mainAddStyles, appStoreStyles, extendBuisnessAddStyles } from '../../st
 import AppStoreBtns from '../buttons/AppStoreBtns'
 import { MainStyledButton } from '../buttons/MainButtons'
 
-import Add1BackgroundWebImg from '../../../assets/images/adds/comBackground.png'
-import Add2BackgroundWebImg from '../../../assets/images/adds/com-extend-background.png'
+import Add1BackgroundWebImg from '../../../assets/images/adds/comBackground.webp'
+import Add2BackgroundWebImg from '../../../assets/images/adds/com-extend-background.webp'
 import { DataTypes } from '../../data/data'
 
 import { useTranslation } from 'react-i18next'
@@ -61,7 +61,7 @@ const MainAdd: React.SFC<MainAdd> = ({
           {t('advertisements.title')}
         </h2>
         {isExtend ? (
-          <MainStyledButton addCss={`${addMainBtnCss};background:${colors.brandSecondary}`} btnTxt={t(`${MainBtnTxt}`) } />
+          <MainStyledButton addCss={`${addMainBtnCss};background:${colors.brandSecondary}`} >{t(`${MainBtnTxt}`) }</MainStyledButton>
         ) : (
           <AppStoreBtns addCssBtn={addCssBtn} addStoreBtnWrapperCss={addStoreBtnWrapperCSs} />
         )}

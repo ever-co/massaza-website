@@ -10,24 +10,23 @@ import {
   safetyWrapperPageLineStyles
 } from '../../styles/componentStyles/trustAndSafety'
 
-import ClientSafetyImage from '../../../assets/images/trust-and-safety/client-safety-img.png'
-import ClientSafetyBackgroundTabletImage from '../../../assets/images/trust-and-safety/client-safety-background-tablet.png'
-import TherapistSafetyImage from '../../../assets/images/trust-and-safety/therapist-safety-img.png'
-import TherapistSafetyBackground from '../../../assets/images/trust-and-safety/therapist-safety-background.png'
-import TherapistSafetyBackgroundTablet from '../../../assets/images/trust-and-safety/therapist-safety-background-tablet.png'
-import {DataTypes} from '../../data/data'
+import ClientSafetyImage from '../../../assets/images/trust-and-safety/client-safety-img.webp'
+import ClientSafetyBackgroundTabletImage from '../../../assets/images/trust-and-safety/client-safety-background-tablet.webp'
+import TherapistSafetyImage from '../../../assets/images/trust-and-safety/therapist-safety-img.webp'
+import TherapistSafetyBackground from '../../../assets/images/trust-and-safety/therapist-safety-background.webp'
+import TherapistSafetyBackgroundTablet from '../../../assets/images/trust-and-safety/therapist-safety-background-tablet.webp'
+import { DataTypes } from '../../data/data'
 import { useTranslation } from 'react-i18next'
 
 const dict = require('../../../i18n/dictionary')
 
-interface ISafetyArticleProps{
-  num:number
+interface ISafetyArticleProps {
+  num: number
   title: string
   paragraph: string
-
 }
 
-const SafetyArticle: React.SFC<ISafetyArticleProps> = ({num, title, paragraph}) => (
+const SafetyArticle: React.SFC<ISafetyArticleProps> = ({ num, title, paragraph }) => (
   <article className="row" css={safetyArticleStyles.article}>
     <section className="num" css={safetyArticleStyles.num}>
       {num}
@@ -39,7 +38,7 @@ const SafetyArticle: React.SFC<ISafetyArticleProps> = ({num, title, paragraph}) 
   </article>
 )
 
-interface ISafetyWrapperProps{
+interface ISafetyWrapperProps {
   addTASCss?: string
   pageLineTxtContent: string
   addLineHCss: string
@@ -47,49 +46,59 @@ interface ISafetyWrapperProps{
   imgUrl: string
   addImgCss: string
   addImgWrapperCss: string
-  data:Array<DataTypes>
+  data: Array<DataTypes>
 }
 
-const SafetyWrapper:React.SFC<ISafetyWrapperProps> = ({data,addLineCss,addImgWrapperCss,addImgCss,imgUrl,addLineHCss,pageLineTxtContent,addTASCss}) => (
+const SafetyWrapper: React.SFC<ISafetyWrapperProps> = ({
+  data,
+  addLineCss,
+  addImgWrapperCss,
+  addImgCss,
+  imgUrl,
+  addLineHCss,
+  pageLineTxtContent,
+  addTASCss
+}) => (
+  <div
+    className="t-a-s row"
+    css={css`
+      ${safetyWrapperStyles.wrapper}
+      ${addTASCss};
+    `}
+  >
+    <PageLine
+      addLineCss={`${safetyWrapperPageLineStyles.line}
+                  ${addLineCss}`}
+      addHCss={` ${safetyWrapperPageLineStyles.h}
+                  ${addLineHCss};`}
+    >
+      {pageLineTxtContent}
+    </PageLine>
+
+    <div className="t-a-s-article-wrapper" css={safetyWrapperStyles.articleWrapper}>
+      {data.map((d: any, key: any) => (
+        <SafetyArticle num={key + 1} title={d.title} paragraph={d.paragraph} key={key} />
+      ))}
+    </div>
+
     <div
-      className="t-a-s row"
+      className="t-a-s-img-wrapper t-a-s-client-img-wrapper col"
       css={css`
-        ${safetyWrapperStyles.wrapper}
-        ${addTASCss};
+        ${safetyWrapperStyles.imgWrapper}
+        ${addImgWrapperCss};
+        background-repeat: no-repeat;
       `}
     >
-      <PageLine
-        txtContent={pageLineTxtContent}
-        addLineCss={`${safetyWrapperPageLineStyles.line}
-                  ${addLineCss}`}
-        addHCss={` ${safetyWrapperPageLineStyles.h}
-                  ${addLineHCss};`}
-      />
-
-      <div className="t-a-s-article-wrapper" css={safetyWrapperStyles.articleWrapper}>
-        {data.map((d: any, key: any) => (
-          <SafetyArticle num={key + 1} title={d.title} paragraph={d.paragraph} key={key} />
-        ))}
-      </div>
-
-      <div
-        className="t-a-s-img-wrapper t-a-s-client-img-wrapper col"
+      <img
+        src={imgUrl}
+        alt="trust and safety image"
         css={css`
-          ${safetyWrapperStyles.imgWrapper}
-          ${addImgWrapperCss};
-          background-repeat: no-repeat;
+          ${addImgCss}
         `}
-      >
-        <img
-          src={imgUrl}
-          alt=""
-          css={css`
-            ${addImgCss}
-          `}
-        ></img>
-      </div>
+      ></img>
     </div>
-  )
+  </div>
+)
 
 const ClientSafety = () => {
   const { t } = useTranslation()

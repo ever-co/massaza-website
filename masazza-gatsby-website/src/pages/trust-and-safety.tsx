@@ -8,7 +8,7 @@ import Guarantees from '../components/shared/Guarantees'
 import { ClientSafety, TherapistSafety } from '../components/trustAndSafetyComponents/SafetyWrapper'
 import { AppStoreAdd, ExtendBuisnessAdd } from '../components/shared/Advertisements'
 
-import TrustAndSafetyHeaderImg from '../../assets/images/trust-and-safety/t-a-s-top-background.png'
+import TrustAndSafetyHeaderImg from '../../assets/images/trust-and-safety/t-a-s-top-background.webp'
 
 const AboutUsPage:React.SFC = () => (
   <IndexLayout>

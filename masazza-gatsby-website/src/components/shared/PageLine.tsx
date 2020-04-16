@@ -3,12 +3,11 @@ import { css, SerializedStyles } from '@emotion/core'
 import { pageLineStyles } from '../../styles/componentStyles/shared'
 
 interface IPageLineProps{
-  addLineCss: string | SerializedStyles,
-  addHCss:  string | SerializedStyles,
-  txtContent: string
+  addLineCss?: string | SerializedStyles,
+  addHCss?:  string | SerializedStyles,
 }
 
-const PageLine: React.SFC<IPageLineProps> = ({ addLineCss, addHCss, txtContent }) => (
+const PageLine: React.SFC<IPageLineProps> = ({ addLineCss, addHCss, children }) => (
   <div
     css={css`
       ${pageLineStyles.pageLine}
@@ -21,7 +20,7 @@ const PageLine: React.SFC<IPageLineProps> = ({ addLineCss, addHCss, txtContent }
         ${addHCss};
       `}
     >
-      {txtContent}
+      {children}
     </h5>
   </div>
 )

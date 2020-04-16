@@ -23,8 +23,8 @@ export const dataEN = {
     topTitle: ' We’re helping people Find the best Therapist in the city.',
     btn: 'Become a Practitioner',
     footerMenus: footerMenusDataEN,
-    callUs: "Call us",
-    contactUs: "Contact us"
+    callUs: 'Call us',
+    contactUs: 'Contact us'
   },
   advertisements: {
     title: 'Available on Android and iOS',
@@ -59,6 +59,11 @@ export const dataEN = {
         },
         step: 'STEP'
       }
+    },
+    howItWorksSvg: {
+      firstStep: 'Download App and Select your location',
+      secondStep: 'Find availabe therapsit  or saloon and make an order',
+      thirdStep: 'Prepaire your self and enjoy your massage'
     },
     pricing: {
       lineH: 'THE PRICING',

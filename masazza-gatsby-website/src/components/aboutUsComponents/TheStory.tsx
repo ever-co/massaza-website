@@ -3,7 +3,7 @@ import { aboutUsStyles } from '../../styles/componentStyles/about-us'
 import AppStoreBtns from '../buttons/AppStoreBtns'
 import i18n from '../../../i18n/initI18n'
 
-import TheStoryPhone from '../../../assets/images/about-us/the-story-phone.png'
+import TheStoryPhone from '../../../assets/images/about-us/the-story-phone.webp'
 
 const dict = require('../../../i18n/dictionary')
 
@@ -21,7 +21,7 @@ const TheStory: React.SFC = () => {
         ))}
       </div>
       <div className="story-pics col" css={aboutUsStyles.storyPics}>
-        <img src={TheStoryPhone} alt="" className="story-phone" css={aboutUsStyles.storyPicsImg} />
+        <img src={TheStoryPhone} alt="The story phone image" className="story-phone" css={aboutUsStyles.storyPicsImg} />
         <AppStoreBtns addStoreBtnWrapperCss={aboutUsStyles.appStoreBtnsAdj.btnWrapper} addCssBtn={aboutUsStyles.appStoreBtnsAdj.btn} />
       </div>
     </div>

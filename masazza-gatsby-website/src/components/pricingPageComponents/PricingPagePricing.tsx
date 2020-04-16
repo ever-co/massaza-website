@@ -27,7 +27,7 @@ const PricingPagePricing:React.FC = () => {
         <StyledParagraph>{t('pricing.paragraphTop')}</StyledParagraph>
         <StyledParagraph>{t('pricing.paragraphBottom')}</StyledParagraph>
 
-        <PageLine txtContent={t('pricing.pageLineComissionH')} addHCss={pricingPageLineStyles.h} />
+        <PageLine  addHCss={pricingPageLineStyles.h} >{t('pricing.pageLineComissionH')}</PageLine>
       </div>
       <div className="comissions" css={pricingPageStyles.comissions}>
         <p css={pricingPageStyles.paragraph}>{t('pricing.comissionsParagraph')}</p>

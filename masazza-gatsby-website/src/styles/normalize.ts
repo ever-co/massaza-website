@@ -1,6 +1,29 @@
-import { dimensions, fonts, colors } from './variables'
+import { dimensions,  colors } from './variables'
+
+import carioSemiBoldTTF from '../../assets/fonts/Cairo-SemiBold.ttf'
+import carioSemiBoldWOFF from '../../assets/fonts/Cairo-SemiBold.woff'
+import carioRegularTTF from '../../assets/fonts/Cairo-Regular.ttf'
+import carioRegularWOFF from '../../assets/fonts/Cairo-Regular.woff'
 
 export default `
+
+
+
+@font-face {
+  font-family: "Cairo-SemiBold";
+  font-display: swap;
+  src: url(${carioSemiBoldTTF}) format("truetype"),
+    url(${carioSemiBoldWOFF}) format("woff");
+
+}
+@font-face {
+  font-family: "Cairo-Regular";
+  font-display: swap;
+  src: url(${carioRegularTTF}) format("truetype"),
+    url(${carioRegularWOFF}) format("woff");
+
+}
+
   html {
     box-sizing: border-box;
   }
@@ -10,7 +33,9 @@ export default `
   *::after {
     box-sizing: inherit;
   }
-
+  h2, h1 {
+    font-family: "Cairo-SemiBold", sans-serif;
+  }
   html {
     font-size: ${dimensions.fontSize.regular}px !important;
     line-height: ${dimensions.lineHeight.regular} !important;
@@ -20,11 +45,13 @@ export default `
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    font-family: ${fonts.sansSerif};
+    
     color: ${colors.black};
     background-color:${colors.mainBackground};
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+  font-family: "Cairo-Regular", sans-serif;
+
   }
 
   a {
@@ -41,6 +68,9 @@ export default `
     max-width: 100%;
     object-fit: contain;
     position: relative;
+  }
+  button{
+    font-family: "Cairo-SemiBold", sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {

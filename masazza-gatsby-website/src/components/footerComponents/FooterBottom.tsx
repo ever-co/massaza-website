@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import LanguageSwitch from '../LanguageSwitch'
 import { footerBottomStyles } from '../../styles/componentStyles/footer'
-import MasazzaMiniLogo from '../../../assets/icons/logos/massaza-footer-logo.png'
+import MasazzaMiniLogo from '../../../assets/icons/logos/massaza-footer-logo.webp'
 import { useTranslation } from 'react-i18next'
 import { colors } from '../../styles/variables'
 
@@ -59,7 +59,7 @@ const FooterBottom: React.SFC = () => {
         <div>
           <img
             src={MasazzaMiniLogo}
-            alt="massaza"
+            alt="masazza logo"
             css={css`
               margin: 1em 2em 0;
             `}

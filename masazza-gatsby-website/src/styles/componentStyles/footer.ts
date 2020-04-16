@@ -1,8 +1,8 @@
 import {css} from '@emotion/core'
 import {colors, flex} from '../variables'
 
-import TopBackgroundImg from '../../../assets/images/global/footer-top-background.png'
-import TopBackgroundImgMobile from '../../../assets/images/global/footer-top-mobile-background.png'
+import TopBackgroundImg from '../../../assets/images/global/footer-top-background.webp'
+import TopBackgroundImgMobile from '../../../assets/images/global/footer-top-mobile-background.webp'
 
 
 // Footer Top
@@ -37,16 +37,10 @@ export const footerTopStyles = {
       color: #ffffff;
       margin: 2em 0 0;
       max-width: 11em;
-      &::before {
-        content: url('../../../assets/icons/global/footer-leaves.png');
-        width: 1em;
-        margin: -1em;
-        transform: translate(-1em, 1em);
-        display: block;
-      }
+
       @media (max-width: 600px) {
         font-size: 1.7rem;
-        margin: 0;
+        margin: 1em auto;
         text-align: center;
       }`
 }
@@ -150,10 +144,10 @@ export const footerBottomStyles = {
    }`
 }
 
-import bulgarianFlag from '../../../assets/icons/global/bulgaria-flag.png'
-import usaFlag from '../../../assets/icons/global/united-states-flag.png'
-import israelFlag from '../../../assets/icons/global/israel-flag.png'
-import russiaFlag from '../../../assets/icons/global/russia-flag.png'
+import bulgarianFlag from '../../../assets/icons/global/bulgaria-flag.webp'
+import usaFlag from '../../../assets/icons/global/united-states-flag.webp'
+import israelFlag from '../../../assets/icons/global/israel-flag.webp'
+import russiaFlag from '../../../assets/icons/global/russia-flag.webp'
 
 
 export const languageSwitchStyles ={
@@ -208,6 +202,9 @@ export const languageSwitchStyles ={
     display: flex;
     transition: all 0.5s ease-out;
     align-items:center;
+  }
+  @media(max-width:600px){
+    margin: 2em auto 0;
   }
   `
 }

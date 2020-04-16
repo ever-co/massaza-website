@@ -2,7 +2,7 @@ import { css } from '@emotion/core'
 import { flex } from '../variables'
 import { colors } from '../variables'
 // Guarantees background
-import GuaranteesBackground from '../../../assets/images/about-us/guaranties-background.png'
+import GuaranteesBackground from '../../../assets/images/about-us/guaranties-background.webp'
 
 // Guarantees
 export const guaranteesStyles = {
@@ -120,8 +120,8 @@ export const mainAddStyles = {
       `
 }
 
-import Add1BackgroundTabletImg from '../../../assets/images/adds/com-1-tablet-background.png'
-import Add1BackgroundMobileImg from '../../../assets/images/adds/com-1-background-mobile.png'
+import Add1BackgroundTabletImg from '../../../assets/images/adds/com-1-tablet-background.webp'
+import Add1BackgroundMobileImg from '../../../assets/images/adds/com-1-background-mobile.webp'
 
 export const appStoreStyles = {
   addCssBtn: `
@@ -171,8 +171,8 @@ export const appStoreStyles = {
     }"`
 }
 
-import Add2BackgroundTabletImg from '../../../assets/images/adds/com-2-background-tablet.png'
-import Add2BackgroundMobileImg from '../../../assets/images/adds/com-2-background-mobile.png'
+import Add2BackgroundTabletImg from '../../../assets/images/adds/com-2-background-tablet.webp'
+import Add2BackgroundMobileImg from '../../../assets/images/adds/com-2-background-mobile.webp'
 
 export const extendBuisnessAddStyles = {
   addWrapper: `
@@ -251,13 +251,17 @@ export const pageLineStyles = {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin: 0 -2em;
-    font-weight: 100;
     font-size: 1rem;
     padding: 1em 0;
     position: absolute;
     width: max-content;
+    font-weigth:bold;
     @media (max-width: 1024px) {
       margin: -3em -1em;
+    }
+    @media (max-width: 600px) {
+      margin: 0;
+      padding:0;
     }`
 }
 
@@ -316,6 +320,7 @@ export const pricingStyles = {
         @media (max-width: 1024px) {
           width: 95%;
           margin: auto;
+          background-position: 120% -215%;
         }
         @media (max-width: 600px) {
           width: 95%;

@@ -1,13 +1,13 @@
 import * as React from 'react'
-import { css } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/core'
 import { colors, flex } from '../../styles/variables'
 import { pricingStyles } from '../../styles/componentStyles/shared'
 import { MainStyledButton } from '../buttons/MainButtons'
 import PageLine from './PageLine'
 import { useTranslation } from 'react-i18next'
-import { OfferTypes, DataTypes } from '../../data/data'
+import { OfferTypes,  } from '../../data/data'
 
-import OfferBackgroundImg from '../../../assets/images/shared/prices-card-background.png'
+import OfferBackgroundImg from '../../../assets/images/shared/prices-card-background.webp'
 
 const dict = require('../../../i18n/dictionary')
 
@@ -18,6 +18,15 @@ interface IOfferProps {
   description: string
   key: number
 }
+interface IPricingProps{
+  addWrapperCss?: string| SerializedStyles
+  PageLineHTxt: string
+  addDescrCss?: string| SerializedStyles
+  addOfferCss?: string| SerializedStyles
+  addLineCss?: string| SerializedStyles
+  addPageLHCss?: string| SerializedStyles
+}
+
 
 const Offer: React.SFC<IOfferProps> = ({ addOfferCss, minutes, dollars, description }) => {
   const { t } = useTranslation()
@@ -45,12 +54,14 @@ const Offer: React.SFC<IOfferProps> = ({ addOfferCss, minutes, dollars, descript
         <h2>${dollars}</h2>
       </div>
       <p css={pricingStyles.Offer.offerP}>{description}</p>
-      <MainStyledButton addCss={pricingStyles.Offer.addMainBtn} btnTxt={t('pricing.offerBtn')} />
+      <MainStyledButton addCss={pricingStyles.Offer.addMainBtn} >{t('pricing.offerBtn')} </MainStyledButton>
     </article>
   )
 }
 
-const Pricing: React.SFC<DataTypes> = ({ children, addWrapperCss, PageLineHTxt, addDescrCss, addOfferCss, addLineCss, addPageLHCss }) => {
+
+
+const Pricing: React.SFC<IPricingProps> = ({ children, addWrapperCss, PageLineHTxt, addDescrCss, addOfferCss, addLineCss, addPageLHCss }) => {
   const { t } = useTranslation()
   let currentLang = useTranslation().i18n.languages[0]
   const offersData = dict.default[`${currentLang}`].translation.pricing.offers
@@ -63,13 +74,14 @@ const Pricing: React.SFC<DataTypes> = ({ children, addWrapperCss, PageLineHTxt, 
       `}
     >
       <PageLine
-        txtContent={PageLineHTxt}
         addHCss={`margin-top:-3em; background:${colors.mainBackground};  @media(max-width:600px){ margin: -2em 0em} ${addPageLHCss}`}
         addLineCss={css`
           height: 65em;
           ${addLineCss}
         `}
-      />
+      >
+        {PageLineHTxt}
+      </PageLine>
       <div
         className="pricing-descr"
         css={css`

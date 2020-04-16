@@ -28,7 +28,7 @@ const AppStoreButtons = ({ addStoreBtnWrapperCss, addCssBtn }: IProps) => (
         ${addCssBtn}
       `}
     >
-      <img src={AppStoreSvg} alt="" />
+      <img alt="App store button" src={AppStoreSvg} />
     </Link>
     <Link
       to="/"

@@ -2,13 +2,13 @@ import { css } from '@emotion/core'
 import { flex, colors } from '../variables'
 
 // Top page images
-import TopBackgroundImg from '../../../assets/images/home/backgrounds/top-background.png'
-import TopBackgroundMobileImg from '../../../assets/images/home/backgrounds/top-background-mobile.png'
+import TopBackgroundImg from '../../../assets/images/home/backgrounds/top-background.webp'
+import TopBackgroundMobileImg from '../../../assets/images/home/backgrounds/top-background-mobile.webp'
 // Home pricing background
-import PricingHomeBackgroundImg from '../../../assets/images/home/prices-main-background.png'
+import PricingHomeBackgroundImg from '../../../assets/images/home/prices-main-background.webp'
 // MassageTypes images
-import MassageTypesWrapperBackground from '../../../assets/images/home/backgrounds/small-background.png'
-import MassageTypesWrapperTabletBackground from '../../../assets/images/home/backgrounds/small-background-tablet.png'
+import MassageTypesWrapperBackground from '../../../assets/images/home/backgrounds/small-background.webp'
+import MassageTypesWrapperTabletBackground from '../../../assets/images/home/backgrounds/small-background-tablet.webp'
 import MassageCardBackgroundImage from '../../../assets/images/home/massage-card-background.svg'
 
 // Top page
@@ -55,7 +55,7 @@ export const topPageStyles = {
     color: ${colors.white};
     @media (max-width: 1280px) {
       margin: 4em 7em;
-      width: 30em;
+      width: 80em;
     }
     @media (max-width: 1025px) {
       background-size: cover;
@@ -70,7 +70,7 @@ export const topPageStyles = {
   `,
   h1: css`
     font-size: 2rem;
-    color:${colors.white};
+    color: ${colors.white};
     @media (max-width: 600px) {
       font-size: 1.8rem;
     }
@@ -84,6 +84,25 @@ export const topPageStyles = {
       font-size: 1rem;
     }
   `
+}
+
+// top page line
+export const pageLine = {
+  topLine: `
+  height:65em;
+  top:1%; 
+  @media (min-width:1280px){
+    top: 10%;
+  };`,
+  topLineH: `
+  color:${colors.white};
+   margin: -1.1em -.2em;
+   @media(max-width:1024px){
+     margin:0;
+    };  
+    @media(max-width:600px){
+      margin:0;
+    }`
 }
 // Top page app store btns
 export const topPageAppStoreBtnsStyles = {
@@ -113,29 +132,31 @@ export const howItWorksStyles = {
     ${flex.col} width: 85%;
     max-width: 90em;
     margin: auto;
-    `,
+  `,
   h5: css`
     align-self: flex-end;
     text-transform: uppercase;
     color: ${colors.brand};
     margin: 5em 0;
-    font-size: 1em;`
+    font-size: 1em;
+  `
 }
 
 // Pricing
 export const pricingHomeStyles = {
-  addWrapperCss:`
+  addWrapperCss: `
   background: url(${PricingHomeBackgroundImg});
   background-repeat: no-repeat;
   background-position: 120% 110%;
   background-size: 60%;`,
-addOfferCss:`
+  addOfferCss: `
 margin: 0 1em 2em;
   @media (max-width:600px){
     margin: 0 auto 2em;
     width: 100%;
+    max-width:17em;
   }`,
-  addDescrCss:`
+  addDescrCss: `
   margin: 6em 0 3em 4em;
   width: 70%;
   @media (max-width:600px){
@@ -145,7 +166,6 @@ margin: 0 1em 2em;
   `
 }
 
-
 // How it works page line
 export const howItWorksPageLineStyles = {
   line: `height:65em;`,
@@ -153,9 +173,7 @@ export const howItWorksPageLineStyles = {
   color: ${colors.brandSecondary}; 
   font-size: 1em; background:${colors.mainBackground}; 
   margin: -3em -2em; 
-  @media (max-width:600px){
-    display:none
-  }`
+`
 }
 
 // Most popular
@@ -191,7 +209,7 @@ export const massageCardStyles = {
     max-height: 4em;
     line-height: 20px;
   `,
-  btn:`background:${colors.brandSecondary}; height: auto;`
+  btn: `background:${colors.brandSecondary}; height: auto;`
 }
 
 export const mostPopularStyles = {
@@ -219,37 +237,21 @@ export const mostPopularStyles = {
     @media (max-width: 600px) {
       text-align: center;
       margin: 0;
-    }`,
+    }
+  `,
   massageCardsContainer: css`
     ${flex.row};
     flex-flow: wrap;
     justify-content: center;
-    `,
-    pageLine:{
-      h:`
+  `,
+  pageLine: {
+    h: `
       background:${colors.mainBackground};
       margin-top:-3em; 
       @media(max-width:600px){
         margin:-2.45em 0;
       }`,
-      line: `height:65em;`
-    }
+    line: `height:65em;`
+  }
 }
 
-export const pageLine = {
-  topLine: `
-  height:65em;
-  top:1%; 
-  @media (min-width:1280px){
-    top: 10%;
-  };`,
-  topLineH: `
-  color:${colors.white};
-   margin: -1.1em -.2em;
-   @media(max-width:1024px){
-     margin:-1em 0
-    };  
-    @media(max-width:600px){
-      margin:0;
-    }`
-}

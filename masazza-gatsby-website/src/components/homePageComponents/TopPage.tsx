@@ -5,12 +5,15 @@ import PageLine from '../shared/PageLine'
 import Container from '../Container'
 import { useTranslation } from 'react-i18next'
 
-const TopContainer:React.SFC = () => {
+const TopContainer: React.SFC = () => {
   const { t } = useTranslation()
+  
   return (
     <Container>
       <div css={topPageStyles.topContainer}>
-        <PageLine txtContent={t('homePage.topPage.pageLine')} addLineCss={pageLine.topLine} addHCss={pageLine.topLineH} />
+        <PageLine addLineCss={pageLine.topLine} addHCss={pageLine.topLineH}>
+          {t('homePage.topPage.pageLine')}{' '}
+        </PageLine>
         <header css={topPageStyles.header}>
           <h1 css={topPageStyles.h1}>{t('homePage.topPage.h')}</h1>
           <p css={topPageStyles.paragraph}>

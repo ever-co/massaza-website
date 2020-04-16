@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180.521" height="100.828" viewBox="0 0 180.521 100.828">
+  <g id="car" data-name="car" transform="translate(-1.173 -0.124)">
+       <g id="wp-car-part" data-name="up-car-part"> 
+        <path id="Fill_1" data-name="Fill 1" d="M114.962,43.379v-.828C114.962,19.026,95.7,0,71.905,0H43.056C19.281,0,0,19.026,0,42.551v.828Z" transform="translate(33.732 0.124)" fill="#e87b68"/>
+        <path id="Fill_8" data-name="Fill 8" d="M151.24,0H29.329A29.351,29.351,0,0,0,0,29.4v7.635H24.284a21.246,21.246,0,0,1,42.141,0h54.55a21.254,21.254,0,0,1,42.155,0h17.4V29.4A29.332,29.332,0,0,0,151.24,0" transform="translate(1.173 44.552)" fill="#e87b68"/>
+        <path id="Fill_16" data-name="Fill 16" d="M43.29,35.173H0v-.828C0,15.407,15.62,0,34.82,0h8.47V35.172Zm55.248,0h-43.3V0H63.7C82.912,0,98.538,15.407,98.538,34.344v.827Z" transform="translate(41.943 8.331)" fill="#a9d3c2"/>
+        </g>
+      <g id="left-wheel" data-name="Group 13" transform="translate(28.866 66.952)">
+          <path id="Fill_11" data-name="Fill 11" d="M33.626,16.918A16.813,16.813,0,1,1,16.842,0,16.879,16.879,0,0,1,33.626,16.918" transform="translate(0.082 0.141)" fill="#4c4c4c"/>
+          <path id="Fill_14" data-name="Fill 14" d="M13.049,7.02a6.011,6.011,0,1,1-6-5.993,6.015,6.015,0,0,1,6,5.993" transform="translate(7.597 7.331)" fill="#8c8c8c"/>
+      </g>
+      <g id="right-wheel" data-name="right-wheel" transform="translate(125.232 66.952)">
+          <path id="Fill_3" data-name="Fill 3" d="M33.826,16.918A16.913,16.913,0,1,1,16.9,0,16.941,16.941,0,0,1,33.826,16.918" transform="translate(0.521 0.141)" fill="#4c4c4c"/>
+      <path id="Fill_6" data-name="Fill 6" d="M13.049,7.02A6.011,6.011,0,1,1,7.024,1.027,6.021,6.021,0,0,1,13.049,7.02" transform="translate(6.521 7.141)" fill="#8c8c8c"/>
+      </g>
+    
+  </g>
+</svg>

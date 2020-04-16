@@ -2,7 +2,7 @@ import {css} from '@emotion/core'
 import { flex, colors } from '../variables'
 
 
-import StoryPicsBackground from '../../../assets/images/about-us/story-pics-background.png'
+import StoryPicsBackground from '../../../assets/images/about-us/story-pics-background.webp'
 
 
 

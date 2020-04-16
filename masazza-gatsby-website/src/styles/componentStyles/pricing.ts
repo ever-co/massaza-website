@@ -1,7 +1,7 @@
 import {css} from '@emotion/core'
 import { colors } from "../variables"
 
-import PricingPagePricingBackgroundImg from '../../../assets/images/pricing/pricing-offeers-background.png'
+import PricingPagePricingBackgroundImg from '../../../assets/images/pricing/pricing-offeers-background.webp'
 
 
 export const pricingPageStyles = {

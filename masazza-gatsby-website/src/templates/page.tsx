@@ -9,6 +9,7 @@ interface PageTemplateProps {
   data: {
     site: {
       siteMetadata: {
+        title:string
         description: string
         author: {
           name: string

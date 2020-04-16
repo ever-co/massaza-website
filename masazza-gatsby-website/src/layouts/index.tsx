@@ -25,6 +25,7 @@ const IndexLayout: React.FC = ({ children }) => (
       query IndexLayoutQuery {
         site {
           siteMetadata {
+            title
             description
           }
         }
@@ -38,7 +39,9 @@ const IndexLayout: React.FC = ({ children }) => (
             { name: 'description', content: data.site.siteMetadata.description },
             { name: 'keywords', content: data.site.siteMetadata.keywords }
           ]}
-        />
+        >
+          <html lang="en" />
+        </Helmet>
         <Header
         />
         <LayoutMain>{children}</LayoutMain>

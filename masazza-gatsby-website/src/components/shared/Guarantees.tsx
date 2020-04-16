@@ -11,12 +11,12 @@ interface IGuaranteeProps {
   imgUrl: string
   title: string
   description: string
-  key:number
+  key: number
 }
 
 const Guarantee: React.SFC<IGuaranteeProps> = ({ imgUrl, title, description }) => (
   <article className="guarantie row" css={guaranteesStyles.guarantee}>
-    <img src={imgUrl} alt="" css={guaranteesStyles.guaranteeImg} />
+    <img src={imgUrl} alt="guarantee icon" css={guaranteesStyles.guaranteeImg} />
     <div className="guarantie-descr">
       <h2>{title}</h2>
       <p>{description}</p>
@@ -31,7 +31,9 @@ const Guarantees: React.SFC = () => {
   return (
     <div className="guaranties" css={guaranteesStyles.guarantees}>
       <Container>
-        <PageLine txtContent={t('guaranteesLineH')} addLineCss={guaranteesPageLine.line} addHCss={guaranteesPageLine.h} />
+        <PageLine addLineCss={guaranteesPageLine.line} addHCss={guaranteesPageLine.h}>
+          {t('guaranteesLineH')}
+        </PageLine>
         <div className="guaranties-wrapper row" css={guaranteesStyles.guaranteesWrapper}>
           {guaranteesData.map((g: DataTypes, key: number) => (
             <Guarantee title={g.title} key={key} description={g.description} imgUrl={guaranteesImages[key]} />
