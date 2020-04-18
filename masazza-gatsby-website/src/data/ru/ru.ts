@@ -2,7 +2,7 @@ import {footerMenusDataRU,guaranteesDataRU,massageTypesRU, storyParagraphDataRU,
 
 
 export const dataRU = {
-    a: 'lalala',
+  title: 'Masazza',
     navbar: {
       aboutUs: 'About us',
       trustAndSafety: 'Trust and safety',

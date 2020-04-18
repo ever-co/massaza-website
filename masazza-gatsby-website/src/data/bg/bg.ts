@@ -2,6 +2,7 @@ import {footerMenusDataBG, guaranteesDataBG, massageTypesBG, storyParagraphDataB
 
 
 export const dataBG = { 
+  title: 'Masazza',
 navbar: {
   aboutUs: 'За нас',
   trustAndSafety: 'Доверие и безопасност',

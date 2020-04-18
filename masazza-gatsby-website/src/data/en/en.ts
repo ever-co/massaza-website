@@ -9,7 +9,7 @@ import {
 } from './data'
 
 export const dataEN = {
-  a: 'lalala',
+  title: 'Masazza',
   navbar: {
     aboutUs: 'About us',
     trustAndSafety: 'Trust and safety',

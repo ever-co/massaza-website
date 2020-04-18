@@ -80,7 +80,6 @@ export const navLinkStyles = {
       font-size: 2rem;
       color: ${colors.secondaryLinks};
       margin-left: 5px;
-      margin-top: -5px;
       position: relative;
     }
     @media(max-width:1350px){
@@ -91,7 +90,7 @@ export const navLinkStyles = {
     width: 100%;
     margin: 1em 0;
     padding: 0;
-    font-family: "Catamaran-SemiBlod";
+    font-family: "Catamaran-SemiBold", monospace;
     `
 }
 

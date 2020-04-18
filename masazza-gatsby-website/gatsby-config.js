@@ -3,7 +3,7 @@
 module.exports = {
   siteMetadata: {
     title: 'masazza-website',
-    description: '',
+    description: 'Website for massage services',
     keywords: 'gatsbyjs, gatsby, javascript, massages, therapists',
     siteUrl: 'https://massaza.co',
     author: {
@@ -14,13 +14,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-json`,
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'content',
-        path: `${__dirname}/src/content`
-      }
-    },
+   
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -45,17 +39,24 @@ module.exports = {
         ]
       }
     },
-    'gatsby-transformer-json',
-    {
-      resolve: 'gatsby-plugin-canonical-urls',
-      options: {
-        siteUrl: 'https://masazza.co'
-      }
-    },
+    
     'gatsby-plugin-emotion',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `http://www.masazza.co`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'markdown-pages',
+        path: `${__dirname}/src/content`
+      }
+    },
   ]
 }

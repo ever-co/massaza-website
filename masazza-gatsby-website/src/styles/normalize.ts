@@ -4,6 +4,8 @@ import carioSemiBoldTTF from '../../assets/fonts/Cairo-SemiBold.ttf'
 import carioSemiBoldWOFF from '../../assets/fonts/Cairo-SemiBold.woff'
 import carioRegularTTF from '../../assets/fonts/Cairo-Regular.ttf'
 import carioRegularWOFF from '../../assets/fonts/Cairo-Regular.woff'
+import catamaranSemiBoldTTF from '../../assets/fonts/Catamaran-SemiBold.ttf'
+import catamaranSemiBoldWOFF from '../../assets/fonts/Catamaran-SemiBold.woff'
 
 export default `
 
@@ -21,6 +23,14 @@ export default `
   font-display: swap;
   src: url(${carioRegularTTF}) format("truetype"),
     url(${carioRegularWOFF}) format("woff");
+
+}
+
+@font-face {
+  font-family: "Catamaran-SemiBold";
+  font-display: swap;
+  src: url(${catamaranSemiBoldTTF}) format("truetype"),
+    url(${catamaranSemiBoldWOFF}) format("woff");
 
 }
 

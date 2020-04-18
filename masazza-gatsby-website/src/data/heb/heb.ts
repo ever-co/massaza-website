@@ -2,7 +2,7 @@ import {footerMenusDataHEB,guaranteesDataHEB,massageTypesHEB, storyParagraphData
 
 
 export const dataHEB = {
-    a: 'lalala',
+  title: 'Masazza',
     navbar: {
       aboutUs: 'About us',
       trustAndSafety: 'Trust and safety',

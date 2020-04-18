@@ -1,8 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
+import {useTranslation} from 'react-i18next'
 
 import Page from '../components/Page'
 import Container from '../components/Container'
+import SEO from '../components/seo'
 import IndexLayout from '../layouts'
 
 interface PageTemplateProps {
@@ -27,8 +29,11 @@ interface PageTemplateProps {
   }
 }
 
-const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
+const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => {
+  const {t} = useTranslation()
+  return(
   <IndexLayout>
+    <SEO title={t('title')} />
     <Page>
       <Container>
         <h1>{data.markdownRemark.frontmatter.title}</h1>
@@ -37,7 +42,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
       </Container>
     </Page>
   </IndexLayout>
-)
+)}
 
 export default PageTemplate
 
