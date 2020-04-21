@@ -33,7 +33,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => {
   const {t} = useTranslation()
   return(
   <IndexLayout>
-    <SEO title={t('title')} />
+    <SEO title={t('title')} description={t("description")} />
     <Page>
       <Container>
         <h1>{data.markdownRemark.frontmatter.title}</h1>

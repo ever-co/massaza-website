@@ -10,6 +10,7 @@ import {
 
 export const dataEN = {
   title: 'Masazza',
+  description: 'Website for massage services',
   navbar: {
     aboutUs: 'About us',
     trustAndSafety: 'Trust and safety',

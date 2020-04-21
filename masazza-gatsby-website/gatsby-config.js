@@ -58,5 +58,11 @@ module.exports = {
         path: `${__dirname}/src/content`
       }
     },
+    {
+      resolve: 'gatsby-plugin-preconnect',
+      options: {
+        domains: ['https://masazza.co', 'https://ever.co'],
+      },
+    },
   ]
 }

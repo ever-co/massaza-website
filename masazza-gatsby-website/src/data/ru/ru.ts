@@ -3,6 +3,7 @@ import {footerMenusDataRU,guaranteesDataRU,massageTypesRU, storyParagraphDataRU,
 
 export const dataRU = {
   title: 'Masazza',
+  description: 'Website for massage services',
     navbar: {
       aboutUs: 'About us',
       trustAndSafety: 'Trust and safety',
