@@ -80,7 +80,7 @@ export const aboutUsStyles = {
      @media (max-width:1024px){
          flex-flow: column;
          width: 60%;
-         margin: auto -5em;
+         margin: auto -2em;
       }
      @media (max-width:600px){
           width: 100%;

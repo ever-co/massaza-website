@@ -52,14 +52,14 @@ const LanguageSwitch: React.FC = () => {
         css={css`
           ${checkedStyle};
           ${labelStyles}
-        `}
+          `}
+          onClick={handleSelectLanguage}
       >
         <input
           type="radio"
           value={langSwitch.slug}
           name="lang"
           id={langSwitch.slug}
-          onClick={handleSelectLanguage}
           css={css`
             ${radioStyles}
           `}

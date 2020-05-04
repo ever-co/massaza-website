@@ -9,7 +9,7 @@ border-radius: 10px;
 border: none;
 min-width: max-content;
 outline: none;
-font-size: 1rem;
+font-size: .8rem;
 font-weight: 600;
 color: ${colors.white};
 min-height: 3em;

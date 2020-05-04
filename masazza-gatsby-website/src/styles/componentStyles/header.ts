@@ -83,7 +83,7 @@ export const navLinkStyles = {
       position: relative;
     }
     @media(max-width:1350px){
-      font-size: .8rem;
+      font-size: 1rem;
     }`,
   navlinksUl: `
     display: flex;

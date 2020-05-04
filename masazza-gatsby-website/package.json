@@ -29,6 +29,7 @@
     "babel-plugin-styled-components": "^1.10.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.10.0",
+    "gatsby-cli": "^2.12.8",
     "gatsby-image": "^2.2.1",
     "gatsby-plugin-emotion": "^4.1.0",
     "gatsby-plugin-preconnect": "^1.1.3",

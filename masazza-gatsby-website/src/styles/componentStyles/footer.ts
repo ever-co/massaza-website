@@ -28,6 +28,9 @@ export const footerTopStyles = {
       margin: auto;
       @media (max-width: 1024px) {
         margin: 3em 5em;
+        h1{
+          font-size: 3rem;
+        }
       }
       @media (max-width: 600px) {
         width: 95%;
@@ -103,6 +106,7 @@ export const footerMiddleStyles = {
     background: ${colors.brandSecondary};
     @media (max-width:1024px){
        margin: auto;
+       font-size: 1.3rem;
       }; 
     @media (max-width:600px){
       width: 12em;
@@ -125,11 +129,14 @@ export const footerBottomStyles = {
     font-size: 1.2rem;
     color: ${colors.secondaryLinks};
      @media (max-width: 800px) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
      }`,
   footerMenusUl: css`
      padding: 0;
-     list-style-type: none;`,
+     list-style-type: none;
+     @media (max-width:1024px){
+       font-size: 1.2rem;
+     }`,
   footerBottomContainer: css`
    justify-content: space-around;
    color: ${colors.secondaryLinks};
@@ -137,6 +144,9 @@ export const footerBottomStyles = {
    width: 90%;
    margin: auto;
    max-width: 90em;
+   @media (max-width:1024px){
+     font-size:1.2rem;
+   }
    @media (max-width: 800px) {
      flex-flow: wrap;
      width: 100%;
