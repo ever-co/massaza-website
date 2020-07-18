@@ -1,13 +1,17 @@
 {
-  "name": "gatsby-starter-typescript-plus",
-  "description": "A starter kit for TypeScript-based Gatsby projects with sensible defaults.",
-  "version": "1.0.0",
+  "name": "massaza-website",
+  "description": "Gatsby powered static website for Massaza",
+  "version": "0.1.0",
   "private": true,
-  "author": "Resi Respati <resir014@gmail.com>",
+  "author": {
+		"name": "Ever Co. LTD",
+		"email": "ever@ever.co",
+		"url": "https://ever.co"
+  },
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
